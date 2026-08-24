@@ -1,0 +1,436 @@
+{
+  "slug": "programacion-logica-funcional",
+  "shortName": "Lógica y Funcional",
+  "title": "Programación Lógica y Funcional",
+  "degree": "Ingeniería en Sistemas",
+  "eyebrow": "Paradigmas + datos + IA + automatización",
+  "summary": "Una exploración práctica de cómo cambia la forma de resolver problemas cuando se usan funciones puras, evaluación perezosa, reglas lógicas y herramientas de IA para desarrollar software verificable.",
+  "approach": "Más que memorizar sintaxis, los alumnos comparan modelos mentales. Python funciona como puente; se incorporan Haskell para conceptos funcionales y Prolog para razonamiento lógico, conectándolos con pipelines de datos, sistemas expertos y desarrollo asistido por IA.",
+  "technologies": [
+    "Python",
+    "Haskell",
+    "Prolog",
+    "Jupyter",
+    "Pandas",
+    "Generators",
+    "pytest",
+    "Ollama / Codex / Copilot",
+    "Git/GitHub",
+    "RAG básico"
+  ],
+  "modules": [
+    {
+      "number": 1,
+      "title": "Conceptos fundamentales",
+      "description": "Se comparan los paradigmas imperativo, orientado a objetos, funcional y lógico a través del mismo problema. El objetivo es aprender a elegir una forma de pensar antes de elegir una sintaxis.",
+      "objectives": [
+        "Distinguir paradigmas por la manera en que representan estado, control y conocimiento.",
+        "Resolver un mismo problema con estrategias diferentes y comparar complejidad y legibilidad.",
+        "Reconocer funciones de orden superior, recursión, reglas y declaratividad como herramientas conceptuales."
+      ],
+      "topics": [
+        "Paradigmas",
+        "Declarativo vs imperativo",
+        "Estado",
+        "Recursión",
+        "Funciones de orden superior",
+        "Reglas",
+        "Complejidad",
+        "Git"
+      ],
+      "project": {
+        "title": "Un problema, tres paradigmas",
+        "description": "Resolver un problema de análisis o decisión en tres estilos —imperativo, funcional y lógico/declarativo simulado— y elaborar una comparación técnica basada en claridad, pruebas y extensibilidad.",
+        "deliverables": [
+          "Tres implementaciones o aproximaciones",
+          "Suite breve de casos de prueba",
+          "Comparación técnica argumentada",
+          "Repositorio con historial de evolución"
+        ],
+        "skills": [
+          "Pensamiento multiparadigma",
+          "Comparación técnica",
+          "Testing",
+          "Comunicación"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 1,
+          "focus": "Pensar antes de programar",
+          "activities": [
+            {
+              "title": "Paradigmas en 30 líneas",
+              "description": "Resolver una transformación de datos en estilo imperativo y funcional y comparar el flujo mental.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Clasifica el código",
+              "description": "Analizar fragmentos y justificar qué rasgos pertenecen a cada paradigma.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "focus": "Estado y efectos",
+          "activities": [
+            {
+              "title": "Estado explícito",
+              "description": "Identificar qué variables cambian en un programa y qué bugs pueden aparecer por ese cambio.",
+              "kind": "Reto"
+            },
+            {
+              "title": "Transformación sin mutar",
+              "description": "Reescribir una operación para producir nuevos valores en lugar de modificar estructuras existentes.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "focus": "Recursión y abstracción",
+          "activities": [
+            {
+              "title": "Recursión con propósito",
+              "description": "Resolver recorrido, búsqueda o reducción de una estructura mediante recursión.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Costo de la elegancia",
+              "description": "Comparar una solución recursiva e iterativa midiendo claridad y comportamiento.",
+              "kind": "Datos"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "focus": "El mismo problema, otra mente",
+          "activities": [
+            {
+              "title": "Diseña tres soluciones",
+              "description": "Bosquejar cómo se resolverá el proyecto desde tres paradigmas antes de implementar.",
+              "kind": "Diseño"
+            },
+            {
+              "title": "Pruebas comunes",
+              "description": "Definir casos que todas las implementaciones deben satisfacer para compararlas justamente.",
+              "kind": "Reto"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Programación funcional",
+      "description": "Se profundiza en composición, funciones puras, inmutabilidad y operaciones de alto nivel. Python permite trasladar los conceptos a herramientas usadas en datos; Haskell sirve como laboratorio donde el paradigma funcional es la regla y no la excepción.",
+      "objectives": [
+        "Construir transformaciones mediante funciones puras y composición.",
+        "Utilizar map, filter, reduce y comprensiones con criterio, no como sustitutos mecánicos de ciclos.",
+        "Diseñar pipelines de datos funcionales y fáciles de probar."
+      ],
+      "topics": [
+        "Funciones puras",
+        "Inmutabilidad",
+        "map/filter/reduce",
+        "Composición",
+        "Lambdas",
+        "Haskell básico",
+        "Tipos",
+        "Pipelines"
+      ],
+      "project": {
+        "title": "Pipeline funcional de análisis de datos",
+        "description": "Construir un pipeline reproducible que cargue un dataset, aplique transformaciones como funciones pequeñas, calcule indicadores y genere una salida final sin depender de estado global.",
+        "deliverables": [
+          "Pipeline ejecutable",
+          "Funciones con pruebas",
+          "Notebook o reporte de resultados",
+          "Comparación entre versión inicial y funcional"
+        ],
+        "skills": [
+          "Programación funcional",
+          "Data pipelines",
+          "Testing",
+          "Refactorización"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 5,
+          "focus": "Funciones como valores",
+          "activities": [
+            {
+              "title": "Map/filter/reduce con intención",
+              "description": "Resolver transformaciones y explicar por qué cada operación expresa mejor la intención.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Funciones que reciben funciones",
+              "description": "Construir una utilidad configurable mediante callbacks o funciones de orden superior.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "focus": "Pureza y testabilidad",
+          "activities": [
+            {
+              "title": "Purifica una función",
+              "description": "Eliminar dependencia de variables globales, reloj o entrada externa de una función existente.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Prueba determinista",
+              "description": "Crear pruebas para demostrar que mismas entradas producen mismas salidas.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "focus": "Composición y pipelines",
+          "activities": [
+            {
+              "title": "Pipeline de limpieza",
+              "description": "Encadenar funciones de limpieza y transformación sobre datos tabulares.",
+              "kind": "Datos"
+            },
+            {
+              "title": "Pequeño Haskell",
+              "description": "Implementar transformaciones equivalentes en Haskell para observar tipos e inmutabilidad.",
+              "kind": "Laboratorio"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "focus": "Diseño funcional aplicado",
+          "activities": [
+            {
+              "title": "Refactor del pipeline",
+              "description": "Separar I/O de lógica pura y reducir acoplamiento antes del proyecto.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Benchmark conceptual",
+              "description": "Comparar legibilidad, facilidad de prueba y rendimiento de dos estrategias.",
+              "kind": "Datos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Evaluación perezosa",
+      "description": "La evaluación perezosa se convierte en una herramienta para trabajar con secuencias grandes o potencialmente infinitas. Se conecta con generators de Python, streams y procesamiento eficiente de registros o telemetría.",
+      "objectives": [
+        "Explicar la diferencia entre evaluación inmediata y diferida mediante ejemplos observables.",
+        "Procesar grandes secuencias sin cargarlas completamente en memoria.",
+        "Diseñar pipelines lazy con generators y comparar consumo de recursos."
+      ],
+      "topics": [
+        "Lazy evaluation",
+        "Generators",
+        "yield",
+        "Iteradores",
+        "Secuencias infinitas",
+        "Haskell lazy lists",
+        "Streaming",
+        "Memoria"
+      ],
+      "project": {
+        "title": "Procesador lazy de telemetría o logs",
+        "description": "Crear un pipeline que procese un flujo grande de registros por etapas, filtre eventos, calcule estadísticas en ventanas y emita alertas sin cargar todo el archivo en memoria.",
+        "deliverables": [
+          "Generadores encadenados",
+          "Dataset grande o generador de stream",
+          "Medición de memoria/tiempo",
+          "Reporte de alertas y diseño"
+        ],
+        "skills": [
+          "Lazy evaluation",
+          "Streaming",
+          "Performance",
+          "Observabilidad"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 9,
+          "focus": "¿Cuándo se ejecuta realmente?",
+          "activities": [
+            {
+              "title": "Eager vs lazy",
+              "description": "Comparar listas y generadores observando cuándo ocurre cada cálculo.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Secuencia infinita segura",
+              "description": "Crear una secuencia potencialmente infinita y consumir solo lo necesario.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "focus": "Generators como tuberías",
+          "activities": [
+            {
+              "title": "Filtro por etapas",
+              "description": "Construir generators para leer, parsear, filtrar y transformar registros.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Sin reventar la RAM",
+              "description": "Procesar un archivo grande y comparar memoria contra una carga completa.",
+              "kind": "Datos"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "focus": "Ventanas y eventos",
+          "activities": [
+            {
+              "title": "Ventana móvil lazy",
+              "description": "Calcular medias u otros indicadores sobre una secuencia sin almacenar toda la historia.",
+              "kind": "Datos"
+            },
+            {
+              "title": "Detector de eventos",
+              "description": "Emitir alertas cuando el flujo cumpla patrones definidos.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "focus": "Lazy en otro lenguaje",
+          "activities": [
+            {
+              "title": "Listas infinitas en Haskell",
+              "description": "Explorar take, map y filter sobre secuencias perezosas.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Perfil de rendimiento",
+              "description": "Medir y explicar dónde el enfoque lazy ayuda y dónde puede complicar la depuración.",
+              "kind": "Datos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Fundamentos de la programación lógica",
+      "description": "Los alumnos modelan conocimiento como hechos y reglas, construyen un sistema experto y luego lo integran con un flujo moderno de desarrollo asistido por IA. La IA puede generar propuestas de código, pero las reglas, pruebas y defensa técnica determinan si el software es aceptable.",
+      "objectives": [
+        "Representar conocimiento mediante hechos, reglas y consultas.",
+        "Construir y explicar un sistema experto pequeño con Prolog.",
+        "Usar IA generativa para automatizar partes del desarrollo manteniendo especificaciones, pruebas y revisión humana."
+      ],
+      "topics": [
+        "Prolog",
+        "Hechos y reglas",
+        "Unificación",
+        "Backtracking",
+        "Sistemas expertos",
+        "IA para código",
+        "Especificaciones",
+        "Tests",
+        "Code review",
+        "RAG opcional"
+      ],
+      "project": {
+        "title": "AI Software Factory: sistema experto verificable",
+        "description": "Construir un sistema experto y una pequeña interfaz o servicio alrededor de él utilizando un flujo de desarrollo automatizado con IA: especificación → generación → pruebas → revisión → refactor. El equipo debe conservar evidencias de qué generó la IA y demostrar que comprende cada decisión.",
+        "deliverables": [
+          "Base de conocimiento Prolog",
+          "Aplicación o API que consulta el sistema experto",
+          "Archivo de especificación/prompt y bitácora de iteraciones",
+          "Pruebas generadas y revisadas",
+          "Informe de errores de la IA y correcciones humanas",
+          "Defensa individual del código"
+        ],
+        "skills": [
+          "Programación lógica",
+          "Sistemas expertos",
+          "AI-assisted development",
+          "Testing",
+          "Revisión de código"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 13,
+          "focus": "Conocimiento como reglas",
+          "activities": [
+            {
+              "title": "Hechos y consultas",
+              "description": "Modelar relaciones de un dominio y responder preguntas con Prolog.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Reglas que explican una decisión",
+              "description": "Construir reglas encadenadas y rastrear por qué una consulta resulta verdadera o falsa.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "focus": "Unificación y búsqueda",
+          "activities": [
+            {
+              "title": "Backtracking visible",
+              "description": "Diseñar consultas con varias soluciones y analizar el árbol de búsqueda.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Mini sistema experto",
+              "description": "Crear una base de reglas para diagnóstico, recomendación o configuración.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "focus": "Desarrollo automatizado con IA",
+          "activities": [
+            {
+              "title": "Spec → código",
+              "description": "Redactar una especificación verificable y pedir a una herramienta de IA que genere una capa de integración o pruebas.",
+              "kind": "IA"
+            },
+            {
+              "title": "La IA también se equivoca",
+              "description": "Revisar el código generado, encontrar al menos un riesgo o defecto y corregirlo con evidencia.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "focus": "IA bajo control de pruebas",
+          "activities": [
+            {
+              "title": "Pipeline de generación y test",
+              "description": "Automatizar la ejecución de pruebas después de cada cambio generado o sugerido por IA.",
+              "kind": "IA"
+            },
+            {
+              "title": "Defensa sin copiloto",
+              "description": "Explicar en vivo una regla, un flujo generado y una corrección humana sin consultar al asistente.",
+              "kind": "Reto"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

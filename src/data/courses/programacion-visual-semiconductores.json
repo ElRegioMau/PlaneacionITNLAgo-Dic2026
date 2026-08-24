@@ -1,0 +1,436 @@
+{
+  "slug": "programacion-visual-semiconductores",
+  "shortName": "Programación Visual",
+  "title": "Programación Visual",
+  "degree": "Ingeniería en Semiconductores",
+  "eyebrow": "GUI + instrumentación + adquisición de datos",
+  "summary": "Interfaces de ingeniería para visualizar, adquirir y controlar datos: GUI modernas, arquitectura de aplicaciones, comunicación serial/instrumentación y análisis inteligente de mediciones.",
+  "approach": "Las interfaces se desarrollan alrededor de necesidades de laboratorio y manufactura de semiconductores. Se usa Python con PySide6 para unir visualización, adquisición, almacenamiento y análisis sin convertir el curso en simple diseño de pantallas.",
+  "technologies": [
+    "Python",
+    "PySide6 / Qt",
+    "PyQtGraph",
+    "PySerial",
+    "PyVISA",
+    "CSV / SQLite",
+    "Pandas",
+    "scikit-learn",
+    "Git/GitHub"
+  ],
+  "modules": [
+    {
+      "number": 1,
+      "title": "Interfaces gráficas de usuario",
+      "description": "Se construyen fundamentos de GUI y diseño de interacción. El alumno aprende a representar estados, parámetros y acciones de un sistema técnico de forma clara y evitando interfaces que puedan inducir errores.",
+      "objectives": [
+        "Construir ventanas, layouts y controles utilizando una biblioteca GUI moderna.",
+        "Conectar eventos de usuario con lógica Python sin mezclar todas las responsabilidades.",
+        "Aplicar principios de legibilidad y prevención de errores en interfaces técnicas."
+      ],
+      "topics": [
+        "PySide6",
+        "Widgets",
+        "Layouts",
+        "Signals/slots",
+        "Eventos",
+        "Validación",
+        "UX de ingeniería",
+        "Git"
+      ],
+      "project": {
+        "title": "Panel de configuración de proceso",
+        "description": "Crear una GUI para configurar parámetros de un proceso de laboratorio o manufactura —temperatura, tiempo, voltaje, receta— con validación, estados y resumen previo a ejecución.",
+        "deliverables": [
+          "Aplicación ejecutable",
+          "Formulario con validaciones",
+          "Estados y mensajes de error",
+          "Repositorio y breve guía de uso"
+        ],
+        "skills": [
+          "GUI",
+          "Diseño de interacción",
+          "Validación",
+          "Python"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 1,
+          "focus": "Qué hace buena a una interfaz técnica",
+          "activities": [
+            {
+              "title": "Auditoría de una HMI",
+              "description": "Analizar una interfaz real o simulada e identificar riesgos de legibilidad, jerarquía y error humano.",
+              "kind": "Diseño"
+            },
+            {
+              "title": "Primera ventana Qt",
+              "description": "Crear proyecto PySide6 con estructura mínima, ventana y layout responsive.",
+              "kind": "Laboratorio"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "focus": "Controles y layout",
+          "activities": [
+            {
+              "title": "Panel de parámetros",
+              "description": "Usar inputs, selectores y labels para representar variables de proceso.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Layout que no se rompe",
+              "description": "Redimensionar la ventana y corregir alineación, agrupación y prioridades visuales.",
+              "kind": "Diseño"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "focus": "Eventos y lógica",
+          "activities": [
+            {
+              "title": "Signals & slots",
+              "description": "Conectar botones y cambios de valores con funciones Python.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Validación antes de ejecutar",
+              "description": "Bloquear combinaciones inválidas y explicar al usuario cómo corregirlas.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "focus": "Estado y feedback",
+          "activities": [
+            {
+              "title": "Máquina visual",
+              "description": "Representar LISTO, EJECUTANDO, PAUSA y ERROR con controles coherentes.",
+              "kind": "Reto"
+            },
+            {
+              "title": "Prueba con otro usuario",
+              "description": "Hacer una prueba rápida de usabilidad y aplicar al menos tres mejoras observadas.",
+              "kind": "Diseño"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Elementos avanzados y visualización de datos",
+      "description": "Las GUI comienzan a manejar tareas largas, tablas y gráficas dinámicas. Se introduce una arquitectura que separa interfaz, lógica y datos para evitar aplicaciones frágiles.",
+      "objectives": [
+        "Organizar una aplicación visual en componentes y capas mantenibles.",
+        "Representar datos tabulares y series de tiempo de manera interactiva.",
+        "Mantener la interfaz responsiva durante tareas de adquisición o procesamiento."
+      ],
+      "topics": [
+        "Arquitectura MVC/MVVM ligera",
+        "Tablas",
+        "Gráficas",
+        "PyQtGraph",
+        "Threads/workers",
+        "Timers",
+        "Logging",
+        "Manejo de errores"
+      ],
+      "project": {
+        "title": "Visor de mediciones de laboratorio",
+        "description": "Desarrollar un visor que importe o genere mediciones, muestre tabla y gráfica interactiva, calcule estadísticas y procese información sin congelar la interfaz.",
+        "deliverables": [
+          "Carga/generación de dataset",
+          "Tabla y gráfica sincronizadas",
+          "Estadísticas de medición",
+          "Operación responsiva durante procesamiento"
+        ],
+        "skills": [
+          "Visualización",
+          "Arquitectura GUI",
+          "Concurrencia",
+          "Análisis"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 5,
+          "focus": "Arquitectura que escala",
+          "activities": [
+            {
+              "title": "Separa UI y lógica",
+              "description": "Mover cálculos fuera de los handlers de botones y definir responsabilidades claras.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Diagrama de componentes",
+              "description": "Dibujar el flujo entre vista, datos y servicios del proyecto.",
+              "kind": "Diseño"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "focus": "Tablas y modelos de datos",
+          "activities": [
+            {
+              "title": "Data table",
+              "description": "Mostrar cientos de mediciones con columnas, formato y selección.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Filtro interactivo",
+              "description": "Permitir buscar o filtrar por lote, dispositivo, estado o rango.",
+              "kind": "Datos"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "focus": "Gráficas de ingeniería",
+          "activities": [
+            {
+              "title": "Curva dinámica",
+              "description": "Graficar una serie temporal o curva I‑V con ejes, unidades y zoom adecuados.",
+              "kind": "Datos"
+            },
+            {
+              "title": "Marcadores de límites",
+              "description": "Superponer límites de especificación y resaltar puntos fuera de rango.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "focus": "Interfaces que no se congelan",
+          "activities": [
+            {
+              "title": "Trabajo en background",
+              "description": "Ejecutar una tarea lenta usando worker/thread y reportar progreso a la GUI.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Errores observables",
+              "description": "Agregar logging y recuperación ante un archivo corrupto o cálculo fallido.",
+              "kind": "Reto"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Interfaces aplicadas a puertos e instrumentación",
+      "description": "La interfaz se conecta con el exterior. Se trabaja con comunicación serial y se introduce el concepto de instrumentación programable para que la GUI pueda adquirir datos y enviar comandos.",
+      "objectives": [
+        "Enviar y recibir información a través de un puerto serial desde una aplicación visual.",
+        "Diseñar un protocolo simple de mensajes y manejar desconexiones o datos inválidos.",
+        "Conocer el flujo de control de instrumentos mediante comandos y librerías como PyVISA."
+      ],
+      "topics": [
+        "PySerial",
+        "Puertos COM",
+        "Protocolos",
+        "Parsing",
+        "Timers",
+        "PyVISA",
+        "SCPI conceptual",
+        "Reconexión",
+        "Simuladores"
+      ],
+      "project": {
+        "title": "Osciloscopio / monitor virtual",
+        "description": "Crear una aplicación que reciba un stream de datos por serial real o simulado, grafique en tiempo real y permita enviar comandos básicos al dispositivo. Como extensión, simular un instrumento SCPI.",
+        "deliverables": [
+          "Conexión configurable",
+          "Parser robusto",
+          "Gráfica en tiempo real",
+          "Controles de comando",
+          "Manejo de desconexión"
+        ],
+        "skills": [
+          "Adquisición de datos",
+          "Protocolos",
+          "Instrumentación",
+          "Tiempo real"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 9,
+          "focus": "Hablar con un puerto",
+          "activities": [
+            {
+              "title": "Terminal serial visual",
+              "description": "Crear interfaz de conexión, envío y recepción con un puerto real o simulado.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Protocolo legible",
+              "description": "Definir mensajes como SENSOR:VALOR o JSON y validar entradas incompletas.",
+              "kind": "Diseño"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "focus": "Stream en tiempo real",
+          "activities": [
+            {
+              "title": "Buffer de datos",
+              "description": "Mantener una ventana de las últimas N muestras sin crecer indefinidamente.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Gráfica viva",
+              "description": "Actualizar una curva periódicamente sin bloquear la interacción.",
+              "kind": "Laboratorio"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "focus": "Comandos y control",
+          "activities": [
+            {
+              "title": "Control bidireccional",
+              "description": "Enviar SET/START/STOP y actualizar la GUI con confirmaciones del dispositivo.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Desconexión inesperada",
+              "description": "Detectar pérdida de conexión, cambiar estado visual y permitir reconexión segura.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "focus": "Instrumentación programable",
+          "activities": [
+            {
+              "title": "SCPI sin laboratorio caro",
+              "description": "Explorar comandos de instrumento mediante simulador o ejemplos y diseñar una capa de servicio.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "PyVISA conceptual",
+              "description": "Crear una abstracción para leer una medición sin acoplar la GUI a un instrumento específico.",
+              "kind": "Diseño"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Aplicaciones de adquisición y control inteligente",
+      "description": "El proyecto final del curso integra interfaz, instrumentación, almacenamiento y analítica. Se añaden SQL y un modelo sencillo de ML para detectar patrones en mediciones, manteniendo trazabilidad y criterio ingenieril.",
+      "objectives": [
+        "Integrar adquisición, persistencia, visualización y control en una aplicación completa.",
+        "Almacenar resultados de pruebas con trazabilidad de muestra, fecha y parámetros.",
+        "Aplicar análisis de datos o ML sencillo para apoyar la clasificación de mediciones."
+      ],
+      "topics": [
+        "SQLite",
+        "Pandas",
+        "Trazabilidad",
+        "DAQ",
+        "Dashboards",
+        "Clasificación",
+        "Anomalías",
+        "scikit-learn",
+        "Reportes"
+      ],
+      "project": {
+        "title": "Semiconductor Test Bench HMI",
+        "description": "Desarrollar una estación visual de prueba para un dispositivo o proceso simulado: configura parámetros, adquiere curvas/mediciones, guarda resultados, clasifica PASS/FAIL y muestra un análisis adicional basado en datos o ML.",
+        "deliverables": [
+          "GUI completa por capas",
+          "Adquisición real o simulada",
+          "SQLite con historial de pruebas",
+          "Visualización y PASS/FAIL",
+          "Modelo o detector de anomalías evaluado",
+          "Reporte/exportación de resultados"
+        ],
+        "skills": [
+          "HMI",
+          "DAQ",
+          "SQL",
+          "Machine Learning",
+          "Integración de sistemas"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 13,
+          "focus": "Trazabilidad de pruebas",
+          "activities": [
+            {
+              "title": "Modelo de datos de test",
+              "description": "Diseñar tablas para muestra, receta, medición, resultado y timestamp.",
+              "kind": "Diseño"
+            },
+            {
+              "title": "GUI + SQLite",
+              "description": "Guardar una ejecución y consultar el historial desde la aplicación.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "focus": "Pipeline de análisis",
+          "activities": [
+            {
+              "title": "Limpieza automática",
+              "description": "Transformar mediciones crudas en variables útiles y controlar faltantes o ruido.",
+              "kind": "Datos"
+            },
+            {
+              "title": "PASS/FAIL explicable",
+              "description": "Implementar primero una clasificación por límites de especificación como línea base.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "focus": "ML como segunda opinión",
+          "activities": [
+            {
+              "title": "Clasificador de prueba",
+              "description": "Entrenar un modelo sencillo sobre datos etiquetados y evaluar su desempeño.",
+              "kind": "IA"
+            },
+            {
+              "title": "Regla vs modelo",
+              "description": "Comparar el clasificador ML con la regla de especificación e identificar casos de desacuerdo.",
+              "kind": "Datos"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "focus": "Estación integrada",
+          "activities": [
+            {
+              "title": "Prueba de extremo a extremo",
+              "description": "Ejecutar configuración → adquisición → almacenamiento → análisis → reporte sin pasos manuales externos.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Revisión tipo industria",
+              "description": "Presentar arquitectura, trazabilidad, fallo más crítico y mejora siguiente del sistema.",
+              "kind": "Reto"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

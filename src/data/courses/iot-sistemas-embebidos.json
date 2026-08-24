@@ -1,0 +1,442 @@
+{
+  "slug": "iot-sistemas-embebidos",
+  "shortName": "IoT Embebidos",
+  "title": "Teoría y Práctica de la IoT con Sistemas Embebidos",
+  "degree": "Ingeniería en Sistemas",
+  "eyebrow": "Hardware + software + datos + IA local",
+  "summary": "Del microcontrolador conectado a un asistente doméstico inteligente: sensores, redes, APIs, persistencia, análisis de datos y LLM locales trabajando como un solo sistema.",
+  "approach": "Diseñar e implementar sistemas IoT funcionales mediante la integración de sistemas embebidos, sensores, redes, servicios web, almacenamiento de datos e inteligencia artificial local para resolver problemas reales de forma eficiente y responsable.",
+  "technologies": [
+    "ESP8266 / NodeMCU",
+    "Python",
+    "Flask",
+    "SQLite",
+    "REST",
+    "MQTT",
+    "HTML/CSS/JS",
+    "Pandas",
+    "scikit-learn",
+    "Ollama",
+    "RAG",
+    "Git/GitHub"
+  ],
+  "modules": [
+    {
+      "number": 1,
+      "title": "Objetos conectados: del sensor a la red",
+      "description": "Se construyen las bases del sistema embebido: lectura del entorno, control de actuadores, estados y conectividad Wi‑Fi. El alumno deja de ver el dispositivo como una placa aislada y comienza a tratarlo como un nodo de información.",
+      "objectives": [
+        "Programar entradas y salidas de un sistema embebido con una lógica clara y verificable.",
+        "Capturar, validar y transformar datos provenientes de sensores.",
+        "Conectar un dispositivo a una red y exponer información útil de forma segura."
+      ],
+      "topics": [
+        "ESP8266 / NodeMCU",
+        "GPIO",
+        "Sensores y actuadores",
+        "Puerto serial",
+        "Wi‑Fi",
+        "HTTP básico",
+        "Máquinas de estado",
+        "Git"
+      ],
+      "project": {
+        "title": "Nodo ambiental inteligente",
+        "description": "Construir un nodo IoT que mida al menos dos variables ambientales, controle un actuador y ofrezca un panel web local con estado en tiempo real.",
+        "deliverables": [
+          "Repositorio con código documentado",
+          "Diagrama de conexiones y arquitectura",
+          "Panel web funcional",
+          "Video corto demostrando sensores y actuador"
+        ],
+        "skills": [
+          "Programación embebida",
+          "Integración hardware/software",
+          "Debugging",
+          "Documentación técnica"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 1,
+          "focus": "Primer contacto con un sistema embebido",
+          "activities": [
+            {
+              "title": "Hola, mundo físico",
+              "description": "Configurar el entorno y controlar LED/entrada digital desde un programa mínimo.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Repositorio desde el día uno",
+              "description": "Crear repositorio, README, diagrama simple y convención de commits para el curso.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "focus": "Sensores y calidad del dato",
+          "activities": [
+            {
+              "title": "Sensor con criterio",
+              "description": "Leer una variable física, calibrarla y detectar valores fuera de rango.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Datos que sí sirven",
+              "description": "Registrar muestras por serial y calcular promedio, mínimo, máximo y ruido observado.",
+              "kind": "Datos"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "focus": "Actuadores y decisiones",
+          "activities": [
+            {
+              "title": "Regla automática",
+              "description": "Activar un actuador a partir de umbrales con histéresis para evitar oscilaciones.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Mini máquina de estados",
+              "description": "Modelar NORMAL, ALERTA y ACCIÓN sin llenar el programa de if anidados.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "focus": "Conectividad y visualización local",
+          "activities": [
+            {
+              "title": "ESP en la red",
+              "description": "Conectar el nodo por Wi‑Fi, diagnosticar dirección IP, pérdidas y reconexión.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Dashboard mínimo viable",
+              "description": "Servir una interfaz local que muestre las lecturas y el estado del dispositivo.",
+              "kind": "Diseño"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Del dispositivo a una arquitectura IoT",
+      "description": "El dispositivo empieza a formar parte de una arquitectura distribuida. Se separan frontend, backend y hardware; se diseñan endpoints y mensajes para telemetría y control remoto.",
+      "objectives": [
+        "Comprender la responsabilidad de dispositivo, cliente, servidor y broker.",
+        "Diseñar y consumir una API REST para intercambiar telemetría y comandos.",
+        "Integrar una interfaz web con un backend y un nodo IoT de extremo a extremo."
+      ],
+      "topics": [
+        "Cliente-servidor",
+        "Flask",
+        "API REST",
+        "JSON",
+        "fetch()",
+        "MQTT",
+        "Telemetría",
+        "CORS",
+        "Manejo de errores"
+      ],
+      "project": {
+        "title": "Centro de monitoreo y control IoT",
+        "description": "Crear una plataforma web donde un backend Flask reciba telemetría de un nodo y permita enviar comandos desde una interfaz responsive. Puede utilizar HTTP, MQTT o ambos.",
+        "deliverables": [
+          "API documentada",
+          "Frontend con telemetría y controles",
+          "Integración con dispositivo real o simulador",
+          "Pruebas de fallos de red y recuperación"
+        ],
+        "skills": [
+          "Arquitectura cliente-servidor",
+          "APIs",
+          "Protocolos IoT",
+          "Frontend",
+          "Resiliencia"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 5,
+          "focus": "Cómo viaja un dato IoT",
+          "activities": [
+            {
+              "title": "HTTP bajo la lupa",
+              "description": "Inspeccionar request, response, headers, códigos de estado y JSON con herramientas de desarrollo.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "HTTP vs MQTT",
+              "description": "Implementar o simular el mismo evento con ambos modelos y comparar latencia, simplicidad y uso.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "focus": "Backend para dispositivos",
+          "activities": [
+            {
+              "title": "Primera API con Flask",
+              "description": "Crear endpoints GET/POST para recibir telemetría y devolver comandos.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "API resistente",
+              "description": "Validar payloads, devolver errores correctos y registrar eventos del servidor.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "focus": "Frontend conectado",
+          "activities": [
+            {
+              "title": "fetch() sin magia",
+              "description": "Consumir la API desde JavaScript y representar los datos sin recargar la página.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "UX de un sistema real",
+              "description": "Diseñar estados de cargando, desconectado, error y dato desactualizado.",
+              "kind": "Diseño"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "focus": "Integración extremo a extremo",
+          "activities": [
+            {
+              "title": "Hardware → API → navegador",
+              "description": "Conectar el flujo completo y trazar un dato desde el sensor hasta la interfaz.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Prueba de caos pequeña",
+              "description": "Desconectar Wi‑Fi o servidor y documentar cómo se recupera el sistema.",
+              "kind": "Reto"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Datos e inteligencia para IoT",
+      "description": "La telemetría deja de ser una lista de números. Se almacena con estructura, se analiza para descubrir patrones y se conecta con modelos sencillos de ML y con IA generativa/RAG para apoyar diagnóstico y consulta técnica.",
+      "objectives": [
+        "Persistir telemetría mediante un modelo de datos coherente y operaciones CRUD.",
+        "Analizar series de datos IoT con Python para encontrar patrones, anomalías y tendencias.",
+        "Aplicar un modelo de ML sencillo y contextualizar respuestas de IA con información del sistema."
+      ],
+      "topics": [
+        "SQLite",
+        "CRUD",
+        "SQL",
+        "Pandas",
+        "Visualización",
+        "Features",
+        "scikit-learn",
+        "Anomalías",
+        "IA por API",
+        "RAG manual"
+      ],
+      "project": {
+        "title": "Monitor inteligente de condición",
+        "description": "Desarrollar un sistema que almacene telemetría, genere indicadores y utilice un modelo simple para detectar o predecir una condición anómala. Un asistente de IA debe explicar el estado apoyándose en datos y documentación del dispositivo.",
+        "deliverables": [
+          "Base SQLite con esquema y CRUD",
+          "Notebook o módulo de análisis con métricas",
+          "Modelo ML evaluado con datos de prueba",
+          "Consulta de IA contextualizada y evidencia de sus fuentes"
+        ],
+        "skills": [
+          "SQL",
+          "Análisis de datos",
+          "Machine Learning",
+          "RAG",
+          "Pensamiento experimental"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 9,
+          "focus": "Persistencia y trazabilidad",
+          "activities": [
+            {
+              "title": "Diseña la base antes de llenarla",
+              "description": "Modelar dispositivo, lectura, fecha y estado; crear tablas y restricciones en SQLite.",
+              "kind": "Diseño"
+            },
+            {
+              "title": "CRUD de telemetría",
+              "description": "Insertar, consultar, actualizar y eliminar registros desde Python o Flask.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "focus": "Exploración de datos IoT",
+          "activities": [
+            {
+              "title": "Del CSV al insight",
+              "description": "Usar Pandas para limpiar datos, resumirlos y visualizar tendencias o periodos extraños.",
+              "kind": "Datos"
+            },
+            {
+              "title": "KPI del dispositivo",
+              "description": "Definir al menos tres indicadores útiles: disponibilidad, rango, variación, consumo u otro.",
+              "kind": "Datos"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "focus": "Machine Learning pequeño pero útil",
+          "activities": [
+            {
+              "title": "Construye features",
+              "description": "Convertir ventanas de lecturas en variables útiles para clasificación o regresión.",
+              "kind": "Datos"
+            },
+            {
+              "title": "Modelo con línea base",
+              "description": "Entrenar un algoritmo sencillo, separar train/test y comparar contra una regla simple.",
+              "kind": "IA"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "focus": "IA con contexto técnico",
+          "activities": [
+            {
+              "title": "Respuesta sin contexto vs con contexto",
+              "description": "Comparar una consulta a un LLM sin información y otra alimentada con manuales/datos seleccionados.",
+              "kind": "IA"
+            },
+            {
+              "title": "RAG manual",
+              "description": "Construir un flujo simple de recuperación de fragmentos relevantes antes de preguntar al modelo.",
+              "kind": "IA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Edge AI: asistente doméstico con LLM local",
+      "description": "El cierre integra IoT e IA local. Ollama ejecuta un modelo en la computadora del alumno; el LLM interpreta intención, consulta contexto y solicita acciones a servicios controlados, sin entregarle acceso directo e irrestricto al hardware.",
+      "objectives": [
+        "Ejecutar y consumir un LLM local mediante Ollama.",
+        "Convertir lenguaje natural en acciones estructuradas y verificables sobre un sistema IoT.",
+        "Diseñar un asistente doméstico con contexto, permisos, registro de acciones y mecanismos de seguridad."
+      ],
+      "topics": [
+        "Ollama",
+        "LLM local",
+        "Prompts estructurados",
+        "JSON",
+        "Tool calling",
+        "RAG",
+        "Flask",
+        "MQTT / REST",
+        "Guardrails",
+        "Privacidad local"
+      ],
+      "project": {
+        "title": "Asistente doméstico IoT local",
+        "description": "Crear un asistente que opere localmente con Ollama, entienda instrucciones en lenguaje natural, consulte el estado del hogar y ejecute un conjunto limitado de acciones IoT a través de herramientas/API controladas.",
+        "deliverables": [
+          "Servicio local de Ollama integrado",
+          "Catálogo de herramientas IoT permitidas",
+          "Interfaz de chat y estado de dispositivos",
+          "RAG con documentación o reglas de la casa",
+          "Bitácora, permisos y demostración de acciones rechazadas por seguridad"
+        ],
+        "skills": [
+          "LLM local",
+          "Integración de sistemas",
+          "Automatización",
+          "Seguridad",
+          "Diseño de agentes"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 13,
+          "focus": "LLM en tu propia computadora",
+          "activities": [
+            {
+              "title": "Primer modelo local",
+              "description": "Instalar Ollama, comparar dos modelos disponibles y medir respuesta, consumo y calidad.",
+              "kind": "IA"
+            },
+            {
+              "title": "Salida que una máquina pueda leer",
+              "description": "Diseñar prompts que devuelvan intención, dispositivo y parámetros en JSON validable.",
+              "kind": "IA"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "focus": "El LLM no toca el hardware directamente",
+          "activities": [
+            {
+              "title": "Herramientas seguras",
+              "description": "Crear funciones permitidas como consultar_estado(), encender() o ajustar_objetivo().",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Intención → función",
+              "description": "Hacer que el backend valide la salida del modelo antes de ejecutar una herramienta IoT.",
+              "kind": "IA"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "focus": "Contexto, memoria y seguridad",
+          "activities": [
+            {
+              "title": "RAG doméstico",
+              "description": "Recuperar reglas, nombres de habitaciones y documentación antes de responder.",
+              "kind": "IA"
+            },
+            {
+              "title": "Red team del asistente",
+              "description": "Intentar provocar acciones peligrosas o fuera de permiso y reforzar validaciones y bitácoras.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "focus": "Integración y demostración",
+          "activities": [
+            {
+              "title": "Prueba de conversación real",
+              "description": "Ejecutar una secuencia de consulta, explicación, acción y confirmación sobre dispositivos.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Demo técnica defendible",
+              "description": "Preparar arquitectura, métricas, limitaciones y demostración final sin depender de diapositivas llenas de texto.",
+              "kind": "Diseño"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

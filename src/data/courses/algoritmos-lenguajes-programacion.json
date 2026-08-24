@@ -1,0 +1,435 @@
+{
+  "slug": "algoritmos-lenguajes-programacion",
+  "shortName": "Algoritmos",
+  "title": "Algoritmos y Lenguajes de Programación",
+  "degree": "Ingeniería Industrial",
+  "eyebrow": "Automatización + datos + decisiones",
+  "summary": "Programación para resolver problemas de ingeniería industrial: hojas de cálculo, lógica algorítmica, Python, archivos, APIs, análisis de datos y modelos predictivos sencillos.",
+  "approach": "El curso parte de herramientas familiares para la industria y progresa hacia automatización reproducible. Cada concepto se conecta con calidad, producción, inventarios, tiempos, costos o mejora continua.",
+  "technologies": [
+    "Excel / Google Sheets",
+    "Python",
+    "Jupyter",
+    "Pandas",
+    "Matplotlib",
+    "CSV / JSON",
+    "SQL",
+    "APIs REST",
+    "scikit-learn",
+    "Git/GitHub"
+  ],
+  "modules": [
+    {
+      "number": 1,
+      "title": "Datos, hojas de cálculo y pensamiento algorítmico",
+      "description": "La hoja de cálculo funciona como puente entre el análisis industrial tradicional y la programación. Los alumnos modelan problemas, convierten procesos en pasos y detectan cuándo una solución manual debe automatizarse.",
+      "objectives": [
+        "Resolver cálculos de ingeniería con hojas de cálculo bien estructuradas.",
+        "Traducir un proceso industrial en entradas, reglas, decisiones y salidas.",
+        "Representar soluciones con pseudocódigo y diagramas antes de programarlas."
+      ],
+      "topics": [
+        "Hojas de cálculo",
+        "Fórmulas",
+        "Funciones lógicas",
+        "Tablas dinámicas",
+        "KPIs",
+        "Pseudocódigo",
+        "Diagramas de flujo",
+        "Descomposición de problemas"
+      ],
+      "project": {
+        "title": "Tablero de desempeño de una línea de producción",
+        "description": "Diseñar una hoja de cálculo profesional que procese un conjunto de datos de producción, calcule KPIs y documente el algoritmo usado para clasificar el desempeño por turno o producto.",
+        "deliverables": [
+          "Archivo con datos, cálculos y dashboard",
+          "Diccionario de indicadores",
+          "Pseudocódigo del proceso de análisis",
+          "Conclusiones basadas en evidencia"
+        ],
+        "skills": [
+          "Análisis industrial",
+          "Hojas de cálculo",
+          "KPIs",
+          "Pensamiento algorítmico"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 1,
+          "focus": "Computación aplicada a la industria",
+          "activities": [
+            {
+              "title": "Radiografía de un proceso",
+              "description": "Identificar entradas, transformación, salidas y datos de un proceso industrial cotidiano.",
+              "kind": "Diseño"
+            },
+            {
+              "title": "Hoja de cálculo limpia",
+              "description": "Construir una tabla con tipos de dato, validación, referencias y formato consistente.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "focus": "Cálculo y decisión en spreadsheet",
+          "activities": [
+            {
+              "title": "KPIs con fórmulas",
+              "description": "Calcular productividad, scrap, eficiencia y tiempo ciclo con fórmulas reutilizables.",
+              "kind": "Datos"
+            },
+            {
+              "title": "Decisiones con funciones lógicas",
+              "description": "Clasificar lotes o turnos con IF, AND/OR y reglas de negocio.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "focus": "De una tarea a un algoritmo",
+          "activities": [
+            {
+              "title": "Proceso en pseudocódigo",
+              "description": "Convertir un procedimiento de inspección o producción en pasos inequívocos.",
+              "kind": "Diseño"
+            },
+            {
+              "title": "Diagrama con rutas de decisión",
+              "description": "Representar excepciones y decisiones sin ambigüedad en un flowchart.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "focus": "Automatización: cuándo y por qué",
+          "activities": [
+            {
+              "title": "Detecta trabajo repetible",
+              "description": "Elegir una tarea manual y estimar cuántas operaciones puede ahorrar un programa.",
+              "kind": "Reto"
+            },
+            {
+              "title": "Especificación del proyecto",
+              "description": "Definir entradas, reglas, salidas y casos de prueba del tablero del módulo.",
+              "kind": "Diseño"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Python para resolver problemas de operación",
+      "description": "Se introduce programación estructurada con Python usando casos cuantitativos reales: capacidad, inventarios, calidad, costos, tiempos y simulaciones pequeñas.",
+      "objectives": [
+        "Codificar algoritmos básicos usando variables, operadores, entradas y salidas.",
+        "Aplicar decisiones y ciclos para modelar reglas y procesos repetitivos.",
+        "Depurar programas utilizando casos de prueba y mensajes de diagnóstico."
+      ],
+      "topics": [
+        "Python",
+        "Variables",
+        "Condicionales",
+        "for / while",
+        "Validación",
+        "Simulación",
+        "Debugging",
+        "Casos de prueba"
+      ],
+      "project": {
+        "title": "Simulador de operación industrial",
+        "description": "Crear un programa que simule una operación —producción, inventario, inspección o colas simplificadas— y entregue métricas que permitan comparar al menos dos escenarios.",
+        "deliverables": [
+          "Programa Python ejecutable",
+          "Casos de prueba",
+          "Reporte de métricas de escenarios",
+          "README con supuestos y limitaciones"
+        ],
+        "skills": [
+          "Programación estructurada",
+          "Modelado",
+          "Simulación",
+          "Análisis de escenarios"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 5,
+          "focus": "Primer programa útil",
+          "activities": [
+            {
+              "title": "Calculadora de ingeniería",
+              "description": "Programar conversiones, capacidad o consumo usando entradas validadas.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Errores que cuestan dinero",
+              "description": "Provocar y corregir errores de tipo, división, entrada y lógica.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "focus": "Decisiones de negocio en código",
+          "activities": [
+            {
+              "title": "Clasificador de calidad",
+              "description": "Codificar criterios de aceptación/rechazo con condicionales claros.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Política de inventario",
+              "description": "Modelar punto de reorden y alertas usando varios factores.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "focus": "Repetición y simulación",
+          "activities": [
+            {
+              "title": "Producción por turno",
+              "description": "Recorrer órdenes y acumular producción, scrap y tiempo perdido.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Monte Carlo mini",
+              "description": "Usar números aleatorios para observar variabilidad en tiempos o demanda.",
+              "kind": "Datos"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "focus": "Calidad del código",
+          "activities": [
+            {
+              "title": "Casos límite",
+              "description": "Diseñar pruebas para cero producción, datos inválidos, máximos y mínimos.",
+              "kind": "Reto"
+            },
+            {
+              "title": "Refactor antes de entregar",
+              "description": "Reducir duplicación y mejorar nombres, comentarios y estructura del simulador.",
+              "kind": "Práctica"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Datos industriales: archivos, Pandas y SQL",
+      "description": "Los alumnos pasan de variables aisladas a conjuntos de datos. Aprenden a importar, limpiar, transformar y consultar información como lo harían en un entorno de operaciones o analítica.",
+      "objectives": [
+        "Manipular colecciones y archivos para almacenar información de operación.",
+        "Limpiar y analizar datos tabulares con Pandas.",
+        "Realizar consultas SQL básicas y conectar resultados con un flujo de Python."
+      ],
+      "topics": [
+        "Listas y diccionarios",
+        "CSV",
+        "JSON",
+        "Pandas",
+        "Limpieza",
+        "Visualización",
+        "SQL",
+        "SQLite",
+        "EDA"
+      ],
+      "project": {
+        "title": "Laboratorio de calidad basado en datos",
+        "description": "Construir un pipeline que importe datos de inspección o proceso, limpie errores, almacene información estructurada y produzca un informe de calidad con visualizaciones y hallazgos.",
+        "deliverables": [
+          "Dataset limpio y trazable",
+          "Notebook/script de análisis",
+          "Base SQLite con consultas clave",
+          "Gráficas y conclusiones operativas"
+        ],
+        "skills": [
+          "Data wrangling",
+          "SQL",
+          "Visualización",
+          "Toma de decisiones"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 9,
+          "focus": "Colecciones que representan la operación",
+          "activities": [
+            {
+              "title": "Ordenes en listas y diccionarios",
+              "description": "Modelar órdenes, máquinas y defectos con estructuras de Python.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Resumen sin Pandas",
+              "description": "Calcular frecuencias y métricas recorriendo una colección para entender el algoritmo.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "focus": "Archivos que llegan “sucios”",
+          "activities": [
+            {
+              "title": "CSV imperfecto",
+              "description": "Leer un archivo con faltantes, tipos incorrectos y duplicados; documentar decisiones de limpieza.",
+              "kind": "Datos"
+            },
+            {
+              "title": "JSON de una orden",
+              "description": "Serializar y recuperar una estructura de producción en formato JSON.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "focus": "Pandas para análisis exploratorio",
+          "activities": [
+            {
+              "title": "EDA de producción",
+              "description": "Agrupar por turno, producto o máquina y encontrar desviaciones relevantes.",
+              "kind": "Datos"
+            },
+            {
+              "title": "Visualización con propósito",
+              "description": "Crear gráficas que respondan preguntas concretas, no solo “se vean bonitas”.",
+              "kind": "Datos"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "focus": "SQL para ingenieros",
+          "activities": [
+            {
+              "title": "Consulta la planta",
+              "description": "Crear tablas SQLite y responder preguntas con SELECT, WHERE, GROUP BY y JOIN.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Python + SQL",
+              "description": "Leer una consulta desde Python y convertirla en un indicador o gráfica.",
+              "kind": "Datos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Automatización, APIs y predicción",
+      "description": "El cierre conecta funciones reutilizables, servicios externos y aprendizaje automático. El objetivo no es formar científicos de datos en cuatro semanas, sino mostrar cómo una solución industrial moderna combina código, datos y modelos.",
+      "objectives": [
+        "Diseñar funciones reutilizables y separar responsabilidades del programa.",
+        "Consumir datos externos desde una API y automatizar un flujo de actualización.",
+        "Entrenar y evaluar un modelo predictivo básico sin confundir correlación con certeza."
+      ],
+      "topics": [
+        "Funciones",
+        "Módulos",
+        "APIs REST",
+        "JSON",
+        "Automatización",
+        "Regresión",
+        "Clasificación",
+        "Train/test",
+        "Métricas",
+        "IA responsable"
+      ],
+      "project": {
+        "title": "Asistente predictivo para operaciones",
+        "description": "Desarrollar una aplicación Python que actualice o cargue datos, calcule indicadores y utilice un modelo sencillo para predecir demanda, tiempo, calidad o riesgo. Debe explicar la predicción y sus limitaciones.",
+        "deliverables": [
+          "Código modular",
+          "Fuente de datos local o API",
+          "Modelo con métrica de evaluación",
+          "Interfaz CLI o notebook ejecutivo",
+          "Conclusión sobre utilidad y riesgos del modelo"
+        ],
+        "skills": [
+          "Automatización",
+          "APIs",
+          "Machine Learning",
+          "Comunicación de resultados"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 13,
+          "focus": "Funciones que reducen errores",
+          "activities": [
+            {
+              "title": "De script a funciones",
+              "description": "Refactorizar un análisis largo en funciones pequeñas con entradas y salidas claras.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Pruebas rápidas",
+              "description": "Crear asserts o pruebas simples para validar cálculos críticos.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "focus": "Datos desde servicios",
+          "activities": [
+            {
+              "title": "Consume una API",
+              "description": "Consultar una API pública, interpretar JSON y seleccionar información relevante para un problema.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Pipeline automático",
+              "description": "Guardar la consulta, transformar datos y generar un resumen sin pasos manuales repetitivos.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "focus": "Primer modelo predictivo",
+          "activities": [
+            {
+              "title": "Regresión o clasificación",
+              "description": "Entrenar un modelo de scikit-learn sobre un problema industrial apropiado.",
+              "kind": "IA"
+            },
+            {
+              "title": "¿Es mejor que adivinar?",
+              "description": "Separar entrenamiento/prueba y comparar métrica contra una línea base sencilla.",
+              "kind": "Datos"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "focus": "Del modelo a una decisión",
+          "activities": [
+            {
+              "title": "Explica la predicción",
+              "description": "Traducir salida del modelo a una recomendación y mencionar incertidumbre y supuestos.",
+              "kind": "IA"
+            },
+            {
+              "title": "Demo ejecutiva de 5 minutos",
+              "description": "Presentar el producto como si se propusiera a un jefe de operaciones: problema, evidencia, beneficio y riesgo.",
+              "kind": "Diseño"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

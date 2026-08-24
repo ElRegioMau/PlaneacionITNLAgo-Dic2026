@@ -1,0 +1,432 @@
+{
+  "slug": "programacion-basica-mecatronica",
+  "shortName": "Prog. Básica",
+  "title": "Programación Básica",
+  "degree": "Ingeniería Mecatrónica",
+  "eyebrow": "Python + simulación + datos de sensores",
+  "summary": "Fundamentos de programación exclusivamente con Python, aplicados a cálculo de ingeniería, simulación de máquinas, tratamiento de señales y automatización de tareas mecatrónicas.",
+  "approach": "Python será el único lenguaje del curso. Las estructuras clásicas del temario se traducen a herramientas actuales de Python sin perder los fundamentos: algoritmos, control de flujo, colecciones, referencias, módulos y archivos.",
+  "technologies": [
+    "Python",
+    "VS Code",
+    "Jupyter",
+    "NumPy",
+    "Matplotlib",
+    "CSV / JSON",
+    "PySerial (simulado o real)",
+    "scikit-learn",
+    "Git/GitHub"
+  ],
+  "modules": [
+    {
+      "number": 1,
+      "title": "Algoritmos y fundamentos con Python",
+      "description": "Se aprende a pasar de una necesidad de ingeniería a un algoritmo ejecutable. La prioridad es comprender tipos de datos, operaciones, entrada/salida y precisión antes de construir programas más grandes.",
+      "objectives": [
+        "Analizar un problema y dividirlo en pasos programables.",
+        "Escribir y ejecutar programas Python con variables, operadores y conversiones.",
+        "Validar resultados numéricos utilizando casos conocidos y unidades físicas."
+      ],
+      "topics": [
+        "Algoritmos",
+        "Pseudocódigo",
+        "Python",
+        "Tipos de datos",
+        "Operadores",
+        "Entrada/salida",
+        "Conversión de unidades",
+        "Errores numéricos"
+      ],
+      "project": {
+        "title": "Caja de herramientas del ingeniero",
+        "description": "Crear una aplicación de consola con varias utilidades mecatrónicas: conversiones, Ley de Ohm, potencia, velocidad angular, relación de engranes u otros cálculos, con validación de datos y menú de navegación.",
+        "deliverables": [
+          "Código Python organizado",
+          "Menú interactivo",
+          "Al menos cinco herramientas de cálculo",
+          "Casos de prueba y README"
+        ],
+        "skills": [
+          "Fundamentos Python",
+          "Cálculo de ingeniería",
+          "Validación",
+          "Pensamiento algorítmico"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 1,
+          "focus": "Del problema al algoritmo",
+          "activities": [
+            {
+              "title": "Algoritmo sin computadora",
+              "description": "Describir paso a paso un cálculo físico y probarlo manualmente con dos casos.",
+              "kind": "Diseño"
+            },
+            {
+              "title": "Tu entorno Python",
+              "description": "Configurar Python/VS Code y ejecutar, modificar y depurar un script mínimo.",
+              "kind": "Laboratorio"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "focus": "Variables, tipos y unidades",
+          "activities": [
+            {
+              "title": "Conversor técnico",
+              "description": "Programar conversiones de temperatura, longitud, presión o velocidad con unidades claras.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Caza de tipos",
+              "description": "Explorar int, float, str, bool y errores de conversión con entradas reales.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "focus": "Expresiones de ingeniería",
+          "activities": [
+            {
+              "title": "Calculadora eléctrica",
+              "description": "Implementar relaciones de voltaje, corriente, resistencia y potencia.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Precisión importa",
+              "description": "Comparar redondeo, formato y tolerancias al evaluar resultados numéricos.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "focus": "Entrada robusta y diseño del programa",
+          "activities": [
+            {
+              "title": "Usuario impredecible",
+              "description": "Validar entradas y evitar que el programa termine por un dato incorrecto.",
+              "kind": "Reto"
+            },
+            {
+              "title": "Prototipo de toolbox",
+              "description": "Integrar las utilidades del proyecto en un menú navegable.",
+              "kind": "Práctica"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Control de flujo y comportamiento",
+      "description": "Los programas comienzan a tomar decisiones y repetir acciones. Los casos se acercan a control discreto, secuencias y simulación, sin necesidad de programar todavía un microcontrolador.",
+      "objectives": [
+        "Construir decisiones legibles con estructuras condicionales.",
+        "Utilizar ciclos para procesar secuencias y simular evolución en el tiempo.",
+        "Modelar comportamientos mediante estados y condiciones de transición."
+      ],
+      "topics": [
+        "if / elif / else",
+        "for",
+        "while",
+        "break / continue",
+        "Máquinas de estado",
+        "Simulación",
+        "Debugging",
+        "Pruebas"
+      ],
+      "project": {
+        "title": "Simulador de máquina automática",
+        "description": "Simular en Python una máquina o celda sencilla con estados —apagada, lista, operando, alarma—, entradas simuladas, ciclos de operación y registro de eventos.",
+        "deliverables": [
+          "Diagrama de estados",
+          "Simulador interactivo",
+          "Registro de eventos",
+          "Escenarios normal y de falla"
+        ],
+        "skills": [
+          "Control de flujo",
+          "Máquinas de estado",
+          "Simulación",
+          "Diagnóstico"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 5,
+          "focus": "Decisiones y límites",
+          "activities": [
+            {
+              "title": "Control ON/OFF virtual",
+              "description": "Simular el encendido de un actuador según una variable física y límites definidos.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Zona segura",
+              "description": "Crear alarmas por niveles con prioridades y mensajes de diagnóstico.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "focus": "Ciclos y señales discretas",
+          "activities": [
+            {
+              "title": "Muestreo simulado",
+              "description": "Generar una secuencia de lecturas y procesarla en un ciclo.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Conteo de piezas",
+              "description": "Simular pulsos de un sensor y calcular producción, rechazos y eficiencia.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "focus": "Máquinas de estado",
+          "activities": [
+            {
+              "title": "Semáforo industrial",
+              "description": "Modelar estados y transiciones sin usar cadenas interminables de condiciones.",
+              "kind": "Diseño"
+            },
+            {
+              "title": "Falla y recuperación",
+              "description": "Añadir un estado de alarma que requiera una condición explícita para volver a operar.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "focus": "Depuración sistemática",
+          "activities": [
+            {
+              "title": "Bug hunt",
+              "description": "Recibir un simulador con errores y clasificarlos como sintaxis, ejecución o lógica.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Prueba escenarios",
+              "description": "Crear una tabla de pruebas y demostrar que cada transición ocurre cuando debe.",
+              "kind": "Práctica"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Datos, arreglos y referencias en Python",
+      "description": "Se modelan lecturas, matrices y estructuras de información con listas, diccionarios, NumPy y objetos de datos. También se estudia cómo Python maneja referencias y mutabilidad para comprender qué ocurre al pasar información entre partes del programa.",
+      "objectives": [
+        "Procesar arreglos unidimensionales y multidimensionales de datos.",
+        "Representar dispositivos y mediciones con estructuras apropiadas.",
+        "Explicar mutabilidad, referencias y paso de objetos en Python mediante experimentos observables."
+      ],
+      "topics": [
+        "Listas",
+        "Matrices",
+        "NumPy",
+        "Diccionarios",
+        "dataclass",
+        "Referencias",
+        "Mutabilidad",
+        "Visualización"
+      ],
+      "project": {
+        "title": "Analizador de telemetría de un robot",
+        "description": "Procesar un conjunto de telemetría con posición, velocidad, corriente o temperatura; calcular estadísticas, detectar condiciones fuera de rango y generar visualizaciones.",
+        "deliverables": [
+          "Carga o generación de telemetría",
+          "Procesamiento con Python/NumPy",
+          "Gráficas con Matplotlib",
+          "Reporte de eventos fuera de rango"
+        ],
+        "skills": [
+          "Arreglos",
+          "NumPy",
+          "Estructuras de datos",
+          "Análisis de señales"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 9,
+          "focus": "Listas y señales",
+          "activities": [
+            {
+              "title": "Ventana de mediciones",
+              "description": "Guardar lecturas en listas y calcular estadísticas sin librerías externas.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Filtro móvil manual",
+              "description": "Implementar un promedio móvil para suavizar una señal simulada.",
+              "kind": "Reto"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "focus": "Matrices con NumPy",
+          "activities": [
+            {
+              "title": "Matriz de sensores",
+              "description": "Representar varios sensores a través del tiempo y calcular estadísticas por canal.",
+              "kind": "Datos"
+            },
+            {
+              "title": "Trayectoria 2D",
+              "description": "Aplicar operaciones vectoriales sencillas a coordenadas o desplazamientos.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "focus": "Estructuras para sistemas reales",
+          "activities": [
+            {
+              "title": "Ficha de un dispositivo",
+              "description": "Representar configuración y estado con diccionarios o dataclass.",
+              "kind": "Diseño"
+            },
+            {
+              "title": "Inventario de componentes",
+              "description": "Administrar una colección de actuadores/sensores y consultar por propiedades.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "focus": "Referencias y mutabilidad",
+          "activities": [
+            {
+              "title": "¿Por qué cambió mi lista?",
+              "description": "Experimentar con asignación, copia y modificación para visualizar referencias en Python.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Función con efectos controlados",
+              "description": "Comparar una función que modifica una colección con otra que devuelve una nueva.",
+              "kind": "Reto"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Programas modulares, archivos y datos inteligentes",
+      "description": "El curso cierra organizando código en módulos y trabajando con información persistente. Sobre registros de sensores se introduce una experiencia pequeña de ML para mostrar cómo la programación básica conecta con mantenimiento predictivo.",
+      "objectives": [
+        "Crear funciones y módulos con responsabilidades claras.",
+        "Leer y escribir archivos de datos de forma segura.",
+        "Construir un pipeline básico que analice registros de sensores y detecte un comportamiento anómalo."
+      ],
+      "topics": [
+        "Funciones",
+        "Módulos",
+        "CSV",
+        "JSON",
+        "Manejo de archivos",
+        "Excepciones",
+        "PySerial",
+        "Pandas básico",
+        "ML introductorio"
+      ],
+      "project": {
+        "title": "Monitor de condición mecatrónico",
+        "description": "Desarrollar una aplicación modular en Python que lea datos de sensores desde archivo o puerto serial simulado, los almacene, grafique y clasifique un estado normal/anómalo con una regla o modelo sencillo.",
+        "deliverables": [
+          "Paquete Python dividido en módulos",
+          "Entrada de datos CSV/serial",
+          "Registro de eventos y gráficas",
+          "Clasificador simple con evaluación",
+          "Manual de uso"
+        ],
+        "skills": [
+          "Modularidad",
+          "Archivos",
+          "Telemetría",
+          "Introducción a ML"
+        ]
+      },
+      "weeks": [
+        {
+          "number": 13,
+          "focus": "Funciones y módulos",
+          "activities": [
+            {
+              "title": "Divide y vencerás",
+              "description": "Refactorizar un programa en funciones de adquisición, cálculo, validación y salida.",
+              "kind": "Práctica"
+            },
+            {
+              "title": "Tu primer módulo reutilizable",
+              "description": "Mover utilidades a un archivo importable y documentar su interfaz.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "focus": "Archivos y registros",
+          "activities": [
+            {
+              "title": "Logger de sensores",
+              "description": "Guardar muestras con timestamp en CSV y volver a cargarlas.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Configuración en JSON",
+              "description": "Guardar límites, nombres de sensores y parámetros sin modificar el código.",
+              "kind": "Práctica"
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "focus": "Del puerto a los datos",
+          "activities": [
+            {
+              "title": "Serial simulado",
+              "description": "Procesar líneas con el formato de un microcontrolador usando archivo, generador o PySerial si hay hardware.",
+              "kind": "Laboratorio"
+            },
+            {
+              "title": "Anomalía sencilla",
+              "description": "Entrenar un modelo básico o usar una regla estadística para separar operación normal y anómala.",
+              "kind": "IA"
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "focus": "Integración profesional",
+          "activities": [
+            {
+              "title": "Programa instalable mentalmente",
+              "description": "Revisar estructura, dependencias, errores, logs y README como si otro ingeniero fuera a usarlo.",
+              "kind": "Reto"
+            },
+            {
+              "title": "Demo de condición",
+              "description": "Mostrar adquisición, almacenamiento, gráfica y detección durante una ejecución continua.",
+              "kind": "Laboratorio"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
