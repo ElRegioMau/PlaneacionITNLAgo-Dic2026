@@ -13,7 +13,6 @@
 .profile-orbit { position: relative; padding: 34px; min-height: 420px; border: 1px solid rgba(169,198,235,.17); border-radius: 34px; background: linear-gradient(145deg, rgba(19,39,65,.86), rgba(10,23,39,.75)); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
 .profile-orbit::before { content:""; position:absolute; inset: 0; background: radial-gradient(circle at 75% 15%, rgba(99,230,255,.12), transparent 34%); }
 .orbit-glow { position: absolute; width: 230px; height: 230px; border: 1px solid rgba(99,230,255,.15); border-radius: 50%; top: -55px; right: -45px; box-shadow: 0 0 0 34px rgba(123,166,255,.035), 0 0 0 72px rgba(183,156,255,.025); }
-.profile-monogram { position: absolute; top: 38px; left: 34px; width: 86px; height: 86px; border-radius: 28px; display:grid; place-items:center; font-weight:900; font-size: 24px; color:#06111d; background:linear-gradient(135deg,var(--cyan),var(--violet)); transform: rotate(-4deg); }
 .profile-status { display: flex; gap: 8px; align-items:center; color:#b7c5d9; font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
 .profile-status > span { width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 18px var(--green); }
 .profile-orbit h2 { font-size: 29px; line-height:1.05; letter-spacing:-.035em; margin:14px 0 9px; position:relative; }

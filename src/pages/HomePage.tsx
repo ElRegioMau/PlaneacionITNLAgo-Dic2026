@@ -22,7 +22,6 @@ export default function HomePage() {
 
         <aside className="profile-orbit reveal delay-one" aria-label="Perfil docente resumido">
           <div className="orbit-glow" />
-          <div className="profile-monogram">MA</div>
           <span className="profile-status"><span /> Docencia + industria + IA</span>
           <h2>{profile.name}</h2>
           <p>{profile.role}</p>
