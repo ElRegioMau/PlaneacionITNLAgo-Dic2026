@@ -102,6 +102,18 @@ export default function HomePage() {
           <p>Cuando una actividad use IA generativa, se valorará la especificación, la revisión, las pruebas, la trazabilidad de cambios y la capacidad de explicar el resultado.</p>
         </div>
       </section>
+
+      <section className="section-shell qr-section" aria-labelledby="qr-title">
+        <div>
+          <span className="eyebrow">Consulta la planeación</span>
+          <h2 id="qr-title">Lleva esta página contigo</h2>
+          <p>Escanea el código QR o escribe la siguiente dirección en tu navegador:</p>
+          <a href="https://elregiomau.github.io/PlaneacionITNLAgo-Dic2026/">
+            elregiomau.github.io/PlaneacionITNLAgo-Dic2026/
+          </a>
+        </div>
+        <img src="./planeacionITNL.png" alt="Código QR para abrir la Planeación Docente Agosto–Diciembre 2026" />
+      </section>
     </div>
   )
 }
