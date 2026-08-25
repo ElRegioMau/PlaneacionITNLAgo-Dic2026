@@ -4,6 +4,8 @@ export interface Activity {
   title: string
   description: string
   kind: ActivityKind
+  image?: string
+  imageAlt?: string
 }
 
 export interface WeekPlan {

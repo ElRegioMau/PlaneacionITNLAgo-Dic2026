@@ -23,6 +23,13 @@ export default function WeekPlan({ week }: { week: WeekPlanType }) {
             <div>
               <strong>{activity.title}</strong>
               <p>{activity.description}</p>
+              {activity.image && (
+                <img
+                  className="activity-image"
+                  src={activity.image}
+                  alt={activity.imageAlt ?? ''}
+                />
+              )}
             </div>
           </div>
         ))}

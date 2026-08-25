@@ -52,6 +52,7 @@
 .activity-item:last-child { border-bottom:0; }
 .activity-item strong { font-size:14px; }
 .activity-item p { margin:5px 0 0; color:#9fb1c9; line-height:1.6; font-size:14px; }
+.activity-image { display:block; width:min(100%,420px); height:auto; margin-top:14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:white; }
 .kind-badge { height:max-content; text-align:center; padding:6px 7px; border-radius:7px; font-size:10px; text-transform:uppercase; letter-spacing:.075em; font-weight:800; background:rgba(255,255,255,.055); color:#b7c6da; }
 .kind-ai { color:#d7c8ff; background:rgba(183,156,255,.09); }
 .kind-data { color:#a9f3d6; background:rgba(113,239,193,.075); }

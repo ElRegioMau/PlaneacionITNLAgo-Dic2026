@@ -60,9 +60,11 @@
           "focus": "Pensar antes de programar",
           "activities": [
             {
-              "title": "Paradigmas en 30 líneas",
-              "description": "Resolver una transformación de datos en estilo imperativo y funcional y comparar el flujo mental.",
-              "kind": "Práctica"
+              "title": "Área de una figura con tres paradigmas",
+              "description": "Calcular el área de la figura compuesta mostrada e implementar la solución con los paradigmas imperativo, funcional y orientado a objetos; después, comparar la estructura y claridad de cada enfoque.",
+              "kind": "Práctica",
+              "image": "./area-figura-compuesta.webp",
+              "imageAlt": "Figura compuesta azul con medidas en centímetros para calcular su área"
             },
             {
               "title": "Clasifica el código",
