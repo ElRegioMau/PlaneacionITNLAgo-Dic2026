@@ -64,7 +64,9 @@
               "description": "Calcular el área de la figura compuesta mostrada e implementar la solución con los paradigmas imperativo, funcional y orientado a objetos; después, comparar la estructura y claridad de cada enfoque.",
               "kind": "Práctica",
               "image": "./area-figura-compuesta.webp",
-              "imageAlt": "Figura compuesta azul con medidas en centímetros para calcular su área"
+              "imageAlt": "Figura compuesta azul con medidas en centímetros para calcular su área",
+              "imageCollapsible": true,
+              "imageToggleLabel": "Ver figura de la actividad"
             },
             {
               "title": "Clasifica el código",

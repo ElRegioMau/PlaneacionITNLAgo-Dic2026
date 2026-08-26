@@ -6,6 +6,8 @@ export interface Activity {
   kind: ActivityKind
   image?: string
   imageAlt?: string
+  imageCollapsible?: boolean
+  imageToggleLabel?: string
   resources?: {
     label: string
     language?: string

@@ -58,7 +58,22 @@ export default function WeekPlan({ week }: { week: WeekPlanType }) {
             <div>
               <strong>{activity.title}</strong>
               <p>{activity.description}</p>
-              {activity.image && (
+              {activity.image && activity.imageCollapsible && (
+                <details className="activity-resources activity-image-details">
+                  <summary>
+                    <span>{activity.imageToggleLabel ?? 'Ver imagen de la actividad'}</span>
+                    <ChevronDown size={17} aria-hidden="true" />
+                  </summary>
+                  <div className="activity-image-content">
+                    <img
+                      className="activity-image"
+                      src={activity.image}
+                      alt={activity.imageAlt ?? ''}
+                    />
+                  </div>
+                </details>
+              )}
+              {activity.image && !activity.imageCollapsible && (
                 <img
                   className="activity-image"
                   src={activity.image}
