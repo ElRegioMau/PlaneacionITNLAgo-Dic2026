@@ -6,6 +6,11 @@ export interface Activity {
   kind: ActivityKind
   image?: string
   imageAlt?: string
+  resources?: {
+    label: string
+    language?: string
+    content: string
+  }[]
 }
 
 export interface WeekPlan {

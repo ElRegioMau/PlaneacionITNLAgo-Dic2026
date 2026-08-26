@@ -1,4 +1,6 @@
-import type { WeekPlan as WeekPlanType } from '../types/course'
+import { Check, ChevronDown, Copy } from 'lucide-react'
+import { useState } from 'react'
+import type { Activity, WeekPlan as WeekPlanType } from '../types/course'
 
 const kindClass: Record<string, string> = {
   Práctica: 'kind-practice',
@@ -7,6 +9,39 @@ const kindClass: Record<string, string> = {
   IA: 'kind-ai',
   Diseño: 'kind-design',
   Laboratorio: 'kind-lab',
+}
+
+function ActivityResources({ resources }: { resources: NonNullable<Activity['resources']> }) {
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null)
+
+  const copyResource = async (content: string, index: number) => {
+    await navigator.clipboard.writeText(content)
+    setCopiedIndex(index)
+    window.setTimeout(() => setCopiedIndex(null), 1800)
+  }
+
+  return (
+    <details className="activity-resources">
+      <summary>
+        <span>Ver script y preguntas</span>
+        <ChevronDown size={17} aria-hidden="true" />
+      </summary>
+      <div className="activity-resources-content">
+        {resources.map((resource, index) => (
+          <section className="activity-resource" key={resource.label}>
+            <div className="activity-resource-header">
+              <strong>{resource.label}</strong>
+              <button type="button" onClick={() => copyResource(resource.content, index)}>
+                {copiedIndex === index ? <Check size={15} /> : <Copy size={15} />}
+                {copiedIndex === index ? 'Copiado' : 'Copiar'}
+              </button>
+            </div>
+            <pre><code className={resource.language ? `language-${resource.language}` : undefined}>{resource.content}</code></pre>
+          </section>
+        ))}
+      </div>
+    </details>
+  )
 }
 
 export default function WeekPlan({ week }: { week: WeekPlanType }) {
@@ -30,6 +65,7 @@ export default function WeekPlan({ week }: { week: WeekPlanType }) {
                   alt={activity.imageAlt ?? ''}
                 />
               )}
+              {activity.resources && <ActivityResources resources={activity.resources} />}
             </div>
           </div>
         ))}

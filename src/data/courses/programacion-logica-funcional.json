@@ -68,8 +68,19 @@
             },
             {
               "title": "Clasifica el código",
-              "description": "Analizar fragmentos y justificar qué rasgos pertenecen a cada paradigma.",
-              "kind": "Reto"
+              "description": "Analizar fragmentos y justificar qué rasgos pertenecen a cada paradigma y contesta las preguntas.",
+              "kind": "Reto",
+              "resources": [
+                {
+                  "label": "Script de Python",
+                  "language": "python",
+                  "content": "class Alumno:\n    def __init__(self, nombre, promedio, semestre):\n        self.nombre = nombre\n        self.promedio = promedio\n        self.semestre = semestre\n\n    def mostrar(self):\n        return f\"{self.nombre} - Promedio: {self.promedio} - Semestre: {self.semestre}\"\n\n\nalumnos = [\n    Alumno(\"Ana\", 92, 4),\n    Alumno(\"Luis\", 65, 2),\n    Alumno(\"Carlos\", 78, 6),\n    Alumno(\"María\", 95, 4),\n    Alumno(\"Pedro\", 58, 2)\n]\n\n\nfor alumno in alumnos:\n    print(alumno.mostrar())\n\n\npromedio_total = 0\n\nfor alumno in alumnos:\n    promedio_total = promedio_total + alumno.promedio\n\npromedio_grupo = promedio_total / len(alumnos)\n\nprint(\"Promedio del grupo:\", promedio_grupo)\n\n\nreprobados = [\n    alumno for alumno in alumnos\n    if alumno.promedio < 70\n]\n\nprint(\"Alumnos reprobados:\")\n\nfor alumno in reprobados:\n    print(alumno.nombre, \"- Semestre:\", alumno.semestre)\n\n\nmejor_promedio = 0\nmejor_alumno = \"\"\n\nfor alumno in alumnos:\n    if alumno.promedio > mejor_promedio:\n        mejor_promedio = alumno.promedio\n        mejor_alumno = alumno.nombre\n\nprint(\"Mejor promedio:\")\nprint(mejor_alumno, \"-\", mejor_promedio)"
+                },
+                {
+                  "label": "Preguntas de la actividad",
+                  "content": "1. De forma general, ¿qué hace este script?\n\n2. ¿Qué fragmentos corresponden al paradigma imperativo?\n   ¿Por qué?\n\n3. ¿Qué fragmentos corresponden al paradigma declarativo?\n   ¿Por qué?\n\n4. ¿Qué fragmentos corresponden al paradigma orientado a objetos?\n   ¿Por qué?\n\n5. Sin eliminar ni modificar el código existente, agrega una funcionalidad que muestre los nombres de todos los alumnos que aprobaron y el semestre en el que se encuentran.\n\n6. Sin eliminar ni modificar el código existente, agrega al final una funcionalidad que muestre los nombres de todos los alumnos en 2 semestre."
+                }
+              ]
             }
           ]
         },

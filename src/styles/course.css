@@ -53,6 +53,18 @@
 .activity-item strong { font-size:14px; }
 .activity-item p { margin:5px 0 0; color:#9fb1c9; line-height:1.6; font-size:14px; }
 .activity-image { display:block; width:min(100%,420px); height:auto; margin-top:14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:white; }
+.activity-resources { margin-top:13px; border:1px solid rgba(99,230,255,.14); border-radius:11px; background:rgba(5,15,27,.55); overflow:hidden; }
+.activity-resources summary { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 13px; color:#bde9f1; font-size:12px; font-weight:800; cursor:pointer; list-style:none; }
+.activity-resources summary::-webkit-details-marker { display:none; }
+.activity-resources summary svg { transition:transform .2s ease; }
+.activity-resources[open] summary svg { transform:rotate(180deg); }
+.activity-resources-content { display:grid; gap:12px; padding:0 12px 12px; border-top:1px solid rgba(255,255,255,.055); }
+.activity-resource { min-width:0; padding-top:12px; }
+.activity-resource-header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; }
+.activity-resource-header > strong { color:#d7e5f5; font-size:12px; }
+.activity-resource-header button { display:inline-flex; align-items:center; gap:6px; padding:6px 9px; border:1px solid rgba(255,255,255,.1); border-radius:7px; color:#b9cadf; background:rgba(255,255,255,.04); font:inherit; font-size:11px; cursor:pointer; }
+.activity-resource-header button:hover { color:white; border-color:rgba(99,230,255,.25); }
+.activity-resource pre { max-height:320px; margin:0; padding:12px; overflow:auto; border-radius:8px; color:#c8d6e8; background:#07111e; font-size:11px; line-height:1.55; white-space:pre; }
 .kind-badge { height:max-content; text-align:center; padding:6px 7px; border-radius:7px; font-size:10px; text-transform:uppercase; letter-spacing:.075em; font-weight:800; background:rgba(255,255,255,.055); color:#b7c6da; }
 .kind-ai { color:#d7c8ff; background:rgba(183,156,255,.09); }
 .kind-data { color:#a9f3d6; background:rgba(113,239,193,.075); }
