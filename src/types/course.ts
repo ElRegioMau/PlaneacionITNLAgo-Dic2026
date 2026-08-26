@@ -13,6 +13,11 @@ export interface Activity {
     language?: string
     content: string
   }[]
+  downloads?: {
+    label: string
+    fileName: string
+    url: string
+  }[]
 }
 
 export interface WeekPlan {

@@ -1,4 +1,4 @@
-import { Check, ChevronDown, Copy } from 'lucide-react'
+import { Check, ChevronDown, Copy, Download } from 'lucide-react'
 import { useState } from 'react'
 import type { Activity, WeekPlan as WeekPlanType } from '../types/course'
 
@@ -44,6 +44,31 @@ function ActivityResources({ resources }: { resources: NonNullable<Activity['res
   )
 }
 
+function ActivityDownloads({ downloads }: { downloads: NonNullable<Activity['downloads']> }) {
+  return (
+    <details className="activity-resources activity-downloads">
+      <summary>
+        <span>Descargar drivers para ESP32</span>
+        <ChevronDown size={17} aria-hidden="true" />
+      </summary>
+      <div className="activity-downloads-content">
+        {downloads.map((download) => (
+          <a href={download.url} download={download.fileName} key={download.url}>
+            <span>
+              <strong>{download.label}</strong>
+              <small>{download.fileName}</small>
+            </span>
+            <span className="activity-download-action">
+              <Download size={16} aria-hidden="true" />
+              Descargar
+            </span>
+          </a>
+        ))}
+      </div>
+    </details>
+  )
+}
+
 export default function WeekPlan({ week }: { week: WeekPlanType }) {
   return (
     <article className="week-card">
@@ -81,6 +106,7 @@ export default function WeekPlan({ week }: { week: WeekPlanType }) {
                 />
               )}
               {activity.resources && <ActivityResources resources={activity.resources} />}
+              {activity.downloads && <ActivityDownloads downloads={activity.downloads} />}
             </div>
           </div>
         ))}

@@ -64,7 +64,19 @@
             {
               "title": "Hola, mundo físico",
               "description": "Configurar el entorno y controlar LED/entrada digital desde un programa mínimo.",
-              "kind": "Laboratorio"
+              "kind": "Laboratorio",
+              "downloads": [
+                {
+                  "label": "Driver CP210x para Windows",
+                  "fileName": "CP210x_Universal_Windows_Driver.zip",
+                  "url": "/drivers/CP210x_Universal_Windows_Driver.zip"
+                },
+                {
+                  "label": "Driver CH34x para Windows",
+                  "fileName": "CH34x_Install_Windows_v3_4.zip",
+                  "url": "/drivers/CH34x_Install_Windows_v3_4.zip"
+                }
+              ]
             },
             {
               "title": "Repositorio desde el día uno",

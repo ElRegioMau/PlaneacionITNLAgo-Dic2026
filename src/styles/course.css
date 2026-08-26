@@ -59,6 +59,12 @@
 .activity-resources summary svg { transition:transform .2s ease; }
 .activity-resources[open] summary svg { transform:rotate(180deg); }
 .activity-resources-content { display:grid; gap:12px; padding:0 12px 12px; border-top:1px solid rgba(255,255,255,.055); }
+.activity-downloads-content { display:grid; gap:9px; padding:12px; border-top:1px solid rgba(255,255,255,.055); }
+.activity-downloads-content a { display:flex; align-items:center; justify-content:space-between; gap:16px; min-width:0; padding:11px 12px; border:1px solid rgba(99,230,255,.14); border-radius:9px; background:rgba(99,230,255,.055); color:#e4f8fb; text-decoration:none; transition:border-color .2s ease, background .2s ease; }
+.activity-downloads-content a:hover { border-color:rgba(99,230,255,.35); background:rgba(99,230,255,.1); }
+.activity-downloads-content a > span:first-child { min-width:0; display:grid; gap:3px; }
+.activity-downloads-content small { color:#8fa5bd; overflow-wrap:anywhere; }
+.activity-download-action { display:inline-flex; align-items:center; gap:7px; flex:none; color:#63e6ff; font-size:12px; font-weight:800; }
 .activity-resource { min-width:0; padding-top:12px; }
 .activity-resource-header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; }
 .activity-resource-header > strong { color:#d7e5f5; font-size:12px; }
@@ -101,5 +107,6 @@
   .section-heading-row { align-items:flex-start; flex-direction:column; }
   .project-card { margin:18px 15px 20px; padding:20px; }
   .activity-item { grid-template-columns:1fr; gap:8px; }
+  .activity-downloads-content a { align-items:flex-start; flex-direction:column; gap:9px; }
   .kind-badge { width:max-content; }
 }
