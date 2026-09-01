@@ -71,6 +71,13 @@
 .activity-resource-header button { display:inline-flex; align-items:center; gap:6px; padding:6px 9px; border:1px solid rgba(255,255,255,.1); border-radius:7px; color:#b9cadf; background:rgba(255,255,255,.04); font:inherit; font-size:11px; cursor:pointer; }
 .activity-resource-header button:hover { color:white; border-color:rgba(99,230,255,.25); }
 .activity-resource pre { max-height:320px; margin:0; padding:12px; overflow:auto; border-radius:8px; color:#c8d6e8; background:#07111e; font-size:11px; line-height:1.55; white-space:pre; }
+.activity-resource-text { padding:12px 14px; border-radius:8px; color:#b9cadf; background:#07111e; font-size:13px; line-height:1.65; }
+.activity-resource-text p { margin:0; }
+.activity-resource-text p + p { margin-top:9px; }
+.activity-resource-list { margin:0; padding:13px 14px 13px 34px; border-radius:8px; color:#b9cadf; background:#07111e; font-size:13px; line-height:1.65; }
+.activity-resource-list li { padding-left:3px; }
+.activity-resource-list li + li { margin-top:8px; }
+.activity-resource-list li::marker { color:var(--cyan); font-weight:800; }
 .activity-image-content { padding:0 12px 12px; border-top:1px solid rgba(255,255,255,.055); }
 .activity-image-details .activity-image { margin-top:12px; }
 .kind-badge { height:max-content; text-align:center; padding:6px 7px; border-radius:7px; font-size:10px; text-transform:uppercase; letter-spacing:.075em; font-weight:800; background:rgba(255,255,255,.055); color:#b7c6da; }

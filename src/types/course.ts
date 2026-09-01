@@ -8,9 +8,11 @@ export interface Activity {
   imageAlt?: string
   imageCollapsible?: boolean
   imageToggleLabel?: string
+  resourceToggleLabel?: string
   resources?: {
     label: string
     language?: string
+    format?: 'code' | 'text' | 'ordered-list'
     content: string
   }[]
   downloads?: {

@@ -11,7 +11,13 @@ const kindClass: Record<string, string> = {
   Laboratorio: 'kind-lab',
 }
 
-function ActivityResources({ resources }: { resources: NonNullable<Activity['resources']> }) {
+function ActivityResources({
+  resources,
+  toggleLabel = 'Ver script y preguntas',
+}: {
+  resources: NonNullable<Activity['resources']>
+  toggleLabel?: string
+}) {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null)
 
   const copyResource = async (content: string, index: number) => {
@@ -23,7 +29,7 @@ function ActivityResources({ resources }: { resources: NonNullable<Activity['res
   return (
     <details className="activity-resources">
       <summary>
-        <span>Ver script y preguntas</span>
+        <span>{toggleLabel}</span>
         <ChevronDown size={17} aria-hidden="true" />
       </summary>
       <div className="activity-resources-content">
@@ -36,7 +42,17 @@ function ActivityResources({ resources }: { resources: NonNullable<Activity['res
                 {copiedIndex === index ? 'Copiado' : 'Copiar'}
               </button>
             </div>
-            <pre><code className={resource.language ? `language-${resource.language}` : undefined}>{resource.content}</code></pre>
+            {resource.format === 'ordered-list' ? (
+              <ol className="activity-resource-list">
+                {resource.content.split('\n').filter(Boolean).map((item) => <li key={item}>{item}</li>)}
+              </ol>
+            ) : resource.format === 'text' ? (
+              <div className="activity-resource-text">
+                {resource.content.split('\n').filter(Boolean).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+            ) : (
+              <pre><code className={resource.language ? `language-${resource.language}` : undefined}>{resource.content}</code></pre>
+            )}
           </section>
         ))}
       </div>
@@ -105,7 +121,12 @@ export default function WeekPlan({ week }: { week: WeekPlanType }) {
                   alt={activity.imageAlt ?? ''}
                 />
               )}
-              {activity.resources && <ActivityResources resources={activity.resources} />}
+              {activity.resources && (
+                <ActivityResources
+                  resources={activity.resources}
+                  toggleLabel={activity.resourceToggleLabel}
+                />
+              )}
               {activity.downloads && <ActivityDownloads downloads={activity.downloads} />}
             </div>
           </div>

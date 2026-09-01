@@ -98,7 +98,30 @@
             {
               "title": "Transformación sin mutar",
               "description": "Reescribir una operación para producir nuevos valores en lugar de modificar estructuras existentes.",
-              "kind": "Práctica"
+              "kind": "Práctica",
+              "resourceToggleLabel": "Ver problema, instrucciones y preguntas",
+              "resources": [
+                {
+                  "label": "Problema razonado: Sistema de recuperación de calificaciones",
+                  "format": "text",
+                  "content": "El profesor decide aplicar una actividad de recuperación a las calificaciones del grupo.\nLos alumnos con calificación menor a 70 recibirán 8 puntos adicionales.\nLos alumnos que ya aprobaron conservarán su calificación.\nLas calificaciones originales deben conservarse sin modificaciones."
+                },
+                {
+                  "label": "Datos iniciales",
+                  "language": "python",
+                  "content": "calificaciones = [65, 80, 98, 58, 74, 69, 95]\n\ncalificaciones_recuperacion = []"
+                },
+                {
+                  "label": "Instrucciones",
+                  "format": "ordered-list",
+                  "content": "Imprime las calificaciones originales.\nCrea una nueva lista llamada calificaciones_recuperacion = []; esta lista inicia sin elementos.\nRecorre las calificaciones originales.\nSi una calificación es menor a 70, agrega 8 puntos.\nSi la calificación ya es aprobatoria, conserva su valor.\nImprime las calificaciones_recuperacion.\nImprime cuántos alumnos aprobaron después de la recuperación.\nImprime cuántos continuaron reprobados.\nImprime el promedio del grupo después de la recuperación.\nNo modifiques directamente la lista calificaciones.\nIntenta obtener estos resultados sin modificar ninguna de las dos listas."
+                },
+                {
+                  "label": "Preguntas para responder",
+                  "format": "ordered-list",
+                  "content": "Para calcular el promedio final del grupo, ¿qué dos datos necesitas obtener primero a partir de calificaciones_recuperacion?\n¿Qué variable podría funcionar como acumulador para sumar todas las calificaciones finales?\nSi después de la recuperación quieres saber cuántos alumnos aprobaron y cuántos reprobaron, ¿qué condiciones debería revisar el programa para cada caso?\nSi el profesor necesita comparar las calificaciones antes y después de la recuperación, ¿qué conviene hacer con la lista original: modificarla o conservarla?\nObservando tu solución completa, ¿en qué fragmentos encuentras características del paradigma imperativo?\n¿En cuáles encuentras una forma más declarativa de expresar el resultado?"
+                }
+              ]
             }
           ]
         },
