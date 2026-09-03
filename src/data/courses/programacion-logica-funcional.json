@@ -93,7 +93,30 @@
             {
               "title": "Estado explícito",
               "description": "Identificar qué variables cambian en un programa y qué bugs pueden aparecer por ese cambio.",
-              "kind": "Reto"
+              "kind": "Reto",
+              "resourceToggleLabel": "Ver código, instrucciones y preguntas",
+              "resources": [
+                {
+                  "label": "Código con dos bugs lógicos",
+                  "language": "python",
+                  "content": "precios = [500, 1200, 300, 850, 1500, 200]\n\nprint(\"Precios originales:\")\nprint(precios)\n\n\n# Calcular el total de los precios\ntotal = 0\n\nfor precio in precios:\n    total = total + precio\n\nprint(\"Total:\", total)\n\n\n# Contar productos caros\n# Se considera caro un producto de $800 o más\nproductos_caros = 0\n\nfor precio in precios:\n    if precio >= 800:\n        productos_caros = productos_caros + 1\n\nprint(\"Productos de $800 o más:\", productos_caros)\n\n\n# Crear nuevos precios con 10% de descuento\nprecios_descuento = []\n\nfor precio in precios:\n    nuevo_precio = precio * 0.90\n    precios_descuento.append(nuevo_precio)\n\n\n# La lista original debe conservarse\nprecios = precios_descuento\n\n\nprint(\"\\nPrecios originales:\")\nprint(precios)\n\nprint(\"Precios con descuento:\")\nprint(precios_descuento)\n\n\n# Contar productos de $800 o más después del descuento\nfor precio in precios_descuento:\n    if precio >= 800:\n        productos_caros = productos_caros + 1\n\nprint(\"Productos de $800 o más después del descuento:\", productos_caros)"
+                },
+                {
+                  "label": "Instrucciones",
+                  "format": "ordered-list",
+                  "content": "Ejecuta el programa y analiza los resultados.\nIdentifica los **dos bugs lógicos**.\nCorrige ambos errores.\nLa lista `precios` debe conservar siempre los precios originales.\nLa lista `precios_descuento` debe contener los precios después de aplicar el 10% de descuento.\nEl conteo de productos caros antes y después del descuento debe mostrar resultados independientes."
+                },
+                {
+                  "label": "Funcionalidades que debes agregar",
+                  "format": "ordered-list",
+                  "content": "**Promedio de precios:** calcula e imprime el promedio de los precios originales. No utilices valores escritos manualmente para indicar cuántos productos existen.\n**Productos económicos:** cuenta e imprime cuántos productos originales cuestan menos de $500. El resultado esperado es: Productos menores de $500: 2.\n**Precio más alto:** encuentra e imprime el precio más alto de la lista original. Para este reto no utilices `max()`; utiliza una variable cuyo valor cambie conforme recorres la lista."
+                },
+                {
+                  "label": "Preguntas para responder",
+                  "format": "ordered-list",
+                  "content": "Si necesitamos consultar los precios antes y después de aplicar el descuento, ¿qué problema provoca que la variable `precios` termine guardando también los precios con descuento?\nAntes de contar los productos caros por segunda vez, ¿qué valor conserva `productos_caros` del primer conteo y cómo podría afectar el resultado?\n¿Qué variables del programa funcionan como **estado que cambia paso a paso** durante la ejecución?\nPara encontrar el precio más alto sin utilizar `max()`, ¿qué valor tendría que recordar y actualizar el programa mientras recorre la lista?\nDespués de corregir los bugs, ¿qué diferencia existe entre modificar los datos originales y generar una nueva lista a partir de ellos?"
+                }
+              ]
             },
             {
               "title": "Transformación sin mutar",

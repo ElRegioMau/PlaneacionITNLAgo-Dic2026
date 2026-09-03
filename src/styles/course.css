@@ -78,6 +78,8 @@
 .activity-resource-list li { padding-left:3px; }
 .activity-resource-list li + li { margin-top:8px; }
 .activity-resource-list li::marker { color:var(--cyan); font-weight:800; }
+.activity-resource-text strong,.activity-resource-list strong { color:#e4edf8; }
+.activity-resource-text code,.activity-resource-list code { padding:2px 5px; border-radius:5px; color:#bde9f1; background:rgba(99,230,255,.08); font:inherit; font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:.92em; }
 .activity-image-content { padding:0 12px 12px; border-top:1px solid rgba(255,255,255,.055); }
 .activity-image-details .activity-image { margin-top:12px; }
 .kind-badge { height:max-content; text-align:center; padding:6px 7px; border-radius:7px; font-size:10px; text-transform:uppercase; letter-spacing:.075em; font-weight:800; background:rgba(255,255,255,.055); color:#b7c6da; }

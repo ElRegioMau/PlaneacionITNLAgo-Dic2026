@@ -1,5 +1,5 @@
 import { Check, ChevronDown, Copy, Download } from 'lucide-react'
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import type { Activity, WeekPlan as WeekPlanType } from '../types/course'
 
 const kindClass: Record<string, string> = {
@@ -9,6 +9,20 @@ const kindClass: Record<string, string> = {
   IA: 'kind-ai',
   Diseño: 'kind-design',
   Laboratorio: 'kind-lab',
+}
+
+function formatInlineText(text: string) {
+  return text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={`${part}-${index}`}>{part.slice(2, -2)}</strong>
+    }
+
+    if (part.startsWith('`') && part.endsWith('`')) {
+      return <code key={`${part}-${index}`}>{part.slice(1, -1)}</code>
+    }
+
+    return <Fragment key={`${part}-${index}`}>{part}</Fragment>
+  })
 }
 
 function ActivityResources({
@@ -44,11 +58,11 @@ function ActivityResources({
             </div>
             {resource.format === 'ordered-list' ? (
               <ol className="activity-resource-list">
-                {resource.content.split('\n').filter(Boolean).map((item) => <li key={item}>{item}</li>)}
+                {resource.content.split('\n').filter(Boolean).map((item) => <li key={item}>{formatInlineText(item)}</li>)}
               </ol>
             ) : resource.format === 'text' ? (
               <div className="activity-resource-text">
-                {resource.content.split('\n').filter(Boolean).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {resource.content.split('\n').filter(Boolean).map((paragraph) => <p key={paragraph}>{formatInlineText(paragraph)}</p>)}
               </div>
             ) : (
               <pre><code className={resource.language ? `language-${resource.language}` : undefined}>{resource.content}</code></pre>
