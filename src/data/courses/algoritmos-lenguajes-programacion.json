@@ -92,9 +92,29 @@
           "focus": "De una tarea a un algoritmo",
           "activities": [
             {
-              "title": "Proceso en pseudocódigo",
-              "description": "Convertir un procedimiento de inspección o producción en pasos inequívocos.",
-              "kind": "Diseño"
+              "title": "Formulario de ventas conectado a una base de datos",
+              "description": "Crear un formulario HTML para capturar modelo, precio y cliente, y guardar los registros en Google Sheets mediante Apps Script.",
+              "kind": "Diseño",
+              "resourceToggleLabel": "Ver instrucciones y scripts",
+              "resources": [
+                {
+                  "label": "Preparación",
+                  "format": "ordered-list",
+                  "content": "En Google Sheets, crea una pestaña llamada Ventas con las columnas modelo, precio y cliente, en ese orden. La hoja será el almacén de datos del formulario.\nAbre Extensiones → Apps Script y pega el código doPost completo del siguiente recurso.\nImplementa el script como aplicación web y copia la URL de la implementación para sustituir PEGA_AQUI_TU_URL.\nEn tu proyecto HTML, usa un formulario con id formulario y campos con los identificadores modelo, precio y cliente. Agrega un botón de tipo submit.\nCrea el archivo script.js con el segundo código y vincúlalo al HTML mediante <script src=\"script.js\" defer></script>.\nEnvía una venta de prueba y comprueba que se agregue una fila en Ventas. Con mode: no-cors, el navegador no puede leer la respuesta; el aviso del ejemplo no confirma que el registro se haya guardado."
+                },
+                {
+                  "label": "Extensiones → Apps Script",
+                  "language": "javascript",
+                  "format": "code",
+                  "content": "function doPost(e) {\n    var hoja = SpreadsheetApp\n        .getActiveSpreadsheet()\n        .getSheetByName(\"Ventas\");\n\n    var modelo = e.parameter.modelo;\n    var precio = e.parameter.precio;\n    var cliente = e.parameter.cliente;\n\n    hoja.appendRow([\n        modelo,\n        precio,\n        cliente\n    ]);\n\n    return ContentService.createTextOutput(\"Venta guardada\");\n}"
+                },
+                {
+                  "label": "Proyecto HTML → script.js",
+                  "language": "javascript",
+                  "format": "code",
+                  "content": "var formulario = document.getElementById(\"formulario\");\n\nformulario.addEventListener(\"submit\", function(event) {\n    event.preventDefault();\n\n    var modelo = document.getElementById(\"modelo\").value;\n    var precio = document.getElementById(\"precio\").value;\n    var cliente = document.getElementById(\"cliente\").value;\n\n    var datos = new URLSearchParams();\n\n    datos.append(\"modelo\", modelo);\n    datos.append(\"precio\", precio);\n    datos.append(\"cliente\", cliente);\n\n    fetch(\"PEGA_AQUI_TU_URL\", {\n        method: \"POST\",\n        mode: \"no-cors\",\n        body: datos\n    });\n\n    alert(\"Venta guardada\");\n});"
+                }
+              ]
             },
             {
               "title": "Diagrama con rutas de decisión",
