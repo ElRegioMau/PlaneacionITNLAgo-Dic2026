@@ -158,9 +158,52 @@
               "kind": "Práctica"
             },
             {
-              "title": "Costo de la elegancia",
-              "description": "Comparar una solución recursiva e iterativa midiendo claridad y comportamiento.",
-              "kind": "Datos"
+              "title": "Sistema de empleados y nómina",
+              "description": "Modelar empleados con clases y métodos, calcular salarios y bonos sin modificar los datos originales, y analizar la nómina de la empresa.",
+              "kind": "Datos",
+              "resourceToggleLabel": "Ver actividad, código y preguntas",
+              "resources": [
+                {
+                  "label": "Planteamiento",
+                  "format": "text",
+                  "content": "Una empresa necesita desarrollar un pequeño sistema para calcular el salario semanal de sus empleados.\nCada empleado debe tener: **nombre**, **horas trabajadas** y **pago por hora**."
+                },
+                {
+                  "label": "Partes 1, 2 y 3 — Clase y métodos",
+                  "format": "ordered-list",
+                  "content": "**Crear la clase:** crea una clase llamada `Empleado`. Su constructor debe recibir `nombre`, `horas` y `pago_hora`, y almacenar estos datos como atributos del objeto. Usa la estructura `def __init__(self, nombre, horas, pago_hora):`.\n**Calcular el salario:** dentro de la clase crea el método `calcular_salario()`. Debe multiplicar las horas trabajadas por el pago por hora, regresar el resultado con `return` y no modificar los atributos originales.\n**Mostrar información:** crea el método `mostrar()`. Debe regresar un texto con el nombre, las horas trabajadas, el pago por hora y el salario calculado. Ejemplo: Ana - Horas: 40 - Pago por hora: $100 - Salario: $4000."
+                },
+                {
+                  "label": "Parte 4 — Empleados que debes crear",
+                  "language": "python",
+                  "content": "empleados = [\n    Empleado(\"Ana\", 40, 100),\n    Empleado(\"Luis\", 35, 120),\n    Empleado(\"María\", 45, 110),\n    Empleado(\"Carlos\", 30, 90),\n    Empleado(\"Sofía\", 42, 130)\n]\n\n# Recorre la lista e imprime cada empleado con el método mostrar()."
+                },
+                {
+                  "label": "Partes 5 y 6 — Bono y salarios finales",
+                  "format": "ordered-list",
+                  "content": "**Bono de productividad:** crea la función `aplicar_bono(salario)`. Si el salario es igual o mayor a $4500, agrega un 10%; si es menor, conserva el salario. Regresa el resultado con `return` y no modifiques directamente ningún objeto `Empleado`.\n**Lista de resultados:** crea una lista vacía llamada `salarios_finales`.\nRecorre la lista `empleados` y, para cada empleado, obtén su salario con `calcular_salario()`.\nEnvía cada salario a `aplicar_bono()` y guarda el resultado en `salarios_finales`.\nAl finalizar, imprime el título Salarios finales y la lista resultante. Los atributos originales de los empleados no deben modificarse."
+                },
+                {
+                  "label": "Código inicial para salarios finales",
+                  "language": "python",
+                  "content": "def aplicar_bono(salario):\n    # Completa la función.\n    pass\n\n\nsalarios_finales = []\n\n# Recorre empleados, calcula cada salario, aplica el bono\n# y guarda cada resultado en salarios_finales.\n\nprint(\"Salarios finales:\")\nprint(salarios_finales)"
+                },
+                {
+                  "label": "Parte 7 — Análisis de nómina",
+                  "format": "ordered-list",
+                  "content": "Calcula cuánto dinero deberá pagar la empresa en total por concepto de nómina.\nCuenta cuántos empleados recibieron bono.\nEncuentra el empleado con el salario final más alto. No utilices `max()`; usa una variable que almacene el salario más alto encontrado durante el recorrido."
+                },
+                {
+                  "label": "Mini reto — Horas extra",
+                  "format": "ordered-list",
+                  "content": "Los empleados que trabajaron más de 40 horas recibirán **$150 por cada hora adicional**.\nPor ejemplo: 42 horas trabajadas equivalen a 2 horas extra y a $300 adicionales.\nModifica `calcular_salario()` para considerar las horas extra.\nLas primeras 40 horas deben seguir utilizando el `pago_hora` normal."
+                },
+                {
+                  "label": "Preguntas para responder",
+                  "format": "ordered-list",
+                  "content": "En `Empleado(\"Ana\", 40, 100)`, ¿cuáles son los argumentos y qué parámetros del constructor reciben cada uno?\n¿Qué diferencia existe entre `calcular_salario()` como método de la clase y `aplicar_bono(salario)` como función independiente?\n¿Por qué `calcular_salario()` utiliza `return` en lugar de limitarse a imprimir el salario?\nSi `aplicar_bono()` solamente recibe un salario y devuelve otro valor sin modificar el objeto `Empleado`, ¿qué ventaja tiene esta forma de trabajar respecto a modificar directamente sus atributos?\n¿Qué partes del programa corresponden principalmente a POO y qué partes muestran características del paradigma imperativo?"
+                }
+              ]
             }
           ]
         },
