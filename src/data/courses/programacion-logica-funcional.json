@@ -153,9 +153,66 @@
           "focus": "Recursión y abstracción",
           "activities": [
             {
-              "title": "Recursión con propósito",
-              "description": "Resolver recorrido, búsqueda o reducción de una estructura mediante recursión.",
-              "kind": "Práctica"
+              "title": "Sistema de compra con llamadas anidadas",
+              "description": "Modelar productos con POO y componer funciones mediante llamadas anidadas para calcular descuentos, IVA y el total de una compra sin modificar los precios originales.",
+              "kind": "Práctica",
+              "resourceToggleLabel": "Ver actividad, código y preguntas",
+              "resources": [
+                {
+                  "label": "Planteamiento",
+                  "format": "text",
+                  "content": "Una tienda necesita un programa para calcular el precio final de varios productos considerando la **cantidad comprada**, el **descuento** y el **IVA del 16%**.\nEl programa deberá utilizar **POO, funciones y llamadas anidadas**."
+                },
+                {
+                  "label": "Partes 1 y 2 — Clase y productos",
+                  "format": "ordered-list",
+                  "content": "Crea una clase llamada `Producto`.\nCada producto deberá almacenar `nombre`, `precio`, `cantidad` y `descuento`; el descuento representa un porcentaje.\nDentro de la clase crea el método `subtotal()`, que regrese `precio × cantidad` sin aplicar descuento ni IVA.\nCrea la lista de productos indicada y conserva sin cambios los precios originales de sus objetos."
+                },
+                {
+                  "label": "Código base de productos",
+                  "language": "python",
+                  "content": "class Producto:\n    # Agrega el constructor y el método subtotal().\n    pass\n\n\nproductos = [\n    Producto(\"Teclado\", 500, 2, 10),\n    Producto(\"Mouse\", 300, 1, 0),\n    Producto(\"Monitor\", 2500, 2, 15),\n    Producto(\"USB\", 150, 3, 5)\n]"
+                },
+                {
+                  "label": "Partes 3 y 4 — Descuento e IVA",
+                  "format": "ordered-list",
+                  "content": "Crea `aplicar_descuento(precio, descuento)`. Debe recibir un precio y un porcentaje, y regresar el nuevo precio. Por ejemplo, `aplicar_descuento(1000, 10)` debe regresar 900.\nCrea `aplicar_iva(precio)`. Debe agregar 16% al precio recibido y regresar el resultado. Por ejemplo, `aplicar_iva(1000)` debe regresar 1160."
+                },
+                {
+                  "label": "Parte 5 — Primera llamada anidada",
+                  "format": "ordered-list",
+                  "content": "Crea `calcular_total_producto(producto)`.\nObtén el subtotal mediante `producto.subtotal()`.\nAplica primero el descuento y después el IVA.\nRegresa el precio final.\nUtiliza obligatoriamente una llamada anidada con la estructura `funcion2(funcion1(dato))`. No guardes primero cada operación en variables separadas."
+                },
+                {
+                  "label": "Partes 6 y 7 — Reutilización y mensaje",
+                  "format": "ordered-list",
+                  "content": "Crea `formatear_precio(precio)`, que reciba un número y regrese un texto como $1044.00. Puedes utilizar `round(precio, 2)`.\nCrea `mostrar_precio_descuento(producto)`. Debe regresar el precio después del descuento y antes del IVA mediante una llamada anidada con `aplicar_descuento()` y `formatear_precio()`.\nLa función `aplicar_descuento()` debe aparecer dentro de llamadas anidadas en **dos partes diferentes del programa**.\nCrea `crear_mensaje(nombre, precio)`, que regrese un texto como: Teclado tiene un precio final de $1044.00.\nDentro del recorrido de productos crea la variable `mensaje` mediante al menos **tres funciones o métodos conectados con llamadas anidadas** y después imprímela."
+                },
+                {
+                  "label": "Partes 8, 9 y 10 — Procesamiento y totales",
+                  "format": "ordered-list",
+                  "content": "**Procesar productos:** recorre `productos` y muestra para cada uno su nombre, subtotal, precio después del descuento y precio final con IVA. Obtén los resultados con los métodos y funciones creados; evita repetir las fórmulas.\n**Total de la compra:** crea el acumulador `total_compra = 0`, recorre los productos y utiliza `calcular_total_producto(producto)`. Al finalizar muestra TOTAL DE LA COMPRA: $____.\n**Producto con mayor total:** encuentra el producto que representa el gasto más alto considerando cantidad, descuento e IVA. No utilices `max()`; actualiza las variables `mayor_total` y `nombre_mayor` durante el recorrido."
+                },
+                {
+                  "label": "Firmas de las funciones",
+                  "language": "python",
+                  "content": "def aplicar_descuento(precio, descuento):\n    pass\n\n\ndef aplicar_iva(precio):\n    pass\n\n\ndef calcular_total_producto(producto):\n    # Usa una llamada anidada: funcion2(funcion1(dato)).\n    pass\n\n\ndef formatear_precio(precio):\n    pass\n\n\ndef mostrar_precio_descuento(producto):\n    pass\n\n\ndef crear_mensaje(nombre, precio):\n    pass\n\n\ntotal_compra = 0\nmayor_total = 0\nnombre_mayor = \"\""
+                },
+                {
+                  "label": "Referencias de estructura y salida",
+                  "content": "# Ejemplo de producto\nProducto: Teclado\nPrecio: $500\nCantidad: 2\nDescuento: 10%\n\n# Estructura de una variable con llamadas anidadas\nmensaje = funcion1(\n    dato,\n    funcion2(\n        funcion3(dato)\n    )\n)\n\n# Salida esperada por producto\nProducto: Teclado\nSubtotal: $1000\nPrecio después del descuento: $900\nPrecio final con IVA: $1044\n\n# Salidas finales\nTOTAL DE LA COMPRA: $____\nProducto con mayor total:\nMonitor - $____"
+                },
+                {
+                  "label": "Condiciones obligatorias",
+                  "format": "ordered-list",
+                  "content": "Incluye una clase `Producto`.\nIncluye al menos un método dentro de la clase.\nIncluye al menos cuatro funciones independientes.\nUtiliza una función como llamada anidada dentro de **dos funciones diferentes**.\nCrea una variable cuyo valor se obtenga mediante **dos o más llamadas anidadas**.\nIncluye al menos un `for`.\nIncluye al menos un `if`.\nUtiliza un acumulador.\nNo modifiques los precios originales de los objetos.\nReutiliza las funciones creadas; no repitas manualmente las fórmulas en diferentes partes del programa."
+                },
+                {
+                  "label": "Preguntas para responder",
+                  "format": "ordered-list",
+                  "content": "Cuando escribes `aplicar_iva(aplicar_descuento(...))`, ¿cuál de las dos funciones debe terminar primero para que la otra pueda continuar?\n¿Qué resultado producido por `aplicar_descuento()` se convierte después en la entrada de `aplicar_iva()`?\n¿Qué ventaja tiene reutilizar `calcular_total_producto(producto)` en lugar de volver a escribir las fórmulas de descuento e IVA cada vez que necesitamos el total?\n¿Qué partes del programa corresponden principalmente a POO y cuáles utilizan un procedimiento imperativo?\nSi mañana el IVA cambia de 16% a 18%, ¿en cuántas partes del programa debería ser necesario modificar la fórmula si las funciones fueron diseñadas correctamente?"
+                }
+              ]
             },
             {
               "title": "Sistema de empleados y nómina",
