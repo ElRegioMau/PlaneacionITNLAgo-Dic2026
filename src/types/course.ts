@@ -1,5 +1,12 @@
 export type ActivityKind = 'Práctica' | 'Reto' | 'Datos' | 'IA' | 'Diseño' | 'Laboratorio'
 
+export interface ContentResource {
+  label: string
+  language?: string
+  format?: 'code' | 'text' | 'ordered-list'
+  content: string
+}
+
 export interface Activity {
   title: string
   description: string
@@ -9,12 +16,7 @@ export interface Activity {
   imageCollapsible?: boolean
   imageToggleLabel?: string
   resourceToggleLabel?: string
-  resources?: {
-    label: string
-    language?: string
-    format?: 'code' | 'text' | 'ordered-list'
-    content: string
-  }[]
+  resources?: ContentResource[]
   downloads?: {
     label: string
     fileName: string
@@ -33,6 +35,8 @@ export interface ModuleProject {
   description: string
   deliverables: string[]
   skills: string[]
+  resourceToggleLabel?: string
+  resources?: ContentResource[]
 }
 
 export interface CourseModule {

@@ -1,5 +1,6 @@
 import { Box, CheckCircle2, Sparkles } from 'lucide-react'
 import type { ModuleProject } from '../types/course'
+import ResourceDetails from './ResourceDetails'
 
 export default function ProjectCard({ project }: { project: ModuleProject }) {
   return (
@@ -12,6 +13,13 @@ export default function ProjectCard({ project }: { project: ModuleProject }) {
         </div>
       </div>
       <p className="project-description">{project.description}</p>
+      {project.resources && (
+        <ResourceDetails
+          resources={project.resources}
+          toggleLabel={project.resourceToggleLabel ?? 'Ver requisitos del proyecto'}
+          className="project-resources"
+        />
+      )}
       <div className="project-grid">
         <div>
           <div className="section-kicker"><CheckCircle2 size={17} /> Entregables</div>

@@ -94,6 +94,7 @@
 .project-title-row span { color:#9f91c2; text-transform:uppercase; letter-spacing:.09em; font-size:9px; font-weight:800; }
 .project-title-row h3 { margin:5px 0 0; font-size:22px; letter-spacing:-.025em; }
 .project-description { color:#b9c7da; font-size:16px; line-height:1.7; max-width:950px; margin:18px 0 22px; }
+.project-resources { margin-bottom:22px; }
 .project-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:30px; padding-top:20px; border-top:1px solid rgba(255,255,255,.07); }
 .project-chip { color:#dfd5ff; border-color:rgba(183,156,255,.12); background:rgba(183,156,255,.06); }
 

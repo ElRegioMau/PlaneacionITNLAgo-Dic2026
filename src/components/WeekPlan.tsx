@@ -1,6 +1,6 @@
-import { Check, ChevronDown, Copy, Download } from 'lucide-react'
-import { Fragment, useState } from 'react'
+import { ChevronDown, Download } from 'lucide-react'
 import type { Activity, WeekPlan as WeekPlanType } from '../types/course'
+import ResourceDetails from './ResourceDetails'
 
 const kindClass: Record<string, string> = {
   Práctica: 'kind-practice',
@@ -9,69 +9,6 @@ const kindClass: Record<string, string> = {
   IA: 'kind-ai',
   Diseño: 'kind-design',
   Laboratorio: 'kind-lab',
-}
-
-function formatInlineText(text: string) {
-  return text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).map((part, index) => {
-    if (part.startsWith('**') && part.endsWith('**')) {
-      return <strong key={`${part}-${index}`}>{part.slice(2, -2)}</strong>
-    }
-
-    if (part.startsWith('`') && part.endsWith('`')) {
-      return <code key={`${part}-${index}`}>{part.slice(1, -1)}</code>
-    }
-
-    return <Fragment key={`${part}-${index}`}>{part}</Fragment>
-  })
-}
-
-function ActivityResources({
-  resources,
-  toggleLabel = 'Ver script y preguntas',
-}: {
-  resources: NonNullable<Activity['resources']>
-  toggleLabel?: string
-}) {
-  const [copiedIndex, setCopiedIndex] = useState<number | null>(null)
-
-  const copyResource = async (content: string, index: number) => {
-    await navigator.clipboard.writeText(content)
-    setCopiedIndex(index)
-    window.setTimeout(() => setCopiedIndex(null), 1800)
-  }
-
-  return (
-    <details className="activity-resources">
-      <summary>
-        <span>{toggleLabel}</span>
-        <ChevronDown size={17} aria-hidden="true" />
-      </summary>
-      <div className="activity-resources-content">
-        {resources.map((resource, index) => (
-          <section className="activity-resource" key={resource.label}>
-            <div className="activity-resource-header">
-              <strong>{resource.label}</strong>
-              <button type="button" onClick={() => copyResource(resource.content, index)}>
-                {copiedIndex === index ? <Check size={15} /> : <Copy size={15} />}
-                {copiedIndex === index ? 'Copiado' : 'Copiar'}
-              </button>
-            </div>
-            {resource.format === 'ordered-list' ? (
-              <ol className="activity-resource-list">
-                {resource.content.split('\n').filter(Boolean).map((item) => <li key={item}>{formatInlineText(item)}</li>)}
-              </ol>
-            ) : resource.format === 'text' ? (
-              <div className="activity-resource-text">
-                {resource.content.split('\n').filter(Boolean).map((paragraph) => <p key={paragraph}>{formatInlineText(paragraph)}</p>)}
-              </div>
-            ) : (
-              <pre><code className={resource.language ? `language-${resource.language}` : undefined}>{resource.content}</code></pre>
-            )}
-          </section>
-        ))}
-      </div>
-    </details>
-  )
 }
 
 function ActivityDownloads({ downloads }: { downloads: NonNullable<Activity['downloads']> }) {
@@ -136,9 +73,9 @@ export default function WeekPlan({ week }: { week: WeekPlanType }) {
                 />
               )}
               {activity.resources && (
-                <ActivityResources
+                <ResourceDetails
                   resources={activity.resources}
-                  toggleLabel={activity.resourceToggleLabel}
+                  toggleLabel={activity.resourceToggleLabel ?? 'Ver script y preguntas'}
                 />
               )}
               {activity.downloads && <ActivityDownloads downloads={activity.downloads} />}

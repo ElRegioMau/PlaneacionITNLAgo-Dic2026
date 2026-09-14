@@ -39,19 +39,83 @@
         "Git"
       ],
       "project": {
-        "title": "Un problema, tres paradigmas",
-        "description": "Resolver un problema de análisis o decisión en tres estilos —imperativo, funcional y lógico/declarativo simulado— y elaborar una comparación técnica basada en claridad, pruebas y extensibilidad.",
+        "title": "Sistema de Gestión Multiparadigma",
+        "description": "Desarrollar en Python un sistema de gestión sobre un tema elegido que integre programación imperativa, declarativa y orientada a objetos, además de funciones, llamadas anidadas, conservación de datos y prevención de bugs.",
         "deliverables": [
-          "Tres implementaciones o aproximaciones",
-          "Suite breve de casos de prueba",
-          "Comparación técnica argumentada",
-          "Repositorio con historial de evolución"
+          "Sistema de gestión funcional en Python",
+          "Al menos cinco operaciones relacionadas con el tema elegido",
+          "Código que identifique los tres paradigmas y conserve datos originales",
+          "Presentación y explicación individual del funcionamiento"
         ],
         "skills": [
           "Pensamiento multiparadigma",
-          "Comparación técnica",
-          "Testing",
-          "Comunicación"
+          "POO",
+          "Funciones y composición",
+          "Estado y mutación",
+          "Comunicación técnica"
+        ],
+        "resourceToggleLabel": "Ver requisitos, ejemplos y preguntas",
+        "resources": [
+          {
+            "label": "Descripción y temas sugeridos",
+            "format": "text",
+            "content": "Desarrolla en Python un pequeño sistema de gestión sobre un tema de tu elección.\nPuedes trabajar con una tienda y productos, sistema escolar, biblioteca, videojuegos, gimnasio, restaurante, hospital o consultorio, inventario, reservaciones, empleados y nómina, torneo deportivo o plataforma de películas.\nEl proyecto deberá utilizar **Programación Imperativa**, **Programación Declarativa** y **Programación Orientada a Objetos**. También deberá incorporar funciones y llamadas anidadas."
+          },
+          {
+            "label": "1 — Programación Orientada a Objetos",
+            "format": "ordered-list",
+            "content": "Incluye al menos una clase.\nAgrega un constructor `__init__`.\nDefine tres o más atributos.\nIncluye al menos dos métodos.\nCrea una lista que contenga varios objetos de la clase.\nNo es obligatorio utilizar una clase llamada `Producto`; adapta la clase al tema elegido."
+          },
+          {
+            "label": "2 y 3 — Programación imperativa y declarativa",
+            "format": "ordered-list",
+            "content": "**Imperativa:** incluye al menos un proceso cuyo resultado se obtenga paso a paso mediante un contador, acumulador, búsqueda de valor mayor o menor, recorrido con `for` o condicionales `if`.\nEjemplos imperativos: contar alumnos aprobados, calcular el total de una compra, encontrar el producto más caro, contar productos disponibles o calcular el promedio de un grupo.\n**Declarativa:** incluye al menos una operación que exprese directamente qué datos se desean obtener sin desarrollar manualmente todo el procedimiento paso a paso.\nDebes explicar por qué consideras que ese fragmento tiene características declarativas."
+          },
+          {
+            "label": "4 y 5 — Funciones y llamadas anidadas",
+            "format": "ordered-list",
+            "content": "Incluye al menos **tres funciones independientes**, cada una con una responsabilidad clara.\nUtiliza correctamente parámetros, argumentos, `return`, entrada y salida.\nIncluye al menos **dos llamadas anidadas**.\nAl menos una variable deberá obtener su resultado mediante **dos o más funciones conectadas**."
+          },
+          {
+            "label": "6 y 7 — Datos originales, estado y mutación",
+            "format": "ordered-list",
+            "content": "Incluye una transformación donde los datos originales se conserven y se produzca una nueva colección.\nAl terminar deben seguir existiendo tanto los datos originales como los datos transformados.\nDemuestra la diferencia entre **modificar un estado existente** y **producir un nuevo estado a partir del anterior**.\nIdentifica una variable cuyo estado cambie durante la ejecución.\nIdentifica una estructura mutable y una instrucción que produzca mutación, si el proyecto utiliza alguna."
+          },
+          {
+            "label": "8 — Prevención de bugs",
+            "format": "ordered-list",
+            "content": "Incluye al menos una validación que evite un posible bug.\nPuedes validar que un elemento exista antes de eliminarlo o que una cantidad sea mayor que cero antes de dividir.\nExplica qué podría ocurrir si esa validación no existiera."
+          },
+          {
+            "label": "Ejemplos de referencia",
+            "language": "python",
+            "content": "# Ejemplo de clase\nclass Producto:\n    def __init__(self, nombre, precio, cantidad):\n        self.nombre = nombre\n        self.precio = precio\n        self.cantidad = cantidad\n\n\n# Ejemplo declarativo\nproductos_caros = [\n    producto for producto in productos\n    if producto.precio >= 500\n]\n\n\n# Ejemplo de función\ndef aplicar_descuento(precio, descuento):\n    return precio - precio * descuento\n\n\n# Ejemplo de llamada anidada\nprecio_final = aplicar_iva(\n    aplicar_descuento(precio, descuento)\n)\n\nmensaje = crear_mensaje(\n    producto.nombre,\n    formatear_precio(\n        calcular_total(producto)\n    )\n)\n\n\n# Conservación de datos originales\nprecios = [500, 800, 1000]\nprecios_descuento = [\n    precio * 0.90 for precio in precios\n]\n\n\n# Cambios de estado y mutación\ncontador = contador + 1\nproductos.append(nuevo_producto)\n\n\n# Prevención de bugs\nif producto in productos:\n    productos.remove(producto)\n\nif cantidad > 0:\n    promedio = total / cantidad"
+          },
+          {
+            "label": "Funcionalidades mínimas",
+            "format": "ordered-list",
+            "content": "El sistema deberá realizar al menos **cinco operaciones diferentes**.\nEn una tienda podrían ser: mostrar productos, calcular el valor total del inventario, filtrar productos por precio, crear precios promocionales sin modificar los originales y encontrar el producto con mayor precio.\nElige funcionalidades apropiadas para el tema de tu proyecto."
+          },
+          {
+            "label": "Presentación del proyecto",
+            "format": "text",
+            "content": "El proyecto deberá ejecutarse frente al profesor. No será suficiente mostrar que funciona.\nCada integrante deberá explicar los fragmentos que el profesor señale y conocer el funcionamiento general del proyecto.\nEl objetivo es demostrar que el alumno **comprende el código y no solamente logró que funcionara**."
+          },
+          {
+            "label": "Aspectos que deberás identificar durante la presentación",
+            "format": "ordered-list",
+            "content": "¿Dónde utilizaste Programación Orientada a Objetos?\n¿Dónde utilizaste Programación Imperativa?\n¿Dónde utilizaste Programación Declarativa?\n¿Dónde existe una llamada anidada?\n¿Qué función se ejecuta primero dentro de esa llamada?\n¿Dónde utilizas parámetros, argumentos y `return`?\n¿Qué variable cambia de estado durante la ejecución?\n¿Dónde existe una transformación que conserva los datos originales?\n¿Existe alguna mutación dentro del programa?\n¿Qué bug podría aparecer si eliminaras alguna de las validaciones?"
+          },
+          {
+            "label": "Preguntas individuales posibles",
+            "format": "ordered-list",
+            "content": "¿Qué hace esta línea?\n¿Qué valor tiene esta variable en este momento?\n¿Por qué utilizaste `return` aquí?\n¿Cuál es el argumento enviado a esta función?\n¿Qué función se ejecuta primero?\n¿Qué pasaría si eliminamos este `if`?\n¿Qué ocurriría si no reiniciamos este contador?\n¿Esta lista está siendo modificada o se está creando una nueva?\n¿Por qué consideras este fragmento imperativo?\n¿Por qué consideras este fragmento declarativo?\n¿Qué parte corresponde a POO?\n¿Cómo podrías provocar un bug en esta sección?"
+          },
+          {
+            "label": "Condición importante",
+            "format": "text",
+            "content": "No se evaluará positivamente agregar código innecesariamente complejo.\nSe evaluará: **que funcione + que tenga sentido + que puedan explicarlo**."
+          }
         ]
       },
       "weeks": [
