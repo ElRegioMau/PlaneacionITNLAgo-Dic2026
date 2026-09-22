@@ -39,19 +39,90 @@
         "Descomposición de problemas"
       ],
       "project": {
-        "title": "Tablero de desempeño de una línea de producción",
-        "description": "Diseñar una hoja de cálculo profesional que procese un conjunto de datos de producción, calcule KPIs y documente el algoritmo usado para clasificar el desempeño por turno o producto.",
+        "title": "Dashboard administrativo de ventas CREATEC",
+        "description": "Desarrollar un sistema web sencillo que permita registrar ventas de computadoras y visualizar la información almacenada en Google Sheets desde un panel de administrador.",
         "deliverables": [
-          "Archivo con datos, cálculos y dashboard",
-          "Diccionario de indicadores",
-          "Pseudocódigo del proceso de análisis",
-          "Conclusiones basadas en evidencia"
+          "Formulario con modelo, precio, nombre del cliente y teléfono",
+          "Conexión con Google Sheets mediante Google Apps Script",
+          "Dashboard administrativo con los registros guardados",
+          "Cálculo automático del total de ventas y del monto total vendido",
+          "POST para guardar información y GET para consultarla",
+          "Proyecto organizado en carpetas para login y administrador"
         ],
         "skills": [
-          "Análisis industrial",
-          "Hojas de cálculo",
-          "KPIs",
-          "Pensamiento algorítmico"
+          "Formularios HTML",
+          "JavaScript",
+          "Google Sheets",
+          "Google Apps Script",
+          "HTTP: POST y GET",
+          "Dashboard de ventas"
+        ],
+        "resourceToggleLabel": "Ver requisitos, estructura y códigos CREATEC",
+        "resources": [
+          {
+            "label": "El proyecto debe incluir",
+            "format": "ordered-list",
+            "content": "Un formulario para registrar modelo, precio, nombre del cliente y teléfono.\nConexión del formulario con Google Sheets mediante Google Apps Script.\nUn dashboard administrativo que consulte y muestre los registros guardados.\nCálculo automático del total de ventas realizadas.\nCálculo automático del monto total vendido.\nUso de POST para guardar información.\nUso de GET para consultar información.\nOrganización del proyecto en carpetas para login y administrador."
+          },
+          {
+            "label": "Organización de los archivos",
+            "format": "text",
+            "content": "Guarda formulario_personalizado dentro de login, como indica la estructura esperada. Code.gs y Dashboard.gs pertenecen al mismo proyecto de Apps Script vinculado a Google Sheets.\nLa pestaña Ventas debe tener encabezados en la primera fila: modelo, precio, nombre y telefono. Sustituye URL_DE_APPS_SCRIPT en ambos scripts web por la URL de tu aplicación web.\nLos archivos CSS y logo.png aparecen en la estructura y deben agregarse al proyecto; su contenido no se incluye en estos ejemplos."
+          },
+          {
+            "label": "Estructura esperada",
+            "language": "text",
+            "format": "code",
+            "content": "proyecto/\n└── login/\n    ├── index.html\n    ├── style_login.css\n    ├── script.js\n    ├── IMG/\n    │   └── logo.png\n    ├── formulario_personalizado/\n    │   ├── index.html\n    │   ├── styles.css\n    │   └── script.js\n    └── administrador/\n        ├── index.html\n        ├── style.css\n        └── script.js"
+          },
+          {
+            "label": "formulario_personalizado/index.html",
+            "language": "html",
+            "format": "code",
+            "content": "<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ventas de Computadoras</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n\n    <div class=\"formulario\">\n        <h2>Registro de Ventas</h2>\n        <p>Ing. Mauricio Alberto Alvarez Aspeitia</p>\n\n        <form id=\"formulario\">\n            <label>Modelo de computadora:</label>\n            <input id=\"modelo\" type=\"text\" placeholder=\"Ejemplo: Lenovo ThinkPad\">\n\n            <label>Precio de venta:</label>\n            <input id=\"precio\" type=\"number\" placeholder=\"Escribe el precio\">\n\n            <label>Nombre del cliente:</label>\n            <input id=\"nombre\" type=\"text\" placeholder=\"Escribe el nombre\">\n\n            <label>Teléfono del cliente:</label>\n            <input id=\"telefono\" type=\"text\" placeholder=\"Escribe el teléfono\">\n\n            <button type=\"submit\">Guardar venta</button>\n        </form>\n    </div>\n\n    <script src=\"script.js\"></script>\n\n</body>\n</html>"
+          },
+          {
+            "label": "formulario_personalizado/script.js",
+            "language": "javascript",
+            "format": "code",
+            "content": "var formulario = document.getElementById(\"formulario\");\n\nformulario.addEventListener(\"submit\", function(event) {\n\n    event.preventDefault();\n\n    var modelo = document.getElementById(\"modelo\").value;\n    var precio = document.getElementById(\"precio\").value;\n    var nombre = document.getElementById(\"nombre\").value;\n    var telefono = document.getElementById(\"telefono\").value;\n\n    var datos = new URLSearchParams();\n\n    datos.append(\"modelo\", modelo);\n    datos.append(\"precio\", precio);\n    datos.append(\"nombre\", nombre);\n    datos.append(\"telefono\", telefono);\n\n    fetch(\"URL_DE_APPS_SCRIPT\", {\n        method: \"POST\",\n        mode: \"no-cors\",\n        body: datos\n    });\n\n    alert(\"Venta guardada\");\n});"
+          },
+          {
+            "label": "login/index.html",
+            "language": "html",
+            "format": "code",
+            "content": "<!DOCTYPE html>\n<html lang=\"es\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Login</title>\n    <link rel=\"stylesheet\" href=\"style_login.css\">\n</head>\n\n<body>\n\n    <img src=\"IMG/logo.png\">\n\n    <h1>Iniciar sesión</h1>\n\n    <input id=\"usuario\" type=\"text\" placeholder=\"Usuario\">\n\n    <input id=\"contrasena\" type=\"password\" placeholder=\"Contraseña\">\n\n    <button onclick=\"iniciarSesion()\">Entrar</button>\n\n    <p id=\"mensaje\"></p>\n\n    <script src=\"script.js\"></script>\n\n</body>\n\n</html>"
+          },
+          {
+            "label": "login/script.js",
+            "language": "javascript",
+            "format": "code",
+            "content": "function iniciarSesion() {\n\n    var usuario = document.getElementById(\"usuario\").value;\n    var contrasena = document.getElementById(\"contrasena\").value;\n\n    if (usuario == \"admin\" && contrasena == \"1234\") {\n\n        window.location.href = \"administrador/index.html\";\n\n    } else {\n\n        document.getElementById(\"mensaje\").innerHTML =\n            \"Usuario o contraseña incorrectos\";\n    }\n}"
+          },
+          {
+            "label": "login/administrador/index.html",
+            "language": "html",
+            "format": "code",
+            "content": "<!DOCTYPE html>\n<html lang=\"es\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Administrador CREATEC</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n\n<body>\n\n    <div class=\"dashboard\">\n\n        <img src=\"../IMG/logo.png\">\n\n        <h1>Panel de Administrador</h1>\n        <p>Ing. Mauricio Alberto Alvarez Aspeitia</p>\n\n        <div class=\"resumen\">\n\n            <div class=\"tarjeta\">\n                <h2>Total de ventas</h2>\n                <h3 id=\"totalVentas\">0</h3>\n            </div>\n\n            <div class=\"tarjeta\">\n                <h2>Total vendido</h2>\n                <h3 id=\"totalDinero\">$0</h3>\n            </div>\n\n        </div>\n\n        <h2 class=\"tituloVentas\">Ventas registradas</h2>\n\n        <table>\n\n            <thead>\n                <tr>\n                    <th>Modelo</th>\n                    <th>Precio</th>\n                    <th>Cliente</th>\n                    <th>Teléfono</th>\n                </tr>\n            </thead>\n\n            <tbody id=\"tablaVentas\">\n            </tbody>\n\n        </table>\n\n    </div>\n\n    <script src=\"script.js\"></script>\n\n</body>\n\n</html>"
+          },
+          {
+            "label": "login/administrador/script.js",
+            "language": "javascript",
+            "format": "code",
+            "content": "var url = \"URL_DE_APPS_SCRIPT\";\n\nfetch(url)\n    .then(function(respuesta) {\n\n        return respuesta.json();\n\n    })\n    .then(function(datos) {\n\n        mostrarVentas(datos);\n\n    });\n\nfunction mostrarVentas(datos) {\n\n    var tabla = document.getElementById(\"tablaVentas\");\n\n    var totalVentas = 0;\n    var totalDinero = 0;\n\n    for (var i = 1; i < datos.length; i++) {\n\n        var modelo = datos[i][0];\n        var precio = datos[i][1];\n        var nombre = datos[i][2];\n        var telefono = datos[i][3];\n\n        tabla.innerHTML +=\n            \"<tr>\" +\n                \"<td>\" + modelo + \"</td>\" +\n                \"<td>$\" + precio + \"</td>\" +\n                \"<td>\" + nombre + \"</td>\" +\n                \"<td>\" + telefono + \"</td>\" +\n            \"</tr>\";\n\n        totalVentas = totalVentas + 1;\n\n        totalDinero = totalDinero + Number(precio);\n    }\n\n    document.getElementById(\"totalVentas\").innerHTML =\n        totalVentas;\n\n    document.getElementById(\"totalDinero\").innerHTML =\n        \"$\" + totalDinero;\n}"
+          },
+          {
+            "label": "Code.gs",
+            "language": "javascript",
+            "format": "code",
+            "content": "function doPost(e) {\n\n    var hoja = SpreadsheetApp\n        .getActiveSpreadsheet()\n        .getSheetByName(\"Ventas\");\n\n    var modelo = e.parameter.modelo;\n    var precio = e.parameter.precio;\n    var nombre = e.parameter.nombre;\n    var telefono = e.parameter.telefono;\n\n    hoja.appendRow([\n        modelo,\n        precio,\n        nombre,\n        telefono\n    ]);\n\n    return ContentService.createTextOutput(\"Venta guardada\");\n}"
+          },
+          {
+            "label": "Dashboard.gs",
+            "language": "javascript",
+            "format": "code",
+            "content": "function doGet(e) {\n\n    var hoja = SpreadsheetApp\n        .getActiveSpreadsheet()\n        .getSheetByName(\"Ventas\");\n\n    var datos = hoja\n        .getDataRange()\n        .getValues();\n\n    return ContentService\n        .createTextOutput(JSON.stringify(datos))\n        .setMimeType(ContentService.MimeType.JSON);\n}"
+          }
         ]
       },
       "weeks": [
