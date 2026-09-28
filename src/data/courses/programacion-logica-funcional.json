@@ -389,7 +389,30 @@
             {
               "title": "Map/filter/reduce con intención",
               "description": "Resolver transformaciones y explicar por qué cada operación expresa mejor la intención.",
-              "kind": "Práctica"
+              "kind": "Práctica",
+              "resourceToggleLabel": "Ver problema, datos e instrucciones",
+              "resources": [
+                {
+                  "label": "Problema razonado — Selección y ajuste de becas",
+                  "format": "text",
+                  "content": "Una universidad otorgará una beca únicamente a los estudiantes con promedio igual o mayor a `80`.\nCada estudiante seleccionado recibirá inicialmente una beca de **$3000**, pero el monto aumentará un **20%** cuando su promedio sea igual o mayor a `90`.\nDesarrolla una solución con `filter()` y `map()` que produzca una nueva colección sin modificar la lista original."
+                },
+                {
+                  "label": "Datos iniciales",
+                  "language": "python",
+                  "content": "estudiantes = [\n    {\"nombre\": \"Ana\", \"promedio\": 92},\n    {\"nombre\": \"Luis\", \"promedio\": 68},\n    {\"nombre\": \"Carlos\", \"promedio\": 81},\n    {\"nombre\": \"María\", \"promedio\": 95},\n    {\"nombre\": \"Pedro\", \"promedio\": 73},\n    {\"nombre\": \"Sofía\", \"promedio\": 88}\n]"
+                },
+                {
+                  "label": "Instrucciones",
+                  "format": "ordered-list",
+                  "content": "Utiliza `filter()` para obtener únicamente a los estudiantes con promedio igual o mayor a `80`.\nUtiliza `map()` para generar una nueva colección con el nombre, promedio y monto final de beca de cada estudiante seleccionado.\nAsigna una beca base de **$3000**.\nAumenta la beca un **20%** cuando el promedio sea igual o mayor a `90`.\nConserva la lista original `estudiantes` sin modificaciones.\nImprime o muestra la nueva colección resultante.\nExplica por qué `filter()` expresa la intención de selección y por qué `map()` expresa la transformación de los datos."
+                },
+                {
+                  "label": "Resultado esperado",
+                  "format": "text",
+                  "content": "La nueva colección debe contener solamente a **Ana**, **Carlos**, **María** y **Sofía**, junto con su promedio y el monto de beca correspondiente.\nAna y María reciben el aumento del 20% por tener promedio igual o mayor a 90. Carlos y Sofía conservan la beca base."
+                }
+              ]
             },
             {
               "title": "Funciones que reciben funciones",
