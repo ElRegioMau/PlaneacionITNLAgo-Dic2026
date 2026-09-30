@@ -390,7 +390,7 @@
               "title": "Map/filter/reduce con intención",
               "description": "Resolver transformaciones y explicar por qué cada operación expresa mejor la intención.",
               "kind": "Práctica",
-              "resourceToggleLabel": "Ver problema, datos e instrucciones",
+              "resourceToggleLabel": "Ver problemas, datos e instrucciones",
               "resources": [
                 {
                   "label": "Problema razonado — Selección y ajuste de becas",
@@ -411,6 +411,21 @@
                   "label": "Resultado esperado",
                   "format": "text",
                   "content": "La nueva colección debe contener solamente a **Ana**, **Carlos**, **María** y **Sofía**, junto con su promedio y el monto de beca correspondiente.\nAna y María reciben el aumento del 20% por tener promedio igual o mayor a 90. Carlos y Sofía conservan la beca base."
+                },
+                {
+                  "label": "Problema razonado — Análisis de propiedades inmobiliarias",
+                  "format": "text",
+                  "content": "Una empresa inmobiliaria está analizando varias propiedades para decidir cuáles podrían representar mejores oportunidades de inversión durante el próximo año.\nSe tienen los siguientes datos:"
+                },
+                {
+                  "label": "Datos de las propiedades",
+                  "language": "python",
+                  "content": "casas = [\n    {\n        \"ubicacion\": \"Monterrey\",\n        \"precio\": 3200000,\n        \"metros\": 180,\n        \"habitaciones\": 3,\n        \"crecimiento_estimado\": 0.08\n    },\n    {\n        \"ubicacion\": \"San Nicolás\",\n        \"precio\": 2100000,\n        \"metros\": 140,\n        \"habitaciones\": 3,\n        \"crecimiento_estimado\": 0.06\n    },\n    {\n        \"ubicacion\": \"Guadalupe\",\n        \"precio\": 1800000,\n        \"metros\": 120,\n        \"habitaciones\": 2,\n        \"crecimiento_estimado\": 0.05\n    },\n    {\n        \"ubicacion\": \"San Pedro\",\n        \"precio\": 6500000,\n        \"metros\": 250,\n        \"habitaciones\": 4,\n        \"crecimiento_estimado\": 0.10\n    },\n    {\n        \"ubicacion\": \"Apodaca\",\n        \"precio\": 1600000,\n        \"metros\": 110,\n        \"habitaciones\": 2,\n        \"crecimiento_estimado\": 0.07\n    },\n    {\n        \"ubicacion\": \"Santa Catarina\",\n        \"precio\": 2400000,\n        \"metros\": 155,\n        \"habitaciones\": 3,\n        \"crecimiento_estimado\": 0.09\n    }\n]"
+                },
+                {
+                  "label": "Instrucciones — Análisis de propiedades inmobiliarias",
+                  "format": "text",
+                  "content": "La empresa solamente está interesada en propiedades que tengan al menos **140 m²** y **3 habitaciones**.\nPara cada propiedad que cumpla con esas condiciones, se deberá estimar su precio para el próximo año utilizando su porcentaje de crecimiento estimado.\nPor ejemplo, una propiedad con precio actual de:\n$3,200,000\ny crecimiento estimado de:\n8%\ntendría un precio estimado de:\n$3,456,000\nLa empresa necesita generar una nueva colección con las propiedades que cumplen los requisitos, incluyendo:\n- Ubicación\n- Precio actual\n- Metros cuadrados\n- Habitaciones\n- Precio estimado para el próximo año\nLos datos originales de `casas` deben conservarse sin modificaciones.\nFinalmente, el programa deberá analizar las propiedades seleccionadas y obtener **un único resultado final** que represente el valor total estimado que tendrían todas esas propiedades el próximo año.\nTambién deberá mostrar cuál sería la diferencia total entre:\nValor actual de las propiedades seleccionadas\ny:\nValor estimado para el próximo año\nEl resultado deberá permitir a la empresa responder:\n¿Cuánto aumentaría en total el valor de este conjunto de propiedades si las estimaciones de crecimiento se cumplen?"
                 }
               ]
             },
