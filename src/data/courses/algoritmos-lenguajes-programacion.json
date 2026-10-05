@@ -255,7 +255,33 @@
             {
               "title": "Calculadora de ingeniería",
               "description": "Programar conversiones, capacidad o consumo usando entradas validadas.",
-              "kind": "Práctica"
+              "kind": "Práctica",
+              "resourceToggleLabel": "Ver práctica de inventario y scripts",
+              "resources": [
+                {
+                  "label": "Indicaciones",
+                  "format": "ordered-list",
+                  "content": "Crea una hoja de cálculo con una pestaña llamada inventario y los encabezados producto, stock y precio en la primera fila.\nEn Extensiones → Apps Script, pega el código de Inventario.gs y publícalo como aplicación web.\nCopia la URL de la aplicación web y sustitúyela en script.js donde dice PEGA_TU_URL_DE_APPS_SCRIPT.\nCrea index.html y script.js en la misma carpeta, abre el HTML en el navegador y prueba los botones Mostrar todo y Bajo stock."
+                },
+                {
+                  "label": "index.html",
+                  "language": "html",
+                  "format": "code",
+                  "content": "<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Inventario CREATEC</title>\n</head>\n<body>\n\n    <h1>Inventario CREATEC</h1>\n\n    <button onclick=\"mostrarTodo()\">Mostrar todo</button>\n\n    <button onclick=\"mostrarBajoStock()\">Bajo stock</button>\n\n    <div id=\"productos\"></div>\n\n    <script src=\"script.js\"></script>\n\n</body>\n</html>"
+                },
+                {
+                  "label": "script.js",
+                  "language": "javascript",
+                  "format": "code",
+                  "content": "var url = \"PEGA_TU_URL_DE_APPS_SCRIPT\";\n\nvar productos = [];\n\nfetch(url)\n    .then(function(respuesta) {\n\n        return respuesta.json();\n\n    })\n    .then(function(datos) {\n\n        productos = datos;\n\n        mostrarTodo();\n\n    });\n\nfunction mostrarTodo() {\n\n    mostrarProductos(productos);\n\n}\n\nfunction mostrarBajoStock() {\n\n    var productosFiltrados = [];\n\n    for (var i = 0; i < productos.length; i++) {\n\n        if (productos[i][1] <= 10) {\n\n            productosFiltrados.push(productos[i]);\n\n        }\n\n    }\n\n    mostrarProductos(productosFiltrados);\n\n}\n\nfunction mostrarProductos(lista) {\n\n    var contenedor = document.getElementById(\"productos\");\n\n    contenedor.innerHTML = \"\";\n\n    for (var i = 0; i < lista.length; i++) {\n\n        contenedor.innerHTML +=\n            \"<p>\" +\n            lista[i][0] +\n            \" | Stock: \" +\n            lista[i][1] +\n            \" | Precio: $\" +\n            lista[i][2] +\n            \"</p>\";\n    }\n\n}"
+                },
+                {
+                  "label": "Inventario.gs · Google Apps Script",
+                  "language": "javascript",
+                  "format": "code",
+                  "content": "function doGet(e) {\n\n    var hoja = SpreadsheetApp\n        .getActiveSpreadsheet()\n        .getSheetByName(\"inventario\");\n\n    var datos = hoja\n        .getDataRange()\n        .getValues();\n\n    datos.shift();\n\n    return ContentService\n        .createTextOutput(JSON.stringify(datos))\n        .setMimeType(ContentService.MimeType.JSON);\n\n}"
+                }
+              ]
             },
             {
               "title": "Errores que cuestan dinero",
