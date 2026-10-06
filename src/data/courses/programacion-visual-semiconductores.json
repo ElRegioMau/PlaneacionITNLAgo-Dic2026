@@ -140,19 +140,43 @@
         "Manejo de errores"
       ],
       "project": {
-        "title": "Visor de mediciones de laboratorio",
-        "description": "Desarrollar un visor que importe o genere mediciones, muestre tabla y gráfica interactiva, calcule estadísticas y procese información sin congelar la interfaz.",
+        "title": "Aplicación de control de Inventario",
+        "description": "Proyecto Final Unidad 2: desarrollar una aplicación web intuitiva para consultar, filtrar y presentar el inventario de un negocio de tecnología, con identidad visual de TECSELL y acceso para empleados.",
         "deliverables": [
-          "Carga/generación de dataset",
-          "Tabla y gráfica sincronizadas",
-          "Estadísticas de medición",
-          "Operación responsiva durante procesamiento"
+          "Aplicación web publicada en GitHub Pages",
+          "Repositorio de GitHub con HTML, CSS y JS separados",
+          "Proyecto agregado a la librería de la materia",
+          "Login para empleados e identidad visual de TECSELL"
         ],
         "skills": [
-          "Visualización",
-          "Arquitectura GUI",
-          "Concurrencia",
-          "Análisis"
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Filtrado de datos",
+          "GitHub Pages"
+        ],
+        "resourceToggleLabel": "Ver proyecto completo y requisitos",
+        "resources": [
+          {
+            "label": "Entrega y requisitos técnicos",
+            "format": "text",
+            "content": "Proyecto Final Unidad 2\nFecha de entrega: Lunes 19 de Octubre 2026\n\nRequisitos técnicos:\n- Tener por separado los documentos HTML, CSS y JS.\n- Agregar el proyecto a la librería de proyectos de la materia con su respectivo botón.\n- Subir el repositorio a GitHub y desplegarlo en GitHub Pages."
+          },
+          {
+            "label": "Contexto y fuente del inventario",
+            "format": "text",
+            "content": "Un negocio de tecnología cuenta con el siguiente inventario:\nhttps://docs.google.com/spreadsheets/d/1SrOEAFqHYwHNnofJKRn_iKnxOFCZuHSMRTV90D5fsKY/edit?usp=sharing"
+          },
+          {
+            "label": "Funcionalidades obligatorias",
+            "format": "ordered-list",
+            "content": "Mostrar el inventario completo.\nMostrar los productos con stock menor a 10 piezas.\nMostrar los productos con stock mayor a 20 piezas.\nMostrar los productos con precio mayor a 1500 pesos.\nMostrar los productos con precio menor a 1500 pesos."
+          },
+          {
+            "label": "Identidad visual y acceso",
+            "format": "text",
+            "content": "La aplicación debe ser intuitiva e incluir el logotipo y los colores del negocio.\n\nNombre del negocio: TECSELL\nColores de la empresa: blanco, azul, celeste y naranja\nRequisito adicional: el negocio necesita un logotipo y un Login para empleados de la empresa."
+          }
         ]
       },
       "weeks": [
