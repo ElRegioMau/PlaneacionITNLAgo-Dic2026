@@ -232,19 +232,56 @@
         "Casos de prueba"
       ],
       "project": {
-        "title": "Simulador de operación industrial",
-        "description": "Crear un programa que simule una operación —producción, inventario, inspección o colas simplificadas— y entregue métricas que permitan comparar al menos dos escenarios.",
+        "title": "Aplicación de control de inventario TECSELL",
+        "description": "Desarrollar una aplicación web intuitiva para consultar y filtrar el inventario de 20 productos de Google Sheets, con acceso para administrador, almacenista y cliente.",
         "deliverables": [
-          "Programa Python ejecutable",
-          "Casos de prueba",
-          "Reporte de métricas de escenarios",
-          "README con supuestos y limitaciones"
+          "Aplicación web con login de tres roles",
+          "Inventario conectado a Google Sheets",
+          "Filtros de stock y precio por rol",
+          "Carpetas separadas para HTML, CSS, JS e IMG",
+          "Repositorio en GitHub y despliegue en GitHub Pages"
         ],
         "skills": [
-          "Programación estructurada",
-          "Modelado",
-          "Simulación",
-          "Análisis de escenarios"
+          "HTML y CSS",
+          "JavaScript",
+          "Google Sheets",
+          "Google Apps Script",
+          "Control de inventario",
+          "GitHub Pages"
+        ],
+        "resourceToggleLabel": "Ver requisitos del proyecto final",
+        "resources": [
+          {
+            "label": "Fecha de entrega",
+            "format": "text",
+            "content": "Proyecto Final Unidad 2 · Fecha de entrega: lunes 19 de octubre de 2026."
+          },
+          {
+            "label": "Requisitos técnicos",
+            "format": "ordered-list",
+            "content": "Organiza por separado los documentos y carpetas HTML, CSS, JS e IMG.\nUsa el inventario de 20 productos creado previamente en Google Sheets.\nSube el repositorio a GitHub y despliega la aplicación con GitHub Pages.\nIncluye un login que permita acceder con los roles Administrador, Almacenista y Cliente.\nDiseña una interfaz intuitiva con el logotipo de TECSELL y los colores blanco, azul, celeste y naranja."
+          },
+          {
+            "label": "Permisos por rol",
+            "format": "ordered-list",
+            "content": "Administrador: muestra el inventario completo y puede agregar productos nuevos.\nAlmacenista: muestra el inventario completo, filtra productos con stock menor a 10 piezas y filtra productos con stock mayor a 20 piezas.\nCliente: muestra el inventario y filtra productos con precio mayor a $1,500 y menor a $1,500."
+          },
+          {
+            "label": "Funciones obligatorias",
+            "format": "ordered-list",
+            "content": "Mostrar el inventario completo.\nFiltrar productos con stock menor a 10 piezas.\nFiltrar productos con stock mayor a 20 piezas.\nFiltrar productos con precio mayor a $1,500.\nFiltrar productos con precio menor a $1,500.\nPermitir que el administrador agregue nuevos productos al inventario."
+          },
+          {
+            "label": "Estructura sugerida del proyecto",
+            "language": "text",
+            "format": "code",
+            "content": "tecsell-inventario/\n├── index.html\n├── css/\n│   └── styles.css\n├── js/\n│   ├── login.js\n│   ├── inventario.js\n│   └── administrador.js\n├── img/\n│   └── logo-tecsell.png\n├── administrador/\n│   └── index.html\n├── almacenista/\n│   └── index.html\n└── cliente/\n    └── index.html"
+          },
+          {
+            "label": "Criterios de identidad visual TECSELL",
+            "format": "text",
+            "content": "Nombre comercial: TECSELL. Diseña e incluye un logotipo propio del negocio. Aplica blanco como base, azul y celeste para navegación e información, y naranja para acciones destacadas, alertas o filtros activos."
+          }
         ]
       },
       "weeks": [
