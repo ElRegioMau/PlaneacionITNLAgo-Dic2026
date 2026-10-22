@@ -529,7 +529,45 @@
             {
               "title": "Eager vs lazy",
               "description": "Comparar listas y generadores observando cuándo ocurre cada cálculo.",
-              "kind": "Laboratorio"
+              "kind": "Laboratorio",
+              "resourceToggleLabel": "Ver actividades, código y preguntas",
+              "resources": [
+                {
+                  "label": "Actividad — Detector de temperaturas peligrosas",
+                  "format": "text",
+                  "content": "**Unidad 3**\n20–30 minutos · Python · Individual\n**Situación problemática**\nUna máquina industrial registra diferentes temperaturas durante su funcionamiento. Se necesita detectar la primera temperatura que alcance o supere los 80 °C.\nEl sistema debe procesar las temperaturas una por una y detenerse cuando encuentre una temperatura peligrosa, evitando revisar los valores restantes."
+                },
+                {
+                  "label": "Código inicial — Temperaturas",
+                  "language": "python",
+                  "content": "temperaturas = [35, 42, 55, 63, 85, 90, 95]\n\n\ndef revisar_temperaturas():\n    for temperatura in temperaturas:\n        print(\"Revisando:\", temperatura)\n        # Completar aquí\n\n\ndatos = revisar_temperaturas()\n\n# Completar el recorrido del generador\n# Detenerse cuando temperatura >= 80"
+                },
+                {
+                  "label": "Instrucciones — Temperaturas",
+                  "format": "ordered-list",
+                  "content": "Completa la función utilizando `yield` para entregar cada temperatura.\nUtiliza un ciclo `for` para recorrer el generador.\nCuando encuentres una temperatura igual o superior a 80 °C, muestra `\"ALERTA: Temperatura peligrosa\"`.\nUtiliza `break` para detener el recorrido.\nVerifica que las temperaturas posteriores a la primera alerta no se procesen."
+                },
+                {
+                  "label": "Preguntas para entregar — Temperaturas",
+                  "format": "ordered-list",
+                  "content": "¿Qué función cumple `yield`?\n¿Por qué no aparecen las temperaturas 90 y 95?\n¿Qué sucedería si eliminamos `break`?\n¿Qué diferencia habría si la función construyera y devolviera primero una lista completa con `return`?"
+                },
+                {
+                  "label": "Mini reto — Sistema de monitoreo de producción",
+                  "format": "text",
+                  "content": "**Unidad 3 · Evaluación perezosa**\n20–25 minutos · Python\n**Situación problemática**\nUna fábrica cuenta con una línea de producción que registra el peso de cada producto fabricado.\nLos productos deben pesar entre 95 y 105 gramos para cumplir con los estándares de calidad.\nEl sistema necesita detectar productos defectuosos y detener la inspección cuando encuentre el tercer producto defectuoso."
+                },
+                {
+                  "label": "Código inicial — Monitoreo de producción",
+                  "language": "python",
+                  "content": "pesos = [100, 98, 110, 103, 92, 101, 107, 99, 96, 112]\n\n\n# Función 1: Generar los pesos uno por uno\ndef generar_pesos():\n    # Completar utilizando yield\n    pass\n\n\n# Función 2: Generar solamente los pesos defectuosos\ndef detectar_defectuosos():\n    # Utilizar generar_pesos()\n    # Completar utilizando yield\n    pass\n\n\n# Programa principal\n# Mostrar los productos defectuosos\n# Detenerse al encontrar el tercero"
+                },
+                {
+                  "label": "Instrucciones — Monitoreo de producción",
+                  "format": "ordered-list",
+                  "content": "Completa `generar_pesos()` para recorrer la lista y entregar cada peso utilizando `yield`. Antes de entregar cada valor, muestra `\"Inspeccionando: X gramos\"`.\nCompleta `detectar_defectuosos()` para consumir los valores de `generar_pesos()` y entregar mediante otro `yield` únicamente los pesos menores a 95 o mayores a 105.\nEn el programa principal, utiliza un `for` para mostrar los productos defectuosos.\nUtiliza un contador y `break` para detener la inspección después del tercer producto defectuoso.\nNo modifiques la lista original ni conviertas los generadores a listas."
+                }
+              ]
             },
             {
               "title": "Secuencia infinita segura",
