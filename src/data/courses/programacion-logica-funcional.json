@@ -583,12 +583,58 @@
             {
               "title": "Filtro por etapas",
               "description": "Construir generators para leer, parsear, filtrar y transformar registros.",
-              "kind": "Práctica"
+              "kind": "Práctica",
+              "resourceToggleLabel": "Ver actividad, código e instrucciones",
+              "resources": [
+                {
+                  "label": "Actividad — Procesamiento de pedidos y paquetes con generadores",
+                  "format": "text",
+                  "content": "**Unidad 3 · Programación Lógica y Funcional · 30–40 minutos**\n**Objetivo:** resolver dos problemas utilizando funciones con `yield` y comparar su comportamiento con las expresiones generadoras `()`.\n**Parte 1. Pedidos de alto valor**\nUna tienda en línea necesita identificar los pedidos cuyo total sea superior a $1,000."
+                },
+                {
+                  "label": "Datos iniciales — Pedidos",
+                  "language": "python",
+                  "content": "pedidos = [\n    {\"id\": 101, \"total\": 350},\n    {\"id\": 102, \"total\": 1200},\n    {\"id\": 103, \"total\": 780},\n    {\"id\": 104, \"total\": 2500},\n    {\"id\": 105, \"total\": 450},\n    {\"id\": 106, \"total\": 1800},\n    {\"id\": 107, \"total\": 950}\n]"
+                },
+                {
+                  "label": "Pequeño empujón — Pedidos",
+                  "language": "python",
+                  "content": "def generar_pedidos():\n    for pedido in pedidos:\n        # Completa la condición y entrega el pedido con yield.\n        pass\n\n\ngenerador = generar_pedidos()\n\n# Usa next() para obtener el primero y el segundo.\n# Después recorre con for los pedidos restantes.\n\n\n# Resuelve nuevamente con una expresión generadora.\npedidos_altos = (\n    # Completa la expresión.\n)"
+                },
+                {
+                  "label": "Instrucciones — Pedidos de alto valor",
+                  "format": "ordered-list",
+                  "content": "Crea una función `generar_pedidos()` que utilice `yield` para entregar únicamente los pedidos superiores a $1,000.\nUtiliza `next()` para obtener el primer y segundo pedido que cumplan la condición.\nUtiliza un ciclo `for` para mostrar los pedidos restantes.\nResuelve nuevamente el problema utilizando una expresión generadora `()` en lugar de la función con `yield`.\nCompara los resultados de ambas soluciones."
+                }
+              ]
             },
             {
               "title": "Sin reventar la RAM",
               "description": "Procesar un archivo grande y comparar memoria contra una carga completa.",
-              "kind": "Datos"
+              "kind": "Datos",
+              "resourceToggleLabel": "Ver reto con CSV, guía e instrucciones",
+              "resources": [
+                {
+                  "label": "Problema — Análisis perezoso del CSV de estudiantes",
+                  "format": "text",
+                  "content": "Retoma el archivo de Kaggle utilizado anteriormente y procésalo sin cargar todos sus registros en memoria.\nEl objetivo es encontrar estudiantes de **alto desempeño**: promedio de matemáticas, lectura y escritura igual o mayor a 80. Después deberás analizar cuántos completaron el curso de preparación y mostrar algunos resultados.\nUtiliza una función con `yield` para leer el CSV fila por fila y una expresión generadora para filtrar o transformar los registros."
+                },
+                {
+                  "label": "Pequeño empujón — Lectura del CSV",
+                  "language": "python",
+                  "content": "import csv\nfrom itertools import islice\n\nRUTA = \"StudentsPerformance.csv\"\n\n# Ajusta estos encabezados si tu archivo utiliza nombres diferentes.\nMATEMATICAS = \"math score\"\nLECTURA = \"reading score\"\nESCRITURA = \"writing score\"\nPREPARACION = \"test preparation course\"\n\n\ndef leer_estudiantes(ruta):\n    with open(ruta, newline=\"\", encoding=\"utf-8-sig\") as archivo:\n        lector = csv.DictReader(archivo)\n        for fila in lector:\n            # Convierte las tres calificaciones a número.\n            # Agrega el promedio sin modificar el archivo original.\n            # Entrega un registro a la vez con yield.\n            pass\n\n\n# Crea una expresión generadora a partir de leer_estudiantes(RUTA).\nalto_desempeno = (\n    # Conserva únicamente los registros con promedio >= 80.\n)\n\n# islice permite observar algunos resultados sin crear una lista completa.\nfor estudiante in islice(alto_desempeno, 5):\n    print(estudiante)"
+                },
+                {
+                  "label": "Instrucciones — CSV de estudiantes",
+                  "format": "ordered-list",
+                  "content": "Coloca `StudentsPerformance.csv` en la misma carpeta que tu programa o actualiza la constante `RUTA`.\nCompleta `leer_estudiantes()` para leer una fila a la vez mediante `csv.DictReader` y entregarla con `yield`.\nConvierte `math score`, `reading score` y `writing score` a números, y calcula el promedio de cada estudiante.\nCrea una expresión generadora que conserve únicamente los registros con promedio igual o mayor a 80.\nMuestra los primeros cinco resultados con `islice()` sin convertir el generador a lista.\nCrea un nuevo recorrido perezoso para contar cuántos estudiantes de alto desempeño tienen `test preparation course` igual a `completed`.\nCalcula el promedio general de los estudiantes seleccionados usando acumulador y contador, sin utilizar `list()` sobre todos los registros.\nCompara este enfoque con `list(csv.DictReader(...))`: explica cuál comienza a producir resultados antes y cuál requiere más memoria.\nNo modifiques el archivo CSV original."
+                },
+                {
+                  "label": "Preguntas para entregar — CSV de estudiantes",
+                  "format": "ordered-list",
+                  "content": "¿En qué momento se lee una fila del archivo cuando utilizas `yield`?\n¿Por qué debes crear nuevamente el generador si quieres realizar otro análisis completo?\n¿Qué diferencia observas entre la función generadora y la expresión generadora?\n¿Qué ventaja tendría este enfoque si el CSV contuviera varios millones de estudiantes?"
+                }
+              ]
             }
           ]
         },
