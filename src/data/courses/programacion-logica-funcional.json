@@ -734,22 +734,12 @@
                   "content": "¿Qué problema resuelve MCP en una integración con IA?\n¿Qué diferencia existe entre una tool y un resource?\n¿Qué datos nunca debería aceptar una herramienta sin validación?\n¿Qué permiso mínimo necesita cada operación del proyecto?"
                 }
               ],
-              "downloadsLabel": "Abrir o descargar README y repositorio",
+              "downloadsLabel": "Descargar proyecto MCP de alumnos",
               "downloads": [
                 {
-                  "label": "Repositorio GitHub",
-                  "fileName": "PlaneacionITNLAgo-Dic2026",
-                  "url": "https://github.com/ElRegioMau/PlaneacionITNLAgo-Dic2026"
-                },
-                {
-                  "label": "README.md",
-                  "fileName": "README.md",
-                  "url": "https://raw.githubusercontent.com/ElRegioMau/PlaneacionITNLAgo-Dic2026/main/README.md"
-                },
-                {
-                  "label": "Repositorio comprimido (.zip)",
-                  "fileName": "PlaneacionITNLAgo-Dic2026-main.zip",
-                  "url": "https://github.com/ElRegioMau/PlaneacionITNLAgo-Dic2026/archive/refs/heads/main.zip"
+                  "label": "Proyecto MCP_Alumnos (.zip)",
+                  "fileName": "MCP_Alumnos.zip",
+                  "url": "./MCP_Alumnos.zip"
                 }
               ]
             },
