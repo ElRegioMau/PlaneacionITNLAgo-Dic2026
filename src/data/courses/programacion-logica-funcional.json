@@ -674,105 +674,144 @@
     },
     {
       "number": 4,
-      "title": "Fundamentos de la programación lógica",
-      "description": "Los alumnos modelan conocimiento como hechos y reglas, construyen un sistema experto y luego lo integran con un flujo moderno de desarrollo asistido por IA. La IA puede generar propuestas de código, pero las reglas, pruebas y defensa técnica determinan si el software es aceptable.",
+      "title": "Model Context Protocol (MCP)",
+      "description": "El módulo se dedica exclusivamente a Model Context Protocol (MCP): cómo conectar clientes de IA con herramientas, recursos y prompts mediante servidores interoperables. El trabajo enfatiza contratos claros, permisos mínimos, pruebas y trazabilidad de cada operación.",
       "objectives": [
-        "Representar conocimiento mediante hechos, reglas y consultas.",
-        "Construir y explicar un sistema experto pequeño con Prolog.",
-        "Usar IA generativa para automatizar partes del desarrollo manteniendo especificaciones, pruebas y revisión humana."
+        "Explicar la arquitectura de MCP y distinguir clientes, servidores, herramientas, recursos y prompts.",
+        "Construir un servidor MCP pequeño y conectarlo a un cliente compatible mediante un contrato verificable.",
+        "Aplicar seguridad, validación, manejo de errores, pruebas y documentación a integraciones MCP."
       ],
       "topics": [
-        "Prolog",
-        "Hechos y reglas",
-        "Unificación",
-        "Backtracking",
-        "Sistemas expertos",
-        "IA para código",
-        "Especificaciones",
-        "Tests",
-        "Code review",
-        "RAG opcional"
+        "MCP",
+        "Clientes y servidores",
+        "Tools, resources y prompts",
+        "JSON-RPC y transporte",
+        "Descubrimiento de capacidades",
+        "Validación de entradas",
+        "Permisos y seguridad",
+        "Pruebas e inspección",
+        "Documentación técnica",
+        "Git/GitHub"
       ],
       "project": {
-        "title": "AI Software Factory: sistema experto verificable",
-        "description": "Construir un sistema experto y una pequeña interfaz o servicio alrededor de él utilizando un flujo de desarrollo automatizado con IA: especificación → generación → pruebas → revisión → refactor. El equipo debe conservar evidencias de qué generó la IA y demostrar que comprende cada decisión.",
+        "title": "Servidor MCP verificable",
+        "description": "Diseñar y construir un servidor MCP que exponga herramientas y recursos útiles para un dominio elegido. El equipo deberá conectarlo a un cliente compatible, documentar el contrato de cada capacidad y demostrar con pruebas que las operaciones son seguras, reproducibles y comprensibles.",
         "deliverables": [
-          "Base de conocimiento Prolog",
-          "Aplicación o API que consulta el sistema experto",
-          "Archivo de especificación/prompt y bitácora de iteraciones",
-          "Pruebas generadas y revisadas",
-          "Informe de errores de la IA y correcciones humanas",
-          "Defensa individual del código"
+          "Servidor MCP funcional con al menos dos tools y un resource",
+          "Configuración de conexión para un cliente MCP",
+          "Especificación de entradas, salidas, errores y permisos",
+          "Pruebas de funcionamiento y casos inválidos",
+          "README con instalación, uso, arquitectura y limitaciones",
+          "Demostración y defensa individual del flujo"
         ],
         "skills": [
-          "Programación lógica",
-          "Sistemas expertos",
-          "AI-assisted development",
-          "Testing",
-          "Revisión de código"
+          "Diseño de APIs y contratos",
+          "Integración con MCP",
+          "Validación y seguridad",
+          "Testing y depuración",
+          "Documentación técnica"
         ]
       },
       "weeks": [
         {
           "number": 13,
-          "focus": "Conocimiento como reglas",
+          "focus": "MCP: arquitectura y primer servidor",
           "activities": [
             {
-              "title": "Hechos y consultas",
-              "description": "Modelar relaciones de un dominio y responder preguntas con Prolog.",
-              "kind": "Práctica"
+              "title": "Leer el README y ubicar el proyecto",
+              "description": "Revisar la documentación base del repositorio, identificar el objetivo del proyecto y preparar el entorno de trabajo para las prácticas de MCP.",
+              "kind": "Práctica",
+              "resourceToggleLabel": "Ver guía de lectura y entregables",
+              "resources": [
+                {
+                  "label": "Guía de lectura — MCP",
+                  "format": "ordered-list",
+                  "content": "Abre el README y localiza: propósito del proyecto, requisitos, instrucciones de instalación, forma de ejecución y estructura de carpetas.\nIdentifica qué parte corresponde al cliente, cuál al servidor y dónde se describen las capacidades MCP.\nRegistra dos dudas técnicas y una mejora concreta para la documentación.\nEntrega una captura o breve bitácora que demuestre que el entorno quedó listo."
+                },
+                {
+                  "label": "Preguntas de preparación",
+                  "format": "ordered-list",
+                  "content": "¿Qué problema resuelve MCP en una integración con IA?\n¿Qué diferencia existe entre una tool y un resource?\n¿Qué datos nunca debería aceptar una herramienta sin validación?\n¿Qué permiso mínimo necesita cada operación del proyecto?"
+                }
+              ],
+              "downloadsLabel": "Abrir o descargar README y repositorio",
+              "downloads": [
+                {
+                  "label": "Repositorio GitHub",
+                  "fileName": "PlaneacionITNLAgo-Dic2026",
+                  "url": "https://github.com/ElRegioMau/PlaneacionITNLAgo-Dic2026"
+                },
+                {
+                  "label": "README.md",
+                  "fileName": "README.md",
+                  "url": "https://raw.githubusercontent.com/ElRegioMau/PlaneacionITNLAgo-Dic2026/main/README.md"
+                },
+                {
+                  "label": "Repositorio comprimido (.zip)",
+                  "fileName": "PlaneacionITNLAgo-Dic2026-main.zip",
+                  "url": "https://github.com/ElRegioMau/PlaneacionITNLAgo-Dic2026/archive/refs/heads/main.zip"
+                }
+              ]
             },
             {
-              "title": "Reglas que explican una decisión",
-              "description": "Construir reglas encadenadas y rastrear por qué una consulta resulta verdadera o falsa.",
-              "kind": "Reto"
+              "title": "Mapa de capacidades MCP",
+              "description": "Distinguir cliente, servidor, tools, resources y prompts; después documentar el flujo de una solicitud desde el cliente hasta la respuesta.",
+              "kind": "Laboratorio",
+              "resourceToggleLabel": "Ver actividad y preguntas",
+              "resources": [
+                {
+                  "label": "Actividad — Primer contrato MCP",
+                  "format": "ordered-list",
+                  "content": "Elige una tarea concreta del dominio del proyecto.\nDibuja o describe el recorrido cliente → servidor → capacidad MCP → resultado.\nDefine una tool, un resource y un prompt que podrían apoyar la tarea.\nEspecifica entradas, salidas, errores esperados y permisos mínimos para cada capacidad.\nCompara tu diseño con el README y señala cualquier ambigüedad."
+                }
+              ]
             }
           ]
         },
         {
           "number": 14,
-          "focus": "Unificación y búsqueda",
+          "focus": "Tools, resources y prompts",
           "activities": [
             {
-              "title": "Backtracking visible",
-              "description": "Diseñar consultas con varias soluciones y analizar el árbol de búsqueda.",
+              "title": "Diseñar tools con entradas seguras",
+              "description": "Implementar herramientas MCP con esquemas claros, validación de argumentos, respuestas útiles y errores controlados.",
               "kind": "Laboratorio"
             },
             {
-              "title": "Mini sistema experto",
-              "description": "Crear una base de reglas para diagnóstico, recomendación o configuración.",
+              "title": "Publicar resources y prompts",
+              "description": "Exponer información de solo lectura y plantillas reutilizables, diferenciando datos, instrucciones y operaciones que cambian estado.",
               "kind": "Práctica"
             }
           ]
         },
         {
           "number": 15,
-          "focus": "Desarrollo automatizado con IA",
+          "focus": "Transporte, pruebas y seguridad",
           "activities": [
             {
-              "title": "Spec → código",
-              "description": "Redactar una especificación verificable y pedir a una herramienta de IA que genere una capa de integración o pruebas.",
-              "kind": "IA"
+              "title": "Inspeccionar el intercambio MCP",
+              "description": "Observar el descubrimiento de capacidades y el intercambio de mensajes; registrar solicitudes, respuestas, errores y tiempos de ejecución.",
+              "kind": "Laboratorio"
             },
             {
-              "title": "La IA también se equivoca",
-              "description": "Revisar el código generado, encontrar al menos un riesgo o defecto y corregirlo con evidencia.",
+              "title": "Amenazas y permisos mínimos",
+              "description": "Encontrar riesgos de inyección, exposición de secretos, acceso excesivo o efectos secundarios, y corregirlos con pruebas.",
               "kind": "Reto"
             }
           ]
         },
         {
           "number": 16,
-          "focus": "IA bajo control de pruebas",
+          "focus": "Proyecto MCP y defensa técnica",
           "activities": [
             {
-              "title": "Pipeline de generación y test",
-              "description": "Automatizar la ejecución de pruebas después de cada cambio generado o sugerido por IA.",
-              "kind": "IA"
+              "title": "Integración y documentación",
+              "description": "Conectar el servidor al cliente, cerrar el README del proyecto y preparar una demostración reproducible con casos correctos e incorrectos.",
+              "kind": "Práctica"
             },
             {
-              "title": "Defensa sin copiloto",
-              "description": "Explicar en vivo una regla, un flujo generado y una corrección humana sin consultar al asistente.",
+              "title": "Defensa del servidor MCP",
+              "description": "Explicar la arquitectura, una tool, un resource, un prompt, una decisión de seguridad y la evidencia de pruebas sin ocultar limitaciones.",
               "kind": "Reto"
             }
           ]

@@ -16,6 +16,7 @@ export interface Activity {
   imageCollapsible?: boolean
   imageToggleLabel?: string
   resourceToggleLabel?: string
+  downloadsLabel?: string
   resources?: ContentResource[]
   downloads?: {
     label: string

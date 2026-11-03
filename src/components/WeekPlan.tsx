@@ -11,16 +11,16 @@ const kindClass: Record<string, string> = {
   Laboratorio: 'kind-lab',
 }
 
-function ActivityDownloads({ downloads }: { downloads: NonNullable<Activity['downloads']> }) {
+function ActivityDownloads({ downloads, label }: { downloads: NonNullable<Activity['downloads']>; label?: string }) {
   return (
     <details className="activity-resources activity-downloads">
       <summary>
-        <span>Descargar drivers para ESP32</span>
+        <span>{label ?? 'Descargar recursos'}</span>
         <ChevronDown size={17} aria-hidden="true" />
       </summary>
       <div className="activity-downloads-content">
         {downloads.map((download) => (
-          <a href={download.url} download={download.fileName} key={download.url}>
+          <a href={download.url} download={download.fileName} target="_blank" rel="noreferrer" key={download.url}>
             <span>
               <strong>{download.label}</strong>
               <small>{download.fileName}</small>
@@ -78,7 +78,7 @@ export default function WeekPlan({ week }: { week: WeekPlanType }) {
                   toggleLabel={activity.resourceToggleLabel ?? 'Ver script y preguntas'}
                 />
               )}
-              {activity.downloads && <ActivityDownloads downloads={activity.downloads} />}
+              {activity.downloads && <ActivityDownloads downloads={activity.downloads} label={activity.downloadsLabel} />}
             </div>
           </div>
         ))}
