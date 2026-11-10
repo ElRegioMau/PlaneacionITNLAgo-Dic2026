@@ -506,19 +506,88 @@
         "Memoria"
       ],
       "project": {
-        "title": "Procesador lazy de telemetría o logs",
-        "description": "Crear un pipeline que procese un flujo grande de registros por etapas, filtre eventos, calcule estadísticas en ventanas y emita alertas sin cargar todo el archivo en memoria.",
+        "title": "HousePredict — Sistema inteligente de análisis inmobiliario",
+        "description": "Desarrollar una aplicación de consola en Python que analice datos reales de viviendas, aplique programación funcional y generadores, produzca estadísticas y visualizaciones, y estime precios de venta mediante regresión lineal.",
         "deliverables": [
-          "Generadores encadenados",
-          "Dataset grande o generador de stream",
-          "Medición de memoria/tiempo",
-          "Reporte de alertas y diseño"
+          "Código fuente organizado en módulos y carpeta comprimida",
+          "train.csv o instrucciones claras para obtenerlo",
+          "Cuatro gráficas guardadas en resultados/graficas/",
+          "requirements.txt y README.md con resultados, MAE y limitaciones"
         ],
         "skills": [
-          "Lazy evaluation",
-          "Streaming",
-          "Performance",
-          "Observabilidad"
+          "Programación funcional",
+          "Generadores",
+          "Análisis de datos",
+          "Matplotlib",
+          "Regresión lineal",
+          "Evaluación de modelos"
+        ],
+        "resourceToggleLabel": "Ver proyecto, requisitos y rúbrica",
+        "resources": [
+          {
+            "label": "Objetivo general y objetivos específicos",
+            "format": "text",
+            "content": "**Proyecto final de la Unidad 3**\nAplicar los conceptos de la unidad para cargar, procesar y explorar un conjunto de datos, construir un modelo de regresión lineal y comunicar sus resultados y limitaciones.\nProcesar viviendas con funciones puras, `map()`, `filter()`, `reduce()`, `lambda` y comprensiones de listas.\nImplementar generadores con `yield` y recuperar resultados con `next()`.\nCalcular estadísticas, crear gráficas y entrenar y evaluar un modelo predictivo.\nOrganizar el programa en módulos y explicar su funcionamiento."
+          },
+          {
+            "label": "1 — Conjunto de datos Ames Housing",
+            "format": "text",
+            "content": "Utilicen Ames Housing, de la competencia House Prices de Kaggle. Descarguen `train.csv`: contiene 1,460 registros de entrenamiento, 79 variables explicativas y `SalePrice`, el precio de venta en dólares estadounidenses.\nDescarga: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data"
+          },
+          {
+            "label": "Variables mínimas del dataset",
+            "format": "ordered-list",
+            "content": "`GrLivArea`: superficie habitable sobre el nivel del suelo, en pies cuadrados.\n`BedroomAbvGr`: número de habitaciones sobre el nivel del suelo.\n`FullBath`: número de baños completos.\n`GarageCars`: capacidad del garaje en automóviles.\n`OverallQual`: calidad general de la vivienda, de 1 a 10.\n`YearBuilt`: año de construcción.\n`SalePrice`: precio real de venta en dólares; variable objetivo."
+          },
+          {
+            "label": "2 — Menú y requisitos funcionales",
+            "format": "ordered-list",
+            "content": "Mostrar viviendas.\nFiltrar viviendas.\nConsultar estadísticas.\nVisualizar gráficas.\nEntrenar el modelo.\nPredecir un precio.\nEvaluar el modelo.\nSalir."
+          },
+          {
+            "label": "Módulo A — Carga y procesamiento funcional",
+            "format": "ordered-list",
+            "content": "Lean `train.csv`, seleccionen las variables necesarias, conviertan los valores numéricos y traten valores faltantes o inválidos de forma documentada. Pueden usar `csv.DictReader` y una lista de diccionarios.\nConserven los datos originales al aplicar funciones puras.\n`map()`: convertir superficies de pies cuadrados a metros cuadrados usando 1 pie² = 0.092903 m².\n`filter()`: seleccionar viviendas dentro de un presupuesto indicado.\n`reduce()`: calcular el valor total de las viviendas seleccionadas.\n`lambda`: definir transformaciones y condiciones para las operaciones anteriores.\nComprensiones de listas: extraer los datos de entrada y la variable objetivo para el modelo.\nFunciones puras: procesar datos sin modificar la colección original.\n`yield` y `next()`: generar viviendas que cumplan un criterio, obtener la primera coincidencia y manejar el caso sin resultados."
+          },
+          {
+            "label": "Módulo B — Análisis estadístico",
+            "format": "ordered-list",
+            "content": "Calcular el precio promedio y las viviendas de mayor y menor precio.\nObtener el número de viviendas con precio menor a 150,000 USD.\nCalcular el precio promedio de las viviendas con tres habitaciones.\nInterpretar la relación observada entre superficie y precio.\nSi un filtro no produce registros, informar al usuario y evitar dividir entre cero."
+          },
+          {
+            "label": "Módulo C — Visualización de datos",
+            "format": "ordered-list",
+            "content": "Generen al menos cuatro gráficas con Matplotlib. Incluyan título, nombres de ejes, unidades y leyenda cuando corresponda. Guarden las imágenes en `resultados/graficas/`.\nDispersión de superficie habitable frente a precio, con la recta de regresión simple.\nHistograma de la distribución de precios de venta.\nGráfica de barras del precio promedio por número de habitaciones.\nDispersión de precios reales frente a predichos en el conjunto de prueba, con una línea de referencia ideal."
+          },
+          {
+            "label": "Módulo D — Predicción y evaluación",
+            "format": "ordered-list",
+            "content": "Entrenen una regresión lineal simple con `GrLivArea` como variable de entrada y `SalePrice` como objetivo. Utilicen scikit-learn y representen el modelo como precio estimado = b0 + b1 × superficie.\nDividan los datos en 80 % para entrenamiento y 20 % para prueba antes de entrenar. Usen una semilla fija para reproducir resultados.\nSoliciten mediante `input()` la superficie en pies cuadrados y muestren el precio estimado en USD.\nEvalúen las predicciones del conjunto de prueba mediante el error absoluto medio (MAE), expresado en USD.\nExpliquen el significado del MAE y al menos una limitación del modelo.\n**Ampliación opcional:** entrenar una regresión lineal múltiple con superficie, habitaciones, baños y calidad."
+          },
+          {
+            "label": "3 — Estructura sugerida del proyecto",
+            "content": "HousePredict/\n    main.py                 Menú principal\n    datos.py                Lectura y limpieza\n    filtros.py              Búsquedas y filtros\n    estadisticas.py         Cálculos estadísticos\n    generadores.py          Generadores\n    prediccion.py           Entrenamiento y evaluación\n    graficas.py             Visualizaciones\n    dataset/train.csv       Conjunto de datos\n    resultados/graficas/    Imágenes generadas\n    requirements.txt        Dependencias\n    README.md               Instrucciones y resultados"
+          },
+          {
+            "label": "4 — Entregables",
+            "format": "text",
+            "content": "Entreguen una carpeta comprimida con el código fuente y la estructura del proyecto, el archivo `train.csv` o instrucciones claras para obtenerlo, las cuatro gráficas, `requirements.txt` y `README.md`.\nEl README debe indicar cómo instalar dependencias y ejecutar el programa, describir los módulos, resumir los resultados y explicar el MAE y las limitaciones del modelo."
+          },
+          {
+            "label": "Rúbrica de evaluación — 100 puntos",
+            "format": "ordered-list",
+            "content": "Lectura y limpieza del dataset — 10 puntos.\nUso correcto de `map`, `filter`, `reduce` y `lambda` — 20 puntos.\nGeneradores con `yield` y `next` — 10 puntos.\nFunciones puras y organización modular — 10 puntos.\nAnálisis estadístico — 10 puntos.\nCuatro gráficas con Matplotlib — 15 puntos.\nRegresión lineal y predicción mediante `input()` — 15 puntos.\nEvaluación del modelo con datos de prueba — 5 puntos.\nPresentación y explicación del código — 5 puntos."
+          },
+          {
+            "label": "5 — Etapas de trabajo",
+            "format": "ordered-list",
+            "content": "Exploración y procesamiento: cargar y limpiar el CSV; aplicar `map()`, `filter()` y `reduce()`.\nProgramación funcional: implementar generadores, funciones puras, estadísticas y filtros.\nPredicción y visualización: entrenar y evaluar la regresión, generar gráficas y permitir predicciones desde consola.\nIntegración y defensa: integrar módulos, verificar resultados y presentar el funcionamiento del sistema."
+          },
+          {
+            "label": "6 — Defensa del proyecto (Muy importante)",
+            "format": "text",
+            "content": "Los alumnos deberán modificar y explicar una función de su proyecto elegida por el profesor."
+          }
         ]
       },
       "weeks": [
