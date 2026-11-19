@@ -352,104 +352,109 @@
     },
     {
       "number": 4,
-      "title": "Aplicaciones de adquisición y control inteligente",
-      "description": "El proyecto final del curso integra interfaz, instrumentación, almacenamiento y analítica. Se añaden SQL y un modelo sencillo de ML para detectar patrones en mediciones, manteniendo trazabilidad y criterio ingenieril.",
+      "title": "Desarrollo de videojuegos con Python y Pygame",
+      "description": "Desarrollo de un videojuego con Python y Pygame mediante el manejo de gráficos, eventos, movimiento, reglas e interacción.",
       "objectives": [
-        "Integrar adquisición, persistencia, visualización y control en una aplicación completa.",
-        "Almacenar resultados de pruebas con trazabilidad de muestra, fecha y parámetros.",
-        "Aplicar análisis de datos o ML sencillo para apoyar la clasificación de mediciones."
+        "Diseñar interfaces visuales interactivas para un videojuego con Python y Pygame.",
+        "Gestionar eventos, gráficos, animaciones y colisiones dentro del ciclo del juego.",
+        "Integrar y probar un videojuego funcional con recursos visuales y reglas claras."
       ],
       "topics": [
-        "SQLite",
-        "Pandas",
-        "Trazabilidad",
-        "DAQ",
-        "Dashboards",
-        "Clasificación",
-        "Anomalías",
-        "scikit-learn",
-        "Reportes"
+        "Python",
+        "Pygame",
+        "Ciclo de juego",
+        "Eventos",
+        "Gráficos",
+        "Movimiento",
+        "Colisiones",
+        "Pruebas"
       ],
       "project": {
-        "title": "Semiconductor Test Bench HMI",
-        "description": "Desarrollar una estación visual de prueba para un dispositivo o proceso simulado: configura parámetros, adquiere curvas/mediciones, guarda resultados, clasifica PASS/FAIL y muestra un análisis adicional basado en datos o ML.",
+        "title": "Videojuego interactivo con Pygame",
+        "description": "Desarrollar un videojuego con interfaz visual, controles, personajes y una mecánica de juego definida, tomando el proyecto descargable como punto de partida.",
         "deliverables": [
-          "GUI completa por capas",
-          "Adquisición real o simulada",
-          "SQLite con historial de pruebas",
-          "Visualización y PASS/FAIL",
-          "Modelo o detector de anomalías evaluado",
-          "Reporte/exportación de resultados"
+          "Código Python organizado",
+          "Ventana, gráficos y controles funcionales",
+          "Mecánicas y colisiones",
+          "Pantallas de inicio y resultado",
+          "Instrucciones de ejecución y demostración"
         ],
         "skills": [
-          "HMI",
-          "DAQ",
-          "SQL",
-          "Machine Learning",
-          "Integración de sistemas"
+          "Interfaces visuales",
+          "Pygame",
+          "Manejo de eventos",
+          "Integración y pruebas"
         ]
       },
       "weeks": [
         {
           "number": 13,
-          "focus": "Trazabilidad de pruebas",
+          "focus": "Introducción a Pygame y recursos visuales",
           "activities": [
             {
-              "title": "Modelo de datos de test",
-              "description": "Diseñar tablas para muestra, receta, medición, resultado y timestamp.",
-              "kind": "Diseño"
+              "title": "Explora el proyecto de juego",
+              "description": "Descargar y descomprimir el proyecto; revisar sus scripts y recursos gráficos, instalar Pygame y ejecutar los ejemplos desde la carpeta del proyecto.",
+              "kind": "Práctica",
+              "downloadsLabel": "Descargar proyecto de juego",
+              "downloads": [
+                {
+                  "label": "Proyecto de juego con recursos (.zip)",
+                  "fileName": "juego.zip",
+                  "url": "./juego.zip"
+                }
+              ]
             },
             {
-              "title": "GUI + SQLite",
-              "description": "Guardar una ejecución y consultar el historial desde la aplicación.",
-              "kind": "Práctica"
+              "title": "Ventana y eventos",
+              "description": "Identificar el ciclo del juego, la ventana y el manejo de eventos; modificar la ventana o su apariencia.",
+              "kind": "Diseño"
             }
           ]
         },
         {
           "number": 14,
-          "focus": "Pipeline de análisis",
+          "focus": "Personajes y movimiento",
           "activities": [
             {
-              "title": "Limpieza automática",
-              "description": "Transformar mediciones crudas en variables útiles y controlar faltantes o ruido.",
-              "kind": "Datos"
+              "title": "Controles del personaje",
+              "description": "Implementar o ajustar el movimiento del personaje mediante el teclado.",
+              "kind": "Práctica"
             },
             {
-              "title": "PASS/FAIL explicable",
-              "description": "Implementar primero una clasificación por límites de especificación como línea base.",
-              "kind": "Práctica"
+              "title": "Animación y límites",
+              "description": "Mejorar la respuesta visual y evitar que el personaje salga del área de juego.",
+              "kind": "Reto"
             }
           ]
         },
         {
           "number": 15,
-          "focus": "ML como segunda opinión",
+          "focus": "Mecánicas e interacción",
           "activities": [
             {
-              "title": "Clasificador de prueba",
-              "description": "Entrenar un modelo sencillo sobre datos etiquetados y evaluar su desempeño.",
-              "kind": "IA"
+              "title": "Colisiones y reglas",
+              "description": "Detectar colisiones e incorporar una regla de interacción entre objetos.",
+              "kind": "Práctica"
             },
             {
-              "title": "Regla vs modelo",
-              "description": "Comparar el clasificador ML con la regla de especificación e identificar casos de desacuerdo.",
-              "kind": "Datos"
+              "title": "Interfaz de juego",
+              "description": "Añadir información visible, como puntuación, vidas o instrucciones.",
+              "kind": "Diseño"
             }
           ]
         },
         {
           "number": 16,
-          "focus": "Estación integrada",
+          "focus": "Integración y presentación",
           "activities": [
             {
-              "title": "Prueba de extremo a extremo",
-              "description": "Ejecutar configuración → adquisición → almacenamiento → análisis → reporte sin pasos manuales externos.",
+              "title": "Prueba del videojuego",
+              "description": "Probar controles, colisiones y estados; corregir errores encontrados.",
               "kind": "Laboratorio"
             },
             {
-              "title": "Revisión tipo industria",
-              "description": "Presentar arquitectura, trazabilidad, fallo más crítico y mejora siguiente del sistema.",
+              "title": "Demostración final",
+              "description": "Presentar el videojuego, su interfaz, mecánicas y mejoras posibles.",
               "kind": "Reto"
             }
           ]

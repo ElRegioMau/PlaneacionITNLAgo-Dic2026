@@ -482,103 +482,109 @@
     },
     {
       "number": 4,
-      "title": "Automatización, APIs y predicción",
-      "description": "El cierre conecta funciones reutilizables, servicios externos y aprendizaje automático. El objetivo no es formar científicos de datos en cuatro semanas, sino mostrar cómo una solución industrial moderna combina código, datos y modelos.",
+      "title": "Desarrollo de videojuegos con Python y Pygame",
+      "description": "Desarrollo de un videojuego con Python y Pygame mediante el manejo de gráficos, eventos, movimiento, reglas e interacción.",
       "objectives": [
-        "Diseñar funciones reutilizables y separar responsabilidades del programa.",
-        "Consumir datos externos desde una API y automatizar un flujo de actualización.",
-        "Entrenar y evaluar un modelo predictivo básico sin confundir correlación con certeza."
+        "Aplicar variables, estructuras de control y funciones al desarrollo de videojuegos.",
+        "Implementar movimiento, eventos y reglas de juego con Python y Pygame.",
+        "Organizar, probar y explicar un videojuego funcional."
       ],
       "topics": [
-        "Funciones",
-        "Módulos",
-        "APIs REST",
-        "JSON",
-        "Automatización",
-        "Regresión",
-        "Clasificación",
-        "Train/test",
-        "Métricas",
-        "IA responsable"
+        "Python",
+        "Pygame",
+        "Ciclo de juego",
+        "Eventos",
+        "Gráficos",
+        "Movimiento",
+        "Colisiones",
+        "Pruebas"
       ],
       "project": {
-        "title": "Asistente predictivo para operaciones",
-        "description": "Desarrollar una aplicación Python que actualice o cargue datos, calcule indicadores y utilice un modelo sencillo para predecir demanda, tiempo, calidad o riesgo. Debe explicar la predicción y sus limitaciones.",
+        "title": "Videojuego con algoritmos en Python",
+        "description": "Desarrollar un videojuego en Python y Pygame que utilice algoritmos para movimiento, interacción y puntuación, tomando el proyecto descargable como punto de partida.",
         "deliverables": [
-          "Código modular",
-          "Fuente de datos local o API",
-          "Modelo con métrica de evaluación",
-          "Interfaz CLI o notebook ejecutivo",
-          "Conclusión sobre utilidad y riesgos del modelo"
+          "Código modular en Python",
+          "Controles y movimiento",
+          "Algoritmos de colisión y puntuación",
+          "Condición de victoria o derrota",
+          "Instrucciones de ejecución y demostración"
         ],
         "skills": [
-          "Automatización",
-          "APIs",
-          "Machine Learning",
-          "Comunicación de resultados"
+          "Algoritmos",
+          "Python",
+          "Pygame",
+          "Pruebas y depuración"
         ]
       },
       "weeks": [
         {
           "number": 13,
-          "focus": "Funciones que reducen errores",
+          "focus": "Introducción a Pygame y al proyecto",
           "activities": [
             {
-              "title": "De script a funciones",
-              "description": "Refactorizar un análisis largo en funciones pequeñas con entradas y salidas claras.",
-              "kind": "Práctica"
+              "title": "Explora el proyecto de juego",
+              "description": "Descargar y descomprimir el proyecto; revisar sus scripts y recursos gráficos, instalar Pygame y ejecutar los ejemplos desde la carpeta del proyecto.",
+              "kind": "Práctica",
+              "downloadsLabel": "Descargar proyecto de juego",
+              "downloads": [
+                {
+                  "label": "Proyecto de juego con recursos (.zip)",
+                  "fileName": "juego.zip",
+                  "url": "./juego.zip"
+                }
+              ]
             },
             {
-              "title": "Pruebas rápidas",
-              "description": "Crear asserts o pruebas simples para validar cálculos críticos.",
-              "kind": "Reto"
+              "title": "Algoritmo del ciclo de juego",
+              "description": "Identificar eventos, actualización y dibujo en el ciclo principal; describir su secuencia.",
+              "kind": "Diseño"
             }
           ]
         },
         {
           "number": 14,
-          "focus": "Datos desde servicios",
+          "focus": "Movimiento y control",
           "activities": [
             {
-              "title": "Consume una API",
-              "description": "Consultar una API pública, interpretar JSON y seleccionar información relevante para un problema.",
+              "title": "Variables y teclado",
+              "description": "Usar variables, condiciones y eventos de teclado para controlar el movimiento.",
               "kind": "Práctica"
             },
             {
-              "title": "Pipeline automático",
-              "description": "Guardar la consulta, transformar datos y generar un resumen sin pasos manuales repetitivos.",
+              "title": "Límites de pantalla",
+              "description": "Diseñar un algoritmo que mantenga al personaje dentro de la ventana.",
               "kind": "Reto"
             }
           ]
         },
         {
           "number": 15,
-          "focus": "Primer modelo predictivo",
+          "focus": "Reglas y colisiones",
           "activities": [
             {
-              "title": "Regresión o clasificación",
-              "description": "Entrenar un modelo de scikit-learn sobre un problema industrial apropiado.",
-              "kind": "IA"
+              "title": "Detectar interacciones",
+              "description": "Implementar colisiones entre el personaje y otros objetos.",
+              "kind": "Práctica"
             },
             {
-              "title": "¿Es mejor que adivinar?",
-              "description": "Separar entrenamiento/prueba y comparar métrica contra una línea base sencilla.",
-              "kind": "Datos"
+              "title": "Puntuación y estados",
+              "description": "Usar funciones y condiciones para actualizar puntos y determinar victoria o derrota.",
+              "kind": "Reto"
             }
           ]
         },
         {
           "number": 16,
-          "focus": "Del modelo a una decisión",
+          "focus": "Integración y pruebas",
           "activities": [
             {
-              "title": "Explica la predicción",
-              "description": "Traducir salida del modelo a una recomendación y mencionar incertidumbre y supuestos.",
-              "kind": "IA"
+              "title": "Depuración del juego",
+              "description": "Probar casos de movimiento, colisiones y puntuación; corregir errores.",
+              "kind": "Laboratorio"
             },
             {
-              "title": "Demo ejecutiva de 5 minutos",
-              "description": "Presentar el producto como si se propusiera a un jefe de operaciones: problema, evidencia, beneficio y riesgo.",
+              "title": "Presentación del algoritmo",
+              "description": "Demostrar el juego y explicar sus estructuras de control y funciones principales.",
               "kind": "Diseño"
             }
           ]
