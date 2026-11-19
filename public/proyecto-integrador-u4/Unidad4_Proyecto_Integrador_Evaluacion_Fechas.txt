@@ -1,0 +1,36 @@
+PROGRAMACIÓN LÓGICA Y FUNCIONAL — UNIDAD 4
+PROYECTO INTEGRADOR: EVALUACIÓN Y FECHAS
+
+CALENDARIO Y PONDERACIÓN
+Avance 1 — martes 24 de noviembre de 2026: 10 %.
+Avance 2 — martes 1 de diciembre de 2026: 10 %.
+Avance 3 — lunes 7 de diciembre de 2026: 10 %.
+Entrega final — jueves 10 de diciembre de 2026: 70 %.
+Total: 100 % de la evaluación del proyecto integrador.
+
+AVANCE 1 — 10 %
+Entregar por correo una propuesta con: idea, problema, usuarios y objetivo; arquitectura preliminar y diagrama de IA, cliente y servidor MCP, aplicación y servicios; modelo de datos preliminar de al menos dos bases; flujo de pago o suscripción; herramientas MCP propuestas con su propósito; y repositorio GitHub creado con acceso para revisión. Adjuntar la propuesta o enlazarla en el repositorio.
+
+AVANCE 2 — 10 %
+Mostrar aplicación parcialmente funcional con autenticación, al menos dos bases conectadas, al menos tres herramientas MCP funcionando, primer flujo del chatbot, pago integrado en sandbox o modo de pruebas y README inicial. Subir código y evidencia reproducible al repositorio; incluir instrucciones y enlaces para la revisión.
+
+AVANCE 3 — 10 %
+Presentar versión casi final desplegada en staging o producción; al menos seis herramientas MCP; chatbot que use contexto real autorizado del usuario y la aplicación; flujo completo de pagos en modo prueba; seguridad básica, pruebas y documentación. Preparar presentación y demostración. Incluir enlaces, evidencia y pasos para revisar.
+
+ENTREGA FINAL — 70 %
+Aplicación desplegada en producción y funcional con todos los requisitos del documento de descripción, repositorio GitHub, README y documentación, URL de producción o enlace de descarga funcional, evidencia de pruebas y demostración presencial. Demostrar las dos bases, autenticación y roles, chatbot, herramientas MCP y flujo de pago en modo prueba, además de explicar cómo se configura el proveedor real. El repositorio y los enlaces deben estar disponibles para el docente.
+
+PRESENTACIÓN PRESENCIAL — jueves 10 de diciembre de 2026
+Cada equipo puede elegir una de estas ventanas:
+11:00–12:00 — salón 24P.
+12:00–13:00 — salón 24N.
+13:00–14:00 — salón 20D.
+
+CORREOS Y ASUNTOS OBLIGATORIOS
+Enviar cada avance y la entrega final a docenteinvitado102@nuevoleon.tecnm.mx con el asunto correspondiente, sustituyendo NN por el número de equipo y NombreProyecto por su nombre:
+[PLF-U4][Equipo NN][Avance 1] NombreProyecto
+[PLF-U4][Equipo NN][Avance 2] NombreProyecto
+[PLF-U4][Equipo NN][Avance 3] NombreProyecto
+[PLF-U4][Equipo NN][Entrega Final] NombreProyecto
+
+En cada correo incluir nombres de todos los integrantes, grupo, enlace al repositorio GitHub, enlace al despliegue cuando exista y la evidencia o documento requerido para esa etapa. En la entrega final incluir URL de producción o enlace de descarga y la ventana presencial elegida. Verificar el acceso de revisión a cada enlace.

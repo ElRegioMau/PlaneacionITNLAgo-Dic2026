@@ -1,6 +1,7 @@
 import { Box, CheckCircle2, Sparkles } from 'lucide-react'
 import type { ModuleProject } from '../types/course'
 import ResourceDetails from './ResourceDetails'
+import { ActivityDownloads } from './WeekPlan'
 
 export default function ProjectCard({ project }: { project: ModuleProject }) {
   return (
@@ -20,6 +21,7 @@ export default function ProjectCard({ project }: { project: ModuleProject }) {
           className="project-resources"
         />
       )}
+      {project.downloads && <ActivityDownloads downloads={project.downloads} label="Descargar documentos y presentación" />}
       <div className="project-grid">
         <div>
           <div className="section-kicker"><CheckCircle2 size={17} /> Entregables</div>

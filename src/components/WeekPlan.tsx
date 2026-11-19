@@ -11,7 +11,7 @@ const kindClass: Record<string, string> = {
   Laboratorio: 'kind-lab',
 }
 
-function ActivityDownloads({ downloads, label }: { downloads: NonNullable<Activity['downloads']>; label?: string }) {
+export function ActivityDownloads({ downloads, label }: { downloads: NonNullable<Activity['downloads']>; label?: string }) {
   return (
     <details className="activity-resources activity-downloads">
       <summary>

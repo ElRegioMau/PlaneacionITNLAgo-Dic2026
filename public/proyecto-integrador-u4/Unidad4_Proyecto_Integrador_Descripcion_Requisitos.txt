@@ -1,0 +1,23 @@
+PROGRAMACIÓN LÓGICA Y FUNCIONAL — UNIDAD 4
+PROYECTO INTEGRADOR: APLICACIÓN CON IA Y MCP
+
+OBJETIVO Y ELECCIÓN
+Cada equipo elegirá libremente el problema y la aplicación web o móvil que desarrollará. La idea de ejemplo al final es una referencia, no una opción obligatoria. El chatbot con IA será la interfaz principal y MCP el punto central para integrar la IA con el contexto y las funciones de la aplicación.
+
+REQUISITOS OBLIGATORIOS
+1. Repositorio GitHub del equipo con código, historial de avances y acceso para revisión.
+2. Aplicación web o móvil funcional, con URL de producción o enlace de descarga funcional.
+3. Al menos dos bases de datos conectadas y utilizadas por la aplicación; documentar su propósito, estructura, relaciones y cómo se accede a ellas.
+4. Chatbot o IA como interfaz principal. Debe interpretar solicitudes y ofrecer respuestas útiles basadas en datos reales autorizados.
+5. MCP como integración central: implementar un servidor MCP y conectar un cliente de IA para descubrir e invocar herramientas que consulten contexto de la aplicación, cuenta del usuario autenticado y datos de ambas bases. Documentar entradas, salidas, permisos, errores y demostrar llamadas reales. En el avance 2 se requieren al menos 3 herramientas funcionando y en el avance 3 al menos 6.
+6. Autenticación y roles con autorización en servidor; cada usuario solo puede consultar o modificar datos que le correspondan.
+7. Integrar un sistema real de pago o suscripción, como Stripe, Mercado Pago u otro proveedor justificable. Implementar el flujo completo y el manejo del estado del pago o suscripción mediante los mecanismos del proveedor. Demostrarlo en modo de prueba sin usar datos reales de tarjetas; documentar configuración y requisitos para operación real.
+8. Desplegar en producción. Vercel es una opción para frontend web; Render, Railway, Fly.io, Supabase o Firebase pueden servir para backend, datos o servicios según la arquitectura. Justificar las elecciones y asegurar que los componentes necesarios estén accesibles.
+9. README y documentación: objetivo, integrantes, arquitectura y diagrama, dos bases, instalación, variables de entorno sin valores secretos, ejecución, despliegue, herramientas MCP, roles, pagos, pruebas, limitaciones y enlaces.
+10. Seguridad básica: validar entradas, controlar acceso por usuario y rol, usar HTTPS en producción, manejar errores y proteger secretos con variables de entorno. No publicar contraseñas, llaves, tokens ni datos sensibles en GitHub o el cliente. Aplicar permisos mínimos a las herramientas MCP y proteger las operaciones sensibles.
+11. Probar flujos principales y casos de error: autenticación, permisos, consultas a ambas bases, herramientas MCP y pago en prueba. Preparar evidencia y demostración reproducible.
+
+EJEMPLO ÚNICO — CampusAI Pro
+Aplicación SaaS con plan gratuito y plan premium. Un chatbot ayuda a un usuario autenticado a consultar sus actividades y recursos académicos. A través de herramientas MCP consulta el perfil y plan de la cuenta, una base de usuarios y suscripciones y otra base de actividades y recursos; también usa funciones de la app conforme a los permisos. El usuario puede contratar el plan premium mediante un proveedor de pagos. Este ejemplo ilustra una posibilidad: cada equipo decide qué aplicación crear y debe cumplir todos los requisitos anteriores.
+
+Consulta el archivo de evaluación para las fechas, evidencias y formatos de correo.

@@ -763,22 +763,46 @@
         "Git/GitHub"
       ],
       "project": {
-        "title": "Servidor MCP verificable",
-        "description": "Diseñar y construir un servidor MCP que exponga herramientas y recursos útiles para un dominio elegido. El equipo deberá conectarlo a un cliente compatible, documentar el contrato de cada capacidad y demostrar con pruebas que las operaciones son seguras, reproducibles y comprensibles.",
+        "title": "Aplicación con IA, MCP y suscripción",
+        "description": "Cada equipo elegirá su propia aplicación web o móvil. El chatbot será la interfaz principal y MCP integrará el contexto de la aplicación, la cuenta del usuario y al menos dos bases de datos. La presentación es material didáctico; los dos documentos TXT establecen los requisitos y la evaluación vigentes.",
         "deliverables": [
-          "Servidor MCP funcional con al menos dos tools y un resource",
-          "Configuración de conexión para un cliente MCP",
-          "Especificación de entradas, salidas, errores y permisos",
-          "Pruebas de funcionamiento y casos inválidos",
-          "README con instalación, uso, arquitectura y limitaciones",
-          "Demostración y defensa individual del flujo"
+          "Aplicación en producción con URL o enlace de descarga funcional",
+          "Repositorio GitHub con README, documentación y evidencia",
+          "Chatbot con MCP, al menos dos bases de datos, autenticación y roles",
+          "Integración de pago o suscripción y demostración en modo de prueba",
+          "Tres avances por correo y entrega final presencial el 10 de diciembre de 2026"
         ],
         "skills": [
-          "Diseño de APIs y contratos",
-          "Integración con MCP",
-          "Validación y seguridad",
-          "Testing y depuración",
-          "Documentación técnica"
+          "Integración MCP e IA",
+          "Bases de datos",
+          "Autenticación y seguridad",
+          "Pagos y despliegue",
+          "Pruebas y documentación"
+        ],
+        "resourceToggleLabel": "Ver calendario y evaluación",
+        "resources": [
+          {
+            "label": "Avances y entrega final",
+            "format": "text",
+            "content": "Avance 1: martes 24 de noviembre de 2026 — 10 %.\nAvance 2: martes 1 de diciembre de 2026 — 10 %.\nAvance 3: lunes 7 de diciembre de 2026 — 10 %.\nEntrega final presencial: jueves 10 de diciembre de 2026 — 70 %. Elige 11:00–12:00 en 24P, 12:00–13:00 en 24N o 13:00–14:00 en 20D.\nEnviar cada entrega a docenteinvitado102@nuevoleon.tecnm.mx con el asunto y los datos especificados en el documento de evaluación."
+          }
+        ],
+        "downloads": [
+          {
+            "label": "Descripción y requisitos (.txt)",
+            "fileName": "Unidad4_Proyecto_Integrador_Descripcion_Requisitos.txt",
+            "url": "./proyecto-integrador-u4/Unidad4_Proyecto_Integrador_Descripcion_Requisitos.txt"
+          },
+          {
+            "label": "Evaluación y fechas (.txt)",
+            "fileName": "Unidad4_Proyecto_Integrador_Evaluacion_Fechas.txt",
+            "url": "./proyecto-integrador-u4/Unidad4_Proyecto_Integrador_Evaluacion_Fechas.txt"
+          },
+          {
+            "label": "Presentación: qué es MCP (.pptx)",
+            "fileName": "Presentacion_MCP_Proyectos_Finales_ITNL.pptx",
+            "url": "./proyecto-integrador-u4/Presentacion_MCP_Proyectos_Finales_ITNL.pptx"
+          }
         ]
       },
       "weeks": [

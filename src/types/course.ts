@@ -38,6 +38,7 @@ export interface ModuleProject {
   skills: string[]
   resourceToggleLabel?: string
   resources?: ContentResource[]
+  downloads?: Activity['downloads']
 }
 
 export interface CourseModule {
