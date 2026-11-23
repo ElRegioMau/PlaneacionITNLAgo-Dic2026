@@ -72,13 +72,20 @@ export default function WeekPlan({ week }: { week: WeekPlanType }) {
                   alt={activity.imageAlt ?? ''}
                 />
               )}
-              {activity.resources && (
+              {activity.resources && !activity.resourcesAfterDownloads && (
                 <ResourceDetails
                   resources={activity.resources}
                   toggleLabel={activity.resourceToggleLabel ?? 'Ver script y preguntas'}
                 />
               )}
               {activity.downloads && <ActivityDownloads downloads={activity.downloads} label={activity.downloadsLabel} />}
+              {activity.resources && activity.resourcesAfterDownloads && (
+                <ResourceDetails
+                  resources={activity.resources}
+                  toggleLabel={activity.resourceToggleLabel ?? 'Ver recursos'}
+                  className="activity-prompts"
+                />
+              )}
             </div>
           </div>
         ))}

@@ -18,6 +18,7 @@ export interface Activity {
   resourceToggleLabel?: string
   downloadsLabel?: string
   resources?: ContentResource[]
+  resourcesAfterDownloads?: boolean
   downloads?: {
     label: string
     fileName: string

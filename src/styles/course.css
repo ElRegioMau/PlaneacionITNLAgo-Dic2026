@@ -71,6 +71,10 @@
 .activity-resource-header button { display:inline-flex; align-items:center; gap:6px; padding:6px 9px; border:1px solid rgba(255,255,255,.1); border-radius:7px; color:#b9cadf; background:rgba(255,255,255,.04); font:inherit; font-size:11px; cursor:pointer; }
 .activity-resource-header button:hover { color:white; border-color:rgba(99,230,255,.25); }
 .activity-resource pre { max-height:320px; margin:0; padding:12px; overflow:auto; border-radius:8px; color:#c8d6e8; background:#07111e; font-size:11px; line-height:1.55; white-space:pre; }
+.activity-prompts pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+.activity-item > div { min-width:0; }
+.activity-prompts .activity-resource-header > strong { min-width:0; overflow-wrap:anywhere; }
+.activity-prompts .activity-resource-header button { flex-shrink:0; }
 .activity-resource-text { padding:12px 14px; border-radius:8px; color:#b9cadf; background:#07111e; font-size:13px; line-height:1.65; }
 .activity-resource-text p { margin:0; }
 .activity-resource-text p + p { margin-top:9px; }
