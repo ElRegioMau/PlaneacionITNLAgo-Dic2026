@@ -417,8 +417,16 @@
           "activities": [
             {
               "title": "Controles del personaje",
-              "description": "Implementar o ajustar el movimiento del personaje mediante el teclado.",
-              "kind": "Práctica"
+              "description": "Implementar o ajustar el movimiento del personaje mediante el teclado. Descarga el proyecto actualizado para explorar el movimiento y los recursos visuales.",
+              "kind": "Práctica",
+              "downloadsLabel": "Descargar proyecto del plataformero",
+              "downloads": [
+                {
+                  "label": "Plataformero Alfajara: proyecto completo (.zip)",
+                  "fileName": "plataformero_alfajara_v2.zip",
+                  "url": "./plataformero_alfajara_v2.zip"
+                }
+              ]
             },
             {
               "title": "Animación y límites",

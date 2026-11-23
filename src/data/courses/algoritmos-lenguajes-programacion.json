@@ -547,8 +547,16 @@
           "activities": [
             {
               "title": "Variables y teclado",
-              "description": "Usar variables, condiciones y eventos de teclado para controlar el movimiento.",
-              "kind": "Práctica"
+              "description": "Usar variables, condiciones y eventos de teclado para controlar el movimiento. Descarga el proyecto actualizado para explorar el movimiento y los recursos visuales.",
+              "kind": "Práctica",
+              "downloadsLabel": "Descargar proyecto del plataformero",
+              "downloads": [
+                {
+                  "label": "Plataformero Alfajara: proyecto completo (.zip)",
+                  "fileName": "plataformero_alfajara_v2.zip",
+                  "url": "./plataformero_alfajara_v2.zip"
+                }
+              ]
             },
             {
               "title": "Límites de pantalla",
