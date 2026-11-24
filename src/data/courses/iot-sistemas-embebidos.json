@@ -366,14 +366,13 @@
         "Privacidad local"
       ],
       "project": {
-        "title": "Asistente doméstico IoT local",
-        "description": "Crear un asistente que opere localmente con Ollama, entienda instrucciones en lenguaje natural, consulte el estado del hogar y ejecute un conjunto limitado de acciones IoT a través de herramientas/API controladas.",
+        "title": "SmartHome · Asistente doméstico IoT local",
+        "description": "Diseñar por equipos de hasta 4 integrantes una casa inteligente física con sensores, iluminación y un asistente local que consulte datos reales y ejecute acciones verificables.",
         "deliverables": [
-          "Servicio local de Ollama integrado",
-          "Catálogo de herramientas IoT permitidas",
-          "Interfaz de chat y estado de dispositivos",
-          "RAG con documentación o reglas de la casa",
-          "Bitácora, permisos y demostración de acciones rechazadas por seguridad"
+          "Avance 1 · arquitectura y núcleo IoT (20%)",
+          "Avance 2 · integración del asistente (30%)",
+          "Entrega final · demostración física (50%)",
+          "Evidencias de cada entrega enviadas al correo docente"
         ],
         "skills": [
           "LLM local",
@@ -381,6 +380,49 @@
           "Automatización",
           "Seguridad",
           "Diseño de agentes"
+        ],
+        "resourceToggleLabel": "Ver requisitos, entregas y rúbrica de SmartHome",
+        "resources": [
+          {
+            "label": "Proyecto y requisitos obligatorios",
+            "format": "ordered-list",
+            "content": "Trabajar en equipos de máximo 4 integrantes. Integrar sensores, actuadores, red, base de datos, interfaz privada y asistente con IA local mediante Ollama.\nDetectar presencia en la puerta con un sensor de proximidad, contar las personas que ingresan y conservar los eventos para consultar el historial.\nMedir la temperatura actual y controlar físicamente la iluminación de al menos 3 habitaciones independientes.\nMostrar sensores y estados en una interfaz privada SmartHome, que también permita controlar dispositivos.\nEl chatbot debe consultar datos reales antes de afirmar el estado de la casa y ejecutar acciones reales mediante herramientas o API controladas; no debe inventar estados. Registrar acciones y rechazar solicitudes no permitidas.\nPermitir acceso conversacional desde la interfaz y desde Telegram o WhatsApp, además de reconocimiento de voz y respuesta con la voz de un integrante, con su consentimiento.\nRegistrar mediciones, entradas y estados relevantes en una base de datos; documentar arquitectura, instalación, código y pruebas en un repositorio actualizado.\nInvestigar, medir y optimizar la latencia, demostrando los cambios y comparando resultados antes y después."
+          },
+          {
+            "label": "Arquitectura y ejemplos de uso",
+            "format": "text",
+            "content": "Sensores → sistema embebido → red/API → backend y base de datos → asistente IA → interfaz SmartHome o Telegram/WhatsApp → actuadores. El diseño exacto corresponde al equipo.\nEl asistente debe poder consultar si hay alguien en la puerta, cuántas personas han entrado y la temperatura actual; encender o apagar una habitación, apagar todas las luces y consultar cuáles están encendidas. Cada acción debe llegar al sistema físico."
+          },
+          {
+            "label": "Correo y calendario",
+            "format": "text",
+            "content": "Enviar cada entrega a **docenteinvitado102@nuevoleon.tecnm.mx** con el asunto obligatorio indicado abajo, sustituyendo XX por el número de equipo. Los avances se revisan por correo; mostrarlos en clase o compartirlos por otro medio no equivale a entregarlos.\n**Fecha final: pendiente por confirmar.** La demostración será presencial, en el horario correspondiente a Programación Lógica y Funcional. Las fechas de los avances también quedan pendientes de indicación docente."
+          },
+          {
+            "label": "Avance 1 · arquitectura y núcleo IoT · 20%",
+            "format": "ordered-list",
+            "content": "Implementar el diagrama de arquitectura, repositorio inicial con README, lectura de temperatura, detección de proximidad, primer conteo de entradas o registro de eventos, control físico de una habitación, persistencia inicial y diseño preliminar de la interfaz.\nEnviar PDF de máximo 4 páginas con integrantes, arquitectura, tecnologías, estado de requisitos, problemas y tareas pendientes; enlace al repositorio; 3 a 6 capturas; y video de 2 a 4 minutos que muestre físicamente sensores, una luz y registro de datos.\nAsunto obligatorio: **[IOT-M4][Equipo XX][Avance 1] SmartHome**"
+          },
+          {
+            "label": "Avance 2 · integración del asistente · 30%",
+            "format": "ordered-list",
+            "content": "Integrar temperatura y proximidad, conteo consultable, control de las 3 habitaciones, interfaz privada, chatbot con datos y acciones reales, Telegram o WhatsApp, reconocimiento de voz y primera versión de voz personalizada. Incluir registro de errores, manejo básico de fallos y medición inicial de latencia.\nEnviar PDF con arquitectura actualizada y porcentaje de cumplimiento; enlace al repositorio actualizado; 5 a 8 capturas de interfaz, mensajería, sensores y control; y video de 4 a 6 minutos con una demostración de extremo a extremo.\nAdjuntar tabla de al menos 10 pruebas con consulta, tiempo de respuesta y promedio; explicar al menos 3 técnicas investigadas para reducir latencia y cuáles se aplicaron; mostrar una consulta por voz y la respuesta con la voz elegida.\nAsunto obligatorio: **[IOT-M4][Equipo XX][Avance 2] SmartHome**"
+          },
+          {
+            "label": "Entrega final · demostración física · 50%",
+            "format": "ordered-list",
+            "content": "Antes de la demostración presencial, enviar enlace al repositorio final con README de instalación y ejecución, PDF de máximo 8 páginas con arquitectura, resultados, pruebas y optimizaciones, video de respaldo de 5 a 8 minutos, tabla comparativa de latencia antes/después y lista de integrantes con sus responsabilidades.\nDurante la demostración se podrá solicitar: temperatura, presencia en puerta, conteo de entradas, control de cualquiera de las 3 habitaciones, apagado general, estado de luces, consulta y respuesta por voz, consulta por Telegram o WhatsApp y datos almacenados.\nEl equipo deberá explicar la arquitectura y el flujo de una petición, explicar o modificar código elegido por el docente y mostrar las mediciones de latencia antes y después de optimizar.\nAsunto obligatorio: **[IOT-M4][Equipo XX][Entrega Final] SmartHome**"
+          },
+          {
+            "label": "Rúbrica · porcentajes del proyecto",
+            "format": "text",
+            "content": "**Avance 1 · 20%:** arquitectura y planeación 5%; sensores y adquisición inicial 5%; control físico inicial 4%; persistencia 3%; evidencias, repositorio y documentación 3%.\n**Avance 2 · 30%:** integración de sensores y base de datos 5%; control de 3 habitaciones 5%; chatbot con datos y acciones reales 7%; Telegram o WhatsApp 4%; reconocimiento y síntesis de voz 5%; medición e investigación de latencia 4%.\n**Entrega final · 50%:** funcionamiento integral y estabilidad 15%; asistente IA y exactitud de datos reales 8%; interfaz privada 5%; sensores, conteo y control físico 7%; voz y canal externo 5%; optimización demostrable de latencia 5%; código, explicación y documentación 5%.\nTotal: 100% del proyecto integrador, que representa el 50% de la evaluación del módulo."
+          },
+          {
+            "label": "Reglas de entrega",
+            "format": "ordered-list",
+            "content": "Una evidencia que no pueda abrirse o reproducirse se considera no entregada hasta su corrección; verificar permisos de acceso a enlaces.\nEl repositorio debe corresponder al estado mostrado en el video. No publicar credenciales, tokens ni llaves de API.\nTodos los integrantes deben poder explicar el proyecto. Los datos físicos deben proceder de sensores y las acciones ejecutarse en dispositivos reales.\nLa voz de un integrante solo puede utilizarse con su consentimiento para fines del proyecto."
+          }
         ]
       },
       "weeks": [
