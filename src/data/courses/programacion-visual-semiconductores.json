@@ -370,20 +370,36 @@
         "Pruebas"
       ],
       "project": {
-        "title": "Videojuego interactivo con Pygame",
-        "description": "Desarrollar un videojuego con interfaz visual, controles, personajes y una mecánica de juego definida, tomando el proyecto descargable como punto de partida.",
+        "title": "Videojuego de tres niveles con Python y Pygame",
+        "description": "Desarrollar un videojuego con historia propia y tres niveles conectados con la historia y el personaje. El proyecto se construirá en tres entregas: prototipo y planeación narrativa, construcción de niveles y presentación final.",
         "deliverables": [
-          "Código Python organizado",
-          "Ventana, gráficos y controles funcionales",
-          "Mecánicas y colisiones",
-          "Pantallas de inicio y resultado",
-          "Instrucciones de ejecución y demostración"
+          "Entrega 1 · 30 de noviembre: prototipo, vida e historia en PDF o Word; planeación de los tres niveles",
+          "Entrega 2 · 4 de diciembre: construcción de los tres niveles, enemigos, NPC, diálogos, recursos y música",
+          "Entrega 3 · 10 de diciembre: versión final con al menos una cinemática y gameplay frente al grupo"
         ],
         "skills": [
           "Interfaces visuales",
           "Pygame",
           "Manejo de eventos",
           "Integración y pruebas"
+        ],
+        "resourceToggleLabel": "Ver las tres entregas y sus requisitos",
+        "resources": [
+          {
+            "label": "Entrega 1 · 30 de noviembre de 2026",
+            "format": "ordered-list",
+            "content": "Presentar un prototipo funcional con animaciones de movimiento del personaje y una mecánica de vida.\nEntregar un documento en PDF o Word con la historia del lugar y la historia del personaje principal.\nPlanear los tres niveles: describir el objetivo de cada uno y explicar cómo se relaciona con la historia y la progresión del personaje.\nEntregar el código organizado y los recursos necesarios para ejecutar el prototipo, junto con el documento narrativo."
+          },
+          {
+            "label": "Entrega 2 · 4 de diciembre de 2026",
+            "format": "ordered-list",
+            "content": "Diseñar y construir los tres niveles, siguiendo los objetivos y la historia planteados en la primera entrega.\nIncluir enemigos y personajes no jugables (NPC), con sus interacciones correspondientes.\nIncorporar diálogos, recolección de recursos y música como parte de la experiencia del juego.\nEntregar una versión ejecutable o el proyecto con sus recursos e instrucciones de ejecución, que permita recorrer y revisar los tres niveles."
+          },
+          {
+            "label": "Entrega 3 · Presentación final · 10 de diciembre de 2026",
+            "format": "ordered-list",
+            "content": "Integrar al menos una cinemática relacionada con la historia o el desarrollo del juego.\nPresentar el proyecto final frente al grupo y mostrar gameplay en vivo.\nDemostrar los tres niveles, sus objetivos y las mecánicas principales, incluyendo las interacciones y los recursos incorporados.\nExplicar la relación entre la historia, el personaje y los objetivos de los niveles; entregar la versión final del proyecto con sus recursos e instrucciones de ejecución."
+          }
         ]
       },
       "weeks": [
