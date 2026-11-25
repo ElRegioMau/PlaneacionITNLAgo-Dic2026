@@ -369,8 +369,8 @@
         "title": "SmartHome · Asistente doméstico IoT local",
         "description": "Diseñar por equipos de hasta 4 integrantes una casa inteligente física con sensores, iluminación y un asistente local que consulte datos reales y ejecute acciones verificables.",
         "deliverables": [
-          "Avance 1 · arquitectura y núcleo IoT (20%)",
-          "Avance 2 · integración del asistente (30%)",
+          "Avance 1 · lunes 30 de noviembre de 2026 (20%)",
+          "Avance 2 · viernes 4 de diciembre de 2026 (30%)",
           "Entrega final · demostración física (50%)",
           "Evidencias de cada entrega enviadas al correo docente"
         ],
@@ -396,15 +396,15 @@
           {
             "label": "Correo y calendario",
             "format": "text",
-            "content": "Enviar cada entrega a **docenteinvitado102@nuevoleon.tecnm.mx** con el asunto obligatorio indicado abajo, sustituyendo XX por el número de equipo. Los avances se revisan por correo; mostrarlos en clase o compartirlos por otro medio no equivale a entregarlos.\n**Entrega final presencial: miércoles 9 de diciembre de 2026.** Elige 11:00–12:00 en el salón 24P, 12:00–13:00 en el salón 24N o 13:00–14:00 en el salón 20D. Las fechas de los avances también quedan pendientes de indicación docente."
+            "content": "Enviar cada entrega a **docenteinvitado102@nuevoleon.tecnm.mx** con el asunto obligatorio indicado abajo, sustituyendo XX por el número de equipo. Los avances se revisan por correo; mostrarlos en clase o compartirlos por otro medio no equivale a entregarlos.\n**Entrega final presencial: miércoles 9 de diciembre de 2026.** Elige 11:00–12:00 en el salón 24P, 12:00–13:00 en el salón 24N o 13:00–14:00 en el salón 20D. **Avance 1: lunes 30 de noviembre de 2026. Avance 2: viernes 4 de diciembre de 2026.**"
           },
           {
-            "label": "Avance 1 · arquitectura y núcleo IoT · 20%",
+            "label": "Avance 1 · arquitectura y núcleo IoT · 30 de noviembre · 20%",
             "format": "ordered-list",
             "content": "Implementar el diagrama de arquitectura, repositorio inicial con README, lectura de temperatura, detección de proximidad, primer conteo de entradas o registro de eventos, control físico de una habitación, persistencia inicial y diseño preliminar de la interfaz.\nEnviar PDF de máximo 4 páginas con integrantes, arquitectura, tecnologías, estado de requisitos, problemas y tareas pendientes; enlace al repositorio; 3 a 6 capturas; y video de 2 a 4 minutos que muestre físicamente sensores, una luz y registro de datos.\nAsunto obligatorio: **[IOT-M4][Equipo XX][Avance 1] SmartHome**"
           },
           {
-            "label": "Avance 2 · integración del asistente · 30%",
+            "label": "Avance 2 · integración del asistente · 4 de diciembre · 30%",
             "format": "ordered-list",
             "content": "Integrar temperatura y proximidad, conteo consultable, control de las 3 habitaciones, interfaz privada, chatbot con datos y acciones reales, Telegram o WhatsApp, reconocimiento de voz y primera versión de voz personalizada. Incluir registro de errores, manejo básico de fallos y medición inicial de latencia.\nEnviar PDF con arquitectura actualizada y porcentaje de cumplimiento; enlace al repositorio actualizado; 5 a 8 capturas de interfaz, mensajería, sensores y control; y video de 4 a 6 minutos con una demostración de extremo a extremo.\nAdjuntar tabla de al menos 10 pruebas con consulta, tiempo de respuesta y promedio; explicar al menos 3 técnicas investigadas para reducir latencia y cuáles se aplicaron; mostrar una consulta por voz y la respuesta con la voz elegida.\nAsunto obligatorio: **[IOT-M4][Equipo XX][Avance 2] SmartHome**"
           },
