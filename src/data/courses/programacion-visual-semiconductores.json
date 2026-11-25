@@ -375,7 +375,7 @@
         "deliverables": [
           "Entrega 1 · 30 de noviembre: prototipo, vida e historia en PDF o Word; planeación de los tres niveles",
           "Entrega 2 · 4 de diciembre: construcción de los tres niveles, enemigos, NPC, diálogos, recursos y música",
-          "Entrega 3 · 10 de diciembre: versión final con al menos una cinemática y gameplay frente al grupo"
+          "Entrega 3 · 10 de diciembre: cinemática, gameplay frente al grupo y publicación del juego o descarga en GitHub Pages"
         ],
         "skills": [
           "Interfaces visuales",
@@ -398,7 +398,7 @@
           {
             "label": "Entrega 3 · Presentación final · 10 de diciembre de 2026",
             "format": "ordered-list",
-            "content": "Integrar al menos una cinemática relacionada con la historia o el desarrollo del juego.\nPresentar el proyecto final frente al grupo y mostrar gameplay en vivo.\nDemostrar los tres niveles, sus objetivos y las mecánicas principales, incluyendo las interacciones y los recursos incorporados.\nExplicar la relación entre la historia, el personaje y los objetivos de los niveles; entregar la versión final del proyecto con sus recursos e instrucciones de ejecución."
+            "content": "Integrar al menos una cinemática relacionada con la historia o el desarrollo del juego.\nPresentar el proyecto final frente al grupo y mostrar gameplay en vivo.\nDemostrar los tres niveles, sus objetivos y las mecánicas principales, incluyendo las interacciones y los recursos incorporados.\nExplicar la relación entre la historia, el personaje y los objetivos de los niveles; entregar la versión final del proyecto con sus recursos e instrucciones de ejecución.\nPublicar una página web en GitHub Pages que permita jugar en línea o, como alternativa, descargar el juego. Compartir el enlace público y verificar que el juego o la descarga funcionen."
           }
         ]
       },
